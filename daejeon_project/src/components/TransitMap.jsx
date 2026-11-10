@@ -46,6 +46,8 @@ const ROUTE_SEGMENT_SPEED_URL = '/data/bus/route_segment_speed.json'
 const ROUTE_STOP_RIDERSHIP_URL = '/data/bus/route_stop_ridership.json'
 
 const SUBWAY_STATION_RIDERSHIP_URL = '/data/subway/subway_station_ridership.json'
+// 대전교통공사 공식 열차시각표(2025.08.31)에서 뽑은 열차별 기점 출발 시각(분) - build_subway_timetable_official.py
+const SUBWAY_TIMETABLE_OFFICIAL_URL = '/data/subway/subway_timetable_official.json'
 
 const SUBWAY_RIDERSHIP_BY_AGE_URL = '/data/subway/subway_station_ridership_by_age.json'
 
@@ -67,6 +69,9 @@ const PHARMACIES_URL = '/data/medical/daejeon_pharmacies.geojson'
 const WELFARE_FACILITIES_URL = '/data/welfare/daejeon_welfare_facilities.geojson'
 
 const WELFARE_CENTERS_URL = '/data/welfare/daejeon_welfare_centers.geojson'
+// 타슈(공영자전거) 대여소 위치와 2026년 10월 대여·반납 평균(평일/토/일, 1시간 단위) - build_tashu_ridership.cjs
+const TASHU_STATIONS_URL = '/data/tashu/tashu_stations.geojson'
+const TASHU_USAGE_URL = '/data/tashu/tashu_station_usage.json'
 
 const SCHOOLS_URL = '/data/facilities/daejeon_schools.geojson'
 const MARKETS_URL = '/data/facilities/daejeon_markets.geojson'
@@ -114,6 +119,7 @@ const LAYER_ITEMS = [
   { id: 'pharmacies', label: '약국(공식)', color: '#4ade80', group: '인구·시설' },
   { id: 'welfareFacilities', label: '장애인 편의시설(공식)', color: '#c084fc', group: '인구·시설' },
   { id: 'welfareCenters', label: '복지시설(공식)', color: '#f472b6', group: '인구·시설' },
+  { id: 'tashu', label: '타슈 대여소(공식)', color: '#2dd4bf', group: '인구·시설' },
   { id: 'schools', label: '학교(OSM 추정)', color: '#818cf8', group: '인구·시설' },
   { id: 'markets', label: '전통시장(OSM 추정)', color: '#fb923c', group: '인구·시설' },
   { id: 'governmentOffices', label: '행정기관(OSM 추정)', color: '#94a3b8', group: '인구·시설' },
@@ -631,6 +637,45 @@ function bindWelfareCenterPopup(feature, layer) {
   )
 }
 
+function createTashuMarker(feature, latlng) {
+  return L.circleMarker(latlng, {
+    radius: 4,
+    color: '#134e4a',
+    weight: 1,
+    fillColor: '#2dd4bf',
+    fillOpacity: 0.85,
+  })
+}
+
+// 대여소 팝업: 2026년 10월 평균(평일/토/일)으로 출근(07~09시)·퇴근(17~19시)·하루 대여/반납 건수
+function makeBindTashuPopup(usage) {
+  const sumHours = (byHour, hours, key) =>
+    hours.reduce((acc, h) => acc + (byHour?.[h]?.[key] || 0), 0)
+  const fmt = (v) => (Math.round(v * 10) / 10).toString()
+  const ALL = Array.from({ length: 24 }, (_, i) => `${String(i).padStart(2, '0')}:00`)
+  const AM = ['07:00', '08:00']
+  const PM = ['17:00', '18:00']
+  return (feature, layer) => {
+    const p = feature.properties || {}
+    const u = usage?.stations?.[p.stationId]
+    let html = `<strong>${p.name || p.stationId}</strong><br/>${p.gu || ''} ${p.dong || ''}`
+    if (u) {
+      for (const day of ['평일', '토', '일']) {
+        const d = u[day]
+        if (!d) continue
+        html +=
+          `<br/><b>${day}</b> 출근(07~09시) 대여 ${fmt(sumHours(d, AM, 'rentals'))} / 반납 ${fmt(sumHours(d, AM, 'returns'))}` +
+          `, 퇴근(17~19시) 대여 ${fmt(sumHours(d, PM, 'rentals'))} / 반납 ${fmt(sumHours(d, PM, 'returns'))}` +
+          `, 하루 대여 ${fmt(sumHours(d, ALL, 'rentals'))}건`
+      }
+      html += '<br/><span style="color:#888">2026년 10월 하루 평균</span>'
+    } else {
+      html += '<br/>이용 기록 없음'
+    }
+    layer.bindPopup(html)
+  }
+}
+
 function createPharmacyMarker(feature, latlng) {
   return L.circleMarker(latlng, {
     radius: 4,
@@ -861,7 +906,7 @@ function getSubwayTrainPosition(stationsSorted, elapsedMin, direction, lineShape
   return interpolateAlongStations(reversed, offsets, elapsedMin, lineShape.toPanam)
 }
 
-function SubwayTrainSimulation({ stations, lineShape, headway, dayType, day, clockMin, visible, subwayRidership, subwayRidershipByAge }) {
+function SubwayTrainSimulation({ stations, lineShape, headway, timetable, dayType, day, clockMin, visible, subwayRidership, subwayRidershipByAge }) {
   const stationsSorted = useMemo(() => {
     if (!stations) return []
     return [...stations.features].sort(
@@ -869,17 +914,20 @@ function SubwayTrainSimulation({ stations, lineShape, headway, dayType, day, clo
     )
   }, [stations])
 
+  // 공식 열차시각표(실제 출발 시각)가 있으면 그걸 쓰고, 없을 때만 예전처럼
+  // 첫차~막차를 운행 횟수로 똑같이 나눈 시각(synthesizeDepartures)을 쓴다.
+  // 균등 배분은 출퇴근 시간(5~6분 간격)과 낮(10분 간격)의 차이가 사라져서
+  // 출퇴근 시간 열차 수가 적게 잡히고, 그만큼 1대당 탑승 인원이 많게 나왔다.
   const schedules = useMemo(() => {
+    const official = timetable?.[dayType]
     const dayHeadway = headway?.[dayType]
-    if (!dayHeadway) return {}
-
     const result = {}
     for (const dir of SUBWAY_DIRECTIONS) {
-      const d = dayHeadway[dir]
-      if (d) result[dir] = synthesizeDepartures(d)
+      if (official?.[dir]?.length) result[dir] = official[dir]
+      else if (dayHeadway?.[dir]) result[dir] = synthesizeDepartures(dayHeadway[dir])
     }
     return result
-  }, [headway, dayType])
+  }, [headway, timetable, dayType])
 
   if (!visible || stationsSorted.length === 0 || !lineShape) return null
 
@@ -1189,96 +1237,111 @@ function tripsInHour(deps, hourNum) {
   return deps.filter((d) => Math.floor((((d % 1440) + 1440) % 1440) / 60) === hourNum).length
 }
 
-// 정류소별 승하차 인원은 "그 시간대 그 노선 전체"의 합계라, 같은 시간대에
-// 여러 대가 다니면 한 대가 그 인원을 통째로 태운 게 아니라 나눠 태운
-// 것임 - tripsPerHour(배차간격 기준 그 시간대 운행 대수)로 나눠서 1대 몫만
-// 반영한다. 왕복선형(기점→종점→기점)이라 같은 정류소(stopId)를 두 번
-// 지나기도 해서, "몇 번째 정류소인지"(stopSeqIndex) 기준으로 출발점부터
-// 지금까지 탑승-하차를 누적한다. 같은 stopId가 왕복에서 두 번 나오면
-// 양쪽에 같은 평균 승하차값을 그대로 적용(방향별 데이터 없음).
-//
-// entryTime(이 버스의 출발 시각)+stopOffsetMin[i](그 정류소까지 걸린 시간)
-// = 이 버스가 "실제로 그 정류소를 지난 시각" - 그 시각이 속한 시간대의
-// 승하차 버킷을 써야 한다. 처음엔 지금(clockMin) 시간대 하나로 모든
-// 과거 정류소를 계산했는데, 그러면 예를 들어 지금이 08시라도 이 버스가
-// 7시대에 지난 정류소까지 전부 8시(출근 피크, 하차가 몰림) 기준으로
-// 계산돼서 중간에 엉뚱하게 마이너스로 꺼지는 문제가 있었다(대전역/
-// 정부청사역처럼 특정 시간대 하차가 몰리는 역 바로 다음에서 탑승인원이
-// 0으로 보이던 원인). 배차간격은 시간대별로 안 바뀌는 모델이라
-// tripsPerHour는 시간대와 무관하게 고정값 그대로 써도 된다.
-function estimateBusOccupancy(routeId, stopIds, stopOffsetMin, uptoIndex, entryTime, ridership, day, headwayMin) {
-  const stops = ridership?.routes?.[routeId]?.stops
-  if (!stops) return null
-
-  const dayType = dayToSpeedDayType(day)
-  const tripsPerHour = headwayMin > 0 ? 60 / headwayMin : 1
-  let count = 0
+// [수정] 차내 인원 추정 방식 변경 - "승차-하차 누적"에서 "비례 배분"으로.
+// 원래 방식은 역/정류소 승하차가 양방향(또는 그 노선 전체 차량) 합계인데 그걸 열차 1대 기준으로
+// 누적해서, 하차가 몰리는 역(시청·정부청사 등) 다음에서 0으로 뚝 떨어지고 종점에서도 사람이
+// 남는 문제가 있었다. 이제는 i번째 역에서 탄 사람이 i역을 뺀 나머지 역들에 그 역들의 하차량
+// 비율대로 내린다고 보고(방향도 그 비율로 나뉨), 그중 이 차량 진행 방향 뒤쪽에서 내릴 사람만
+// 지금 차 안에 있다고 계산한다.
+//   차내(u번째 역 출발 직후) = Σ_{i≤u} 승차_i × (Σ_{j>u} 하차_j) / (전체 하차 − 하차_i)
+// 음수가 생기지 않고, 종점에서는 0, 중간에 갑자기 0이 되는 일이 없다.
+function proportionalOnboard(boards, alights, uptoIndex) {
+  const n = boards.length
+  if (n === 0 || uptoIndex >= n - 1) return 0
+  const suffix = new Array(n + 1).fill(0)
+  for (let k = n - 1; k >= 0; k--) suffix[k] = suffix[k + 1] + Math.max(0, alights[k] || 0)
+  const remain = suffix[uptoIndex + 1]
+  let onboard = 0
   for (let i = 0; i <= uptoIndex; i++) {
-    const hourLabel = hourSlotLabel(entryTime + stopOffsetMin[i])
-    const bucket = stops[stopIds[i]]?.byDay?.[dayType]?.[hourLabel]
-    if (!bucket) continue
-    // 역마다(매 단계) 0 밑으로 안 내려가게 바닥을 침 - 하차는 "그 시간대에
-    // 내린 사람"이라 꼭 이 열차가 그 시간대에 태운 사람이 아닐 수 있어서
-    // (앞 시간대에 탄 사람이 이 시간대에 내리는 경우 등) 중간에 하차가
-    // 누적 탑승보다 많아 보이는 구간이 있음 - 거기서 한 번 마이너스로
-    // 꺼지면 그 뒤로 쭉 0만 나오는 걸 막는다.
-    count = Math.max(0, count + (bucket.board - bucket.alight) / tripsPerHour)
+    const others = suffix[0] - Math.max(0, alights[i] || 0)
+    if (others > 0) onboard += Math.max(0, boards[i] || 0) * (remain / others)
   }
-  return Math.round(count)
+  return onboard
 }
 
-// 출발역부터 지금까지 지나온 역들(orderedStations[0..uptoIndex])의
-// 승차-하차를 누적해 현재 열차 내 인원을 추정 - estimateBusOccupancy와
-// 같은 이유로 tripsThisHour(그 시간대에 이 방향으로 실제 출발한 열차 수)로
-// 나눠서 1대 몫만 반영한다.
-// offsets[i] = dep(이 열차 출발 시각)로부터 i번째 역까지 걸리는 시간(분) -
-// dep+offsets[i]가 "이 열차가 실제로 그 역을 지난 시각"이라, 역마다 그
-// 시각이 속한 시간대(hourLabel)의 승하차 버킷을 따로 찾아 써야 한다.
-// 전부 지금(clockMin) 시간대 하나로 계산하면, 예를 들어 지금은 8시라도
-// 이 열차가 7시대에 지난 역들까지 전부 8시(출근 피크, 하차가 몰림)
-// 기준으로 계산돼서 실제로는 사람이 타고 있을 구간이 중간에 마이너스로
-// 꺼지는 문제가 있었다(정부청사역/시청역처럼 특정 시간대 하차가 몰리는
-// 역 직후에서 탑승인원이 0으로 보이던 원인).
+// 버스: 정류소별 승하차는 "그 시간대 그 노선 전체 버스"의 합계라 tripsPerHour로 나눠 1대 몫으로 쓴다.
+// 버스는 왕복 노선이라 회차점(출발 정류소에서 가장 먼 정류소)에서 가는 방향/오는 방향을 나누고,
+// 각 방향 안에서만 비례 배분한다(가는 방향에 탄 사람은 가는 방향 정류소에서 내림 → 회차점에서는
+// 거의 비는 게 정상). 같은 stopId가 양방향에 다 나오면 값이 두 번 들어가므로 등장 횟수로 나눈다.
+const busTurnCache = new WeakMap()
+function getBusTurnIndex(shape, lineCoords) {
+  if (!shape || !lineCoords) return -1
+  if (busTurnCache.has(shape)) return busTurnCache.get(shape)
+  const idx = shape.stopIndex || []
+  const p0 = lineCoords[idx[0]]
+  let best = -1
+  let bestD = -1
+  if (p0) {
+    for (let i = 0; i < idx.length; i++) {
+      const p = lineCoords[idx[i]]
+      if (!p) continue
+      const d = Math.hypot((p[0] - p0[0]) * 0.8, p[1] - p0[1])
+      if (d > bestD) { bestD = d; best = i }
+    }
+  }
+  busTurnCache.set(shape, best)
+  return best
+}
+
+function estimateBusOccupancy(routeId, stopIds, stopOffsetMin, uptoIndex, entryTime, ridership, day, headwayMin, turnIdx = -1) {
+  const stops = ridership?.routes?.[routeId]?.stops
+  if (!stops) return null
+  const dayType = dayToSpeedDayType(day)
+  const tripsPerHour = headwayMin > 0 ? 60 / headwayMin : 1
+  const seen = {}
+  for (const id of stopIds) seen[id] = (seen[id] || 0) + 1
+  const boards = [], alights = []
+  for (let i = 0; i < stopIds.length; i++) {
+    const hourLabel = hourSlotLabel(entryTime + (stopOffsetMin[i] ?? 0))
+    const bucket = stops[stopIds[i]]?.byDay?.[dayType]?.[hourLabel]
+    const k = tripsPerHour * (seen[stopIds[i]] || 1)
+    boards.push(bucket ? bucket.board / k : 0)
+    alights.push(bucket ? bucket.alight / k : 0)
+  }
+  const n = stopIds.length
+  if (turnIdx <= 0 || turnIdx >= n - 1) return Math.round(proportionalOnboard(boards, alights, uptoIndex))
+  if (uptoIndex < turnIdx) {
+    const b = boards.slice(0, turnIdx + 1)
+    b[turnIdx] = 0 // 회차점에서는 내리기만
+    return Math.round(proportionalOnboard(b, alights.slice(0, turnIdx + 1), uptoIndex))
+  }
+  const a = alights.slice(turnIdx)
+  a[0] = 0 // 회차점에서는 타기만
+  return Math.round(proportionalOnboard(boards.slice(turnIdx), a, uptoIndex - turnIdx))
+}
+
+// 지하철: 역별 승하차(양방향 합계)를 그 시간대 이 방향 출발 열차 수로 나눠 1대 몫으로 쓴다.
 function estimateSubwayOccupancy(orderedStations, offsets, uptoIndex, dep, ridership, day, deps) {
   const stations = ridership?.stations
   if (!stations) return null
-
   const dayType = dayToSpeedDayType(day)
-  let count = 0
-  for (let i = 0; i <= uptoIndex; i++) {
-    const hourLabel = hourSlotLabel(dep + offsets[i])
+  const boards = [], alights = []
+  for (let i = 0; i < orderedStations.length; i++) {
+    const hourLabel = hourSlotLabel(dep + (offsets[i] ?? 0))
     const divisor = Math.max(1, tripsInHour(deps, Number(hourLabel.slice(0, 2))))
-    const stationNo = orderedStations[i].properties.stationNo
-    const bucket = stations[stationNo]?.byDay?.[dayType]?.[hourLabel]
-    if (!bucket) continue
-    // 역마다(매 단계) 0 밑으로 안 내려가게 바닥을 침 - 그래도 같은
-    // 시간대 안에서 하차가 몰리는 역 바로 다음은 0으로 보일 수 있음
-    count = Math.max(0, count + (bucket.board - bucket.alight) / divisor)
+    const bucket = stations[orderedStations[i].properties.stationNo]?.byDay?.[dayType]?.[hourLabel]
+    boards.push(bucket ? bucket.board / divisor : 0)
+    alights.push(bucket ? bucket.alight / divisor : 0)
   }
-  return Math.round(count)
+  return Math.round(proportionalOnboard(boards, alights, uptoIndex))
 }
 
-// estimateSubwayOccupancy와 같은 방식(출발역부터 누적, 역마다 실제 통과
-// 시각 기준 시간대)으로 노인 승하차와 전체 승하차를 따로 누적해서, 지금
-// 차내 추정 인원 중 노인 비율(%)을 낸다. subway_station_ridership_by_age.json은
-// 13일치(평일9/토2/일2)라 메인 탑승 인원 추정(304일치)보다 샘플이 적어
-// 보조 지표로만 쓴다.
+// 같은 비례 배분으로 노인/전체 차내 인원을 따로 구해 노인 비율(%)을 낸다.
+// subway_station_ridership_by_age.json은 13일치(평일9/토2/일2)라 보조 지표로만 쓴다.
 function estimateSubwayElderlyRatio(orderedStations, offsets, uptoIndex, dep, ridershipByAge, day, deps) {
   const stations = ridershipByAge?.stations
   if (!stations) return null
-
   const dayType = dayToSpeedDayType(day)
-  let elderly = 0
-  let total = 0
-  for (let i = 0; i <= uptoIndex; i++) {
-    const hourLabel = hourSlotLabel(dep + offsets[i])
+  const bE = [], aE = [], bT = [], aT = []
+  for (let i = 0; i < orderedStations.length; i++) {
+    const hourLabel = hourSlotLabel(dep + (offsets[i] ?? 0))
     const divisor = Math.max(1, tripsInHour(deps, Number(hourLabel.slice(0, 2))))
-    const stationNo = orderedStations[i].properties.stationNo
-    const bucket = stations[stationNo]?.byDay?.[dayType]?.[hourLabel]
-    if (!bucket) continue
-    elderly = Math.max(0, elderly + (bucket.board.elderly - bucket.alight.elderly) / divisor)
-    total = Math.max(0, total + (bucket.board.total - bucket.alight.total) / divisor)
+    const bucket = stations[orderedStations[i].properties.stationNo]?.byDay?.[dayType]?.[hourLabel]
+    bE.push(bucket ? bucket.board.elderly / divisor : 0); aE.push(bucket ? bucket.alight.elderly / divisor : 0)
+    bT.push(bucket ? bucket.board.total / divisor : 0); aT.push(bucket ? bucket.alight.total / divisor : 0)
   }
+  const elderly = proportionalOnboard(bE, aE, uptoIndex)
+  const total = proportionalOnboard(bT, aT, uptoIndex)
   if (total <= 0) return null
   return Math.max(0, Math.min(100, Math.round((elderly / total) * 1000) / 10))
 }
@@ -1340,7 +1403,7 @@ function BusSimulation({ routeLine, route, shape, day, clockMin, visible, routeS
     <>
       {infos.map((info) => {
         const { speedKmh, isReal } = resolveBusSpeed(route.routeId, info, routeSegmentSpeed, day, timeLabel)
-        const occupancy = estimateBusOccupancy(route.routeId, shape.stopIds, shape.stopOffsetMin, info.stopSeqIndex, info.entryTime, routeStopRidership, day, headwayMin)
+        const occupancy = estimateBusOccupancy(route.routeId, shape.stopIds, shape.stopOffsetMin, info.stopSeqIndex, info.entryTime, routeStopRidership, day, headwayMin, getBusTurnIndex(shape, routeLine?.geometry?.coordinates))
         return (
           <Marker key={`bus-${info.trainId}`} position={info.position} icon={getVehicleIcon('🚌', occupancyColor(occupancy, BUS_CAPACITY))} interactive pane="busTrainPane">
             <Popup>
@@ -1377,7 +1440,7 @@ function AllBusSimulation({ routeLines, routeList, lineShapeMap, day, clockMin, 
     const stopNameById = new Map((routeStops?.[routeId] || []).map((s) => [s.stopId, s.name]))
     infos.forEach((info) => {
       const { speedKmh, isReal } = resolveBusSpeed(routeId, info, routeSegmentSpeed, day, timeLabel)
-      const occupancy = estimateBusOccupancy(routeId, shape.stopIds, shape.stopOffsetMin, info.stopSeqIndex, info.entryTime, routeStopRidership, day, headwayMin)
+      const occupancy = estimateBusOccupancy(routeId, shape.stopIds, shape.stopOffsetMin, info.stopSeqIndex, info.entryTime, routeStopRidership, day, headwayMin, getBusTurnIndex(shape, lineById.get(routeId)?.geometry?.coordinates))
       buses.push({
         key: `${routeId}-${info.trainId}`,
         position: info.position,
@@ -1742,11 +1805,14 @@ export default function TransitMap() {
   const [stopCentrality, setStopCentrality] = useState(null)
   const [subwayStationsOfficial, setSubwayStationsOfficial] = useState(null)
   const [subwayRouteOfficial, setSubwayRouteOfficial] = useState(null)
+  const [subwayTimetableOfficial, setSubwayTimetableOfficial] = useState(null)
   const [tramStationsOfficial, setTramStationsOfficial] = useState(null)
   const [hospitals, setHospitals] = useState(null)
   const [pharmacies, setPharmacies] = useState(null)
   const [welfareFacilities, setWelfareFacilities] = useState(null)
   const [welfareCenters, setWelfareCenters] = useState(null)
+  const [tashuStations, setTashuStations] = useState(null)
+  const [tashuUsage, setTashuUsage] = useState(null)
   const [schools, setSchools] = useState(null)
   const [markets, setMarkets] = useState(null)
   const [governmentOffices, setGovernmentOffices] = useState(null)
@@ -1861,6 +1927,7 @@ export default function TransitMap() {
   useOptionalGeoJSON(ROUTE_SEGMENT_SPEED_URL, '노선 구간 실측 속도', setRouteSegmentSpeed)
   useOptionalGeoJSON(ROUTE_STOP_RIDERSHIP_URL, '정류장별 승하차 인원', setRouteStopRidership)
   useOptionalGeoJSON(SUBWAY_STATION_RIDERSHIP_URL, '지하철역 승하차 인원', setSubwayRidership)
+  useOptionalGeoJSON(SUBWAY_TIMETABLE_OFFICIAL_URL, '지하철 공식 열차시각표', setSubwayTimetableOfficial)
   useOptionalGeoJSON(SUBWAY_RIDERSHIP_BY_AGE_URL, '지하철역 연령별 승하차 인원', setSubwayRidershipByAge)
   useOptionalGeoJSON(POPULATION_URL, '고령인구 분포', setPopulationData)
   useOptionalGeoJSON(STOP_CENTRALITY_URL, '정류장 중심성', setStopCentrality)
@@ -1871,6 +1938,8 @@ export default function TransitMap() {
   useOptionalGeoJSON(PHARMACIES_URL, '약국(공식)', setPharmacies)
   useOptionalGeoJSON(WELFARE_FACILITIES_URL, '장애인 편의시설(공식)', setWelfareFacilities)
   useOptionalGeoJSON(WELFARE_CENTERS_URL, '복지시설(공식)', setWelfareCenters)
+  useOptionalGeoJSON(TASHU_STATIONS_URL, '타슈 대여소', setTashuStations)
+  useOptionalGeoJSON(TASHU_USAGE_URL, '타슈 대여·반납', setTashuUsage)
   useOptionalGeoJSON(SCHOOLS_URL, '학교', setSchools)
   useOptionalGeoJSON(MARKETS_URL, '전통시장', setMarkets)
   useOptionalGeoJSON(GOVERNMENT_OFFICES_URL, '행정기관', setGovernmentOffices)
@@ -2905,6 +2974,17 @@ export default function TransitMap() {
               )}
             </Pane>
 
+            <Pane name="tashuPane" style={{ zIndex: 457 }}>
+              {layers.tashu && tashuStations && (
+                <GeoJSON
+                  key={`tashu-layer-${tashuUsage ? 'u' : 'n'}`}
+                  data={tashuStations}
+                  pointToLayer={createTashuMarker}
+                  onEachFeature={makeBindTashuPopup(tashuUsage)}
+                />
+              )}
+            </Pane>
+
             <Pane name="schoolsPane" style={{ zIndex: 458 }}>
               {layers.schools && schools && (
                 <GeoJSON
@@ -3009,6 +3089,7 @@ export default function TransitMap() {
                 stations={subwayStationsOfficial}
                 lineShape={subwayLineShape}
                 headway={subwayRouteOfficial?.features?.[0]?.properties?.headway}
+                timetable={subwayTimetableOfficial}
                 dayType={dayToHeadwayType(subwayDay)}
                 day={subwayDay}
                 clockMin={subwayClockMin}

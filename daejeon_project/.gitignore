@@ -33,3 +33,6 @@ graphify-out
 *.njsproj
 *.sln
 *.sw?
+
+# 원본 데이터(용량 큼, 커밋 안 함)
+raw/

@@ -1,0 +1,75 @@
+{
+ "rule": {
+  "overlapThreshold": 15.0,
+  "tramWalkM": 300,
+  "stopWalkM": 500,
+  "period": "평일 07~09시, 2주 평균"
+ },
+ "routes": [
+  {
+   "routeNo": "104",
+   "routeId": "30300039",
+   "overlapPct": 19.2,
+   "board0709": 488,
+   "tramReplaceable": 158,
+   "tramReplaceablePct": 32.3,
+   "stopsNearTram": 14,
+   "soleServiceStops": 4,
+   "soleServiceBoard": 30,
+   "dependentPop": 0,
+   "dependentElderly": 0
+  },
+  {
+   "routeNo": "1",
+   "routeId": "30300100",
+   "overlapPct": 18.5,
+   "board0709": 1379,
+   "tramReplaceable": 853,
+   "tramReplaceablePct": 61.9,
+   "stopsNearTram": 25,
+   "soleServiceStops": 1,
+   "soleServiceBoard": 0,
+   "dependentPop": 0,
+   "dependentElderly": 0
+  },
+  {
+   "routeNo": "115",
+   "routeId": "30300047",
+   "overlapPct": 16.2,
+   "board0709": 977,
+   "tramReplaceable": 439,
+   "tramReplaceablePct": 44.9,
+   "stopsNearTram": 27,
+   "soleServiceStops": 0,
+   "soleServiceBoard": 0,
+   "dependentPop": 0,
+   "dependentElderly": 0
+  },
+  {
+   "routeNo": "102",
+   "routeId": "30300037",
+   "overlapPct": 15.9,
+   "board0709": 3258,
+   "tramReplaceable": 1261,
+   "tramReplaceablePct": 38.7,
+   "stopsNearTram": 35,
+   "soleServiceStops": 4,
+   "soleServiceBoard": 143,
+   "dependentPop": 0,
+   "dependentElderly": 0
+  },
+  {
+   "routeNo": "706",
+   "routeId": "30300090",
+   "overlapPct": 15.9,
+   "board0709": 1101,
+   "tramReplaceable": 517,
+   "tramReplaceablePct": 47.0,
+   "stopsNearTram": 34,
+   "soleServiceStops": 0,
+   "soleServiceBoard": 0,
+   "dependentPop": 0,
+   "dependentElderly": 0
+  }
+ ]
+}
