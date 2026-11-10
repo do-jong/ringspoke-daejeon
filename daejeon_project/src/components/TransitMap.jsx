@@ -1439,9 +1439,10 @@ function estimateSubwayElderlyRatio(orderedStations, offsets, uptoIndex, dep, ri
 // 배차간격만큼씩 순서대로 출발해서 막차 시각까지 계속 왕복(기점→종점→
 // 기점이 이미 한 선형 안에 다 들어있어서 그대로 한 바퀴 = totalMin).
 function getCirculatingBuses(lineCoords, shape, effectiveClock, firstBusMin, lastBusMin, headwayMin) {
-  if (effectiveClock < firstBusMin || effectiveClock > lastBusMin) return []
-
   const period = shape.totalMin
+  // 막차 시각 이후엔 새로 출발하지 않을 뿐, 이미 출발한 버스는 한 바퀴를 끝까지 돈다
+  // (예전엔 막차 시각이 되는 순간 길 위의 버스가 전부 사라졌음)
+  if (effectiveClock < firstBusMin || effectiveClock > lastBusMin + period) return []
   const numBuses = Math.max(1, Math.round(period / headwayMin))
   const spacing = period / numBuses
   const positions = []
@@ -1450,6 +1451,7 @@ function getCirculatingBuses(lineCoords, shape, effectiveClock, firstBusMin, las
     const entryTime = firstBusMin + k * spacing
     if (effectiveClock < entryTime) continue
     const cycleElapsed = (effectiveClock - entryTime) % period
+    if (effectiveClock - cycleElapsed > lastBusMin) continue // 막차 이후에 시작될 바퀴 = 운행 종료
     const position = getBusPosition(lineCoords, shape, cycleElapsed)
     // trainId(출발 순번)를 같이 넘겨서 운행 중인 버스 대수가 바뀔 때도
     // React key가 "몇 번째 버스"가 아니라 "어느 버스"로 고정되게 함.
@@ -1463,7 +1465,13 @@ function getCirculatingBuses(lineCoords, shape, effectiveClock, firstBusMin, las
 function getBusPositionsForRoute(routeLine, route, shape, day, clockMin) {
   if (!routeLine || !route || !shape) return []
 
-  const headwayMin = getBusHeadwayMin(route, day)
+  // 자정을 넘긴 새벽(첫차 전)은 전날 운행의 연장이므로 전날 요일 배차를 쓴다
+  // (0시에 요일이 바뀌면서 배차가 바뀌거나 '운행 없음'이 돼 버스가 사라지던 문제)
+  const firstBusRaw = parseBusClockMin(route.firstBus)
+  const serviceDay = clockMin < firstBusRaw
+    ? DAYS_OF_WEEK[(DAYS_OF_WEEK.indexOf(day) + 6) % 7] || day
+    : day
+  const headwayMin = getBusHeadwayMin(route, serviceDay)
   if (!headwayMin) return [] // 그 요일엔 운행 없음(예: 주말 운행 없는 광역노선)
 
   const firstBusMin = parseBusClockMin(route.firstBus)
@@ -1517,7 +1525,7 @@ function BusSimulation({ zoom = 15, routeLine, route, shape, day, clockMin, visi
 
 // 전체 노선(141개) 동시 운행 - 노선마다 배차간격이 다 달라서 몇 대가
 // 뜰진 미리 알 수 없음(배차 짧은 노선은 많이, 긴 노선은 적게).
-function AllBusSimulation({ zoom = 15, routeLines, routeList, lineShapeMap, day, clockMin, visible, routeStops, routeSegmentSpeed, routeStopRidership }) {
+function AllBusSimulation({ zoom = 15, routeLines, routeList, lineShapeMap, day, clockMin, visible, routeStops, routeSegmentSpeed, routeStopRidership, onlyRouteId = null }) {
   if (!visible || !routeLines || !lineShapeMap) return null
 
   const lineById = new Map(routeLines.features.map((f) => [f.properties.routeId, f]))
@@ -1526,6 +1534,7 @@ function AllBusSimulation({ zoom = 15, routeLines, routeList, lineShapeMap, day,
 
   const buses = []
   for (const routeId of Object.keys(lineShapeMap)) {
+    if (onlyRouteId && routeId !== onlyRouteId) continue // 노선을 고르면 그 노선 버스만
     const route = routeById.get(routeId)
     const shape = lineShapeMap[routeId]
     const infos = getBusPositionsForRoute(lineById.get(routeId), route, shape, day, clockMin)
@@ -3626,7 +3635,8 @@ export default function TransitMap() {
                 lineShapeMap={busLineShape}
                 day={subwayDay}
                 clockMin={subwayClockMin}
-                visible={layers.busTrainsAll}
+                visible={layers.busTrainsAll && !(layers.busTrains && busPanelOpen && selectedRouteId)}
+                onlyRouteId={busPanelOpen ? selectedRouteId : null}
                 routeStops={busRouteStops}
                 routeSegmentSpeed={routeSegmentSpeed}
                 routeStopRidership={routeStopRidershipMapped}
