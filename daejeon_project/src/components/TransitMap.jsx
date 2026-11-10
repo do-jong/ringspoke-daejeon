@@ -1,5 +1,5 @@
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   MapContainer,
   TileLayer,
@@ -70,6 +70,7 @@ const WELFARE_FACILITIES_URL = '/data/welfare/daejeon_welfare_facilities.geojson
 
 const WELFARE_CENTERS_URL = '/data/welfare/daejeon_welfare_centers.geojson'
 // 타슈(공영자전거) 대여소 위치와 2026년 10월 대여·반납 평균(평일/토/일, 1시간 단위) - build_tashu_ridership.cjs
+// 대전광역시 전통시장 현황(2022.6.30, 공공데이터포털) - 좌표는 OSM 주소/이름 매칭 추정(approx=true면 대략 위치)
 const TASHU_STATIONS_URL = '/data/tashu/tashu_stations.geojson'
 const TASHU_USAGE_URL = '/data/tashu/tashu_station_usage.json'
 
@@ -129,9 +130,18 @@ const LAYER_ITEMS = [
   { id: 'stopBetweenness', label: '정류장 중심성(매개)', color: '#dc2626', group: '분석·기타' },
 ]
 
+// 처음 열 때 전부 켜면 아이콘이 겹쳐 지도가 안 보여서, 기본으로는 핵심 레이어만 켠다
+// (나머지는 오른쪽 패널에서 켜면 됨)
+const DEFAULT_ON_LAYERS = new Set([
+  'subway', 'subwayTrains', 'tram', 'tramTrains', 'busTrainsAll',
+  'motorway', 'majorRoad', 'secondaryRoad', 'waterways',
+])
 const INITIAL_LAYER_STATE = Object.fromEntries(
-  LAYER_ITEMS.map((item) => [item.id, true])
+  LAYER_ITEMS.map((item) => [item.id, DEFAULT_ON_LAYERS.has(item.id)])
 )
+
+// 정류소·시설처럼 점이 수백~수천 개인 레이어는 이 확대 레벨부터만 그린다
+const POINT_MIN_ZOOM = 14
 
 // ==========================================
 // 객체 판별
@@ -416,7 +426,7 @@ function bindOfficialBusStopPopup(feature, layer) {
   )
 }
 
-// SGIS 집계구 성연령별인구 기반. N/A(소규모 비공개)는 0 처리라 일부 과소집계될 수 있음
+// SGIS 2024 집계구 성연령별인구 기반. N/A(1~4명 비공개)는 2.5명으로 추정, 총인구는 공식 총괄값
 function getPopulationStyle(feature) {
   const ratio = feature.properties?.elderlyRatio
 
@@ -443,7 +453,8 @@ function bindPopulationPopup(feature, layer) {
     `집계구 ${p.oaCode}<br/>` +
       `총인구: ${p.totalPop != null ? p.totalPop.toLocaleString() : '정보 없음'}명<br/>` +
       `65세 이상: ${p.elderlyPop != null ? p.elderlyPop.toLocaleString() : '정보 없음'}명<br/>` +
-      `고령인구 비율: ${p.elderlyRatio != null ? `${p.elderlyRatio}%` : '정보 없음'}`
+      `고령인구 비율: ${p.elderlyRatio != null ? `${p.elderlyRatio}%` : '정보 없음'}` +
+      (p.suppressedBins > 0 ? `<br/><span style="color:#888;font-size:11px">※ 1~4명 비공개 칸 ${p.suppressedBins}개는 2.5명으로 추정</span>` : '')
   )
 }
 
@@ -727,16 +738,23 @@ function bindTramStationPopup(feature, layer) {
   layer.bindPopup(`<strong>${p.name}</strong><br/>${p.lineType || ''}`)
 }
 
+// 노선 140여 개가 같은 도로에 겹쳐서, 평소엔 얇고 흐리게 그리고
+// 마우스를 올린 노선만 굵고 진하게 강조한다
 function getBusRouteLineStyle() {
   return {
     color: '#22d3ee',
-    weight: 2,
-    opacity: 0.5,
+    weight: 1.5,
+    opacity: 0.3,
   }
 }
 
 function bindBusRouteLinePopup(feature, layer) {
   layer.bindPopup(`노선ID: ${feature.properties?.routeId}`)
+  layer.on('mouseover', () => {
+    layer.setStyle({ weight: 5, opacity: 1, color: '#0891b2' })
+    layer.bringToFront()
+  })
+  layer.on('mouseout', () => layer.setStyle(getBusRouteLineStyle()))
 }
 
 // data.go.kr 대전광역시_버스전용차로 현황(15081423) 공식 구간표 기반(가로변만) -
@@ -906,7 +924,7 @@ function getSubwayTrainPosition(stationsSorted, elapsedMin, direction, lineShape
   return interpolateAlongStations(reversed, offsets, elapsedMin, lineShape.toPanam)
 }
 
-function SubwayTrainSimulation({ stations, lineShape, headway, timetable, dayType, day, clockMin, visible, subwayRidership, subwayRidershipByAge }) {
+function SubwayTrainSimulation({ zoom = 15, stations, lineShape, headway, timetable, dayType, day, clockMin, visible, subwayRidership, subwayRidershipByAge }) {
   const stationsSorted = useMemo(() => {
     if (!stations) return []
     return [...stations.features].sort(
@@ -952,17 +970,19 @@ function SubwayTrainSimulation({ stations, lineShape, headway, timetable, dayTyp
   return (
     <>
       {trains.map((t) => (
-        <Marker key={t.key} position={t.position} icon={getVehicleIcon('🚇', occupancyColor(t.occupancy, SUBWAY_CAPACITY))} interactive pane="railTrainPane">
+        <Marker key={t.key} position={t.position} icon={getVehicleIcon('🚇', occupancyColor(t.occupancy, SUBWAY_CAPACITY), zoom < 13)} interactive pane="railTrainPane">
           <Popup>
             지하철 1호선
             <br />
             다음 역: {t.nextStationName}
             <br />
-            속도: 약 {t.speedKmh}km/h (배차표 기반 추정)
+            속도: 약 {t.speedKmh}km/h (시각표 기반 추정)
             <br />
             탑승 인원: {t.occupancy != null ? `약 ${t.occupancy}명 (정원 ${SUBWAY_CAPACITY}명 기준 추정)` : '승하차 데이터 없음'}
             <br />
             노인 비율: {t.elderlyRatio != null ? `약 ${t.elderlyRatio}%` : '데이터 없음'}
+            <br />
+            <span style={{ color: '#888', fontSize: 11 }}>※ 역마다 탄 인원을 이후 역 하차 비중대로 나눠 추정</span>
           </Popup>
         </Marker>
       ))}
@@ -1092,7 +1112,7 @@ function TramTrainSimulation({ lineShape, clockMin, visible }) {
             <br />
             다음 역: {t.nextStationName}
             <br />
-            속도: 약 {t.speedKmh}km/h (배차표 기반 추정)
+            속도: 약 {t.speedKmh}km/h (시각표 기반 추정)
           </Popup>
         </Marker>
       ))}
@@ -1133,15 +1153,23 @@ function occupancyColor(count, capacity) {
 
 const vehicleIconCache = new Map()
 
-function getVehicleIcon(emoji, color) {
-  const key = `${emoji}|${color}`
+// 축소해서 볼 때(확대 레벨 14 미만)는 이모지 배지 대신 혼잡도 색 작은 점으로 그려 겹침을 줄인다
+function getVehicleIcon(emoji, color, compact = false) {
+  const key = `${emoji}|${color}|${compact}`
   if (!vehicleIconCache.has(key)) {
-    vehicleIconCache.set(key, L.divIcon({
-      className: 'traffic-car-container',
-      html: `<div class="traffic-car-badge" style="background:${color}"><span class="traffic-car">${emoji}</span></div>`,
-      iconSize: [22, 22],
-      iconAnchor: [11, 11],
-    }))
+    vehicleIconCache.set(key, compact
+      ? L.divIcon({
+          className: 'traffic-car-container',
+          html: `<div style="width:9px;height:9px;border-radius:50%;background:${color};border:1px solid #fff;box-shadow:0 0 1px #000"></div>`,
+          iconSize: [9, 9],
+          iconAnchor: [4.5, 4.5],
+        })
+      : L.divIcon({
+          className: 'traffic-car-container',
+          html: `<div class="traffic-car-badge" style="background:${color}"><span class="traffic-car">${emoji}</span></div>`,
+          iconSize: [22, 22],
+          iconAnchor: [11, 11],
+        }))
   }
   return vehicleIconCache.get(key)
 }
@@ -1391,7 +1419,7 @@ function getBusPositionsForRoute(routeLine, route, shape, day, clockMin) {
   )
 }
 
-function BusSimulation({ routeLine, route, shape, day, clockMin, visible, routeStops, routeSegmentSpeed, routeStopRidership }) {
+function BusSimulation({ zoom = 15, routeLine, route, shape, day, clockMin, visible, routeStops, routeSegmentSpeed, routeStopRidership }) {
   if (!visible) return null
 
   const infos = getBusPositionsForRoute(routeLine, route, shape, day, clockMin)
@@ -1405,15 +1433,17 @@ function BusSimulation({ routeLine, route, shape, day, clockMin, visible, routeS
         const { speedKmh, isReal } = resolveBusSpeed(route.routeId, info, routeSegmentSpeed, day, timeLabel)
         const occupancy = estimateBusOccupancy(route.routeId, shape.stopIds, shape.stopOffsetMin, info.stopSeqIndex, info.entryTime, routeStopRidership, day, headwayMin, getBusTurnIndex(shape, routeLine?.geometry?.coordinates))
         return (
-          <Marker key={`bus-${info.trainId}`} position={info.position} icon={getVehicleIcon('🚌', occupancyColor(occupancy, BUS_CAPACITY))} interactive pane="busTrainPane">
+          <Marker key={`bus-${info.trainId}`} position={info.position} icon={getVehicleIcon('🚌', occupancyColor(occupancy, BUS_CAPACITY), zoom < 14)} interactive pane="busTrainPane">
             <Popup>
-              {route.routeNo}번 버스
+              {routeDisplayName(route)} 버스
               <br />
               다음 정류장: {stopNameById.get(info.toStopId) || info.toStopId}
               <br />
               속도: 약 {speedKmh}km/h ({isReal ? '실측' : '배차표 기반 추정'})
               <br />
               탑승 인원: {occupancy != null ? `약 ${occupancy}명 (정원 ${BUS_CAPACITY}명 기준 추정)` : '승하차 데이터 없음'}
+              <br />
+              <span style={{ color: '#888', fontSize: 11 }}>※ 정류소마다 탄 인원을 이후 정류소 하차 비중대로 나눠 추정(회차점에서 왕복 분리)</span>
             </Popup>
           </Marker>
         )
@@ -1424,7 +1454,7 @@ function BusSimulation({ routeLine, route, shape, day, clockMin, visible, routeS
 
 // 전체 노선(141개) 동시 운행 - 노선마다 배차간격이 다 달라서 몇 대가
 // 뜰진 미리 알 수 없음(배차 짧은 노선은 많이, 긴 노선은 적게).
-function AllBusSimulation({ routeLines, routeList, lineShapeMap, day, clockMin, visible, routeStops, routeSegmentSpeed, routeStopRidership }) {
+function AllBusSimulation({ zoom = 15, routeLines, routeList, lineShapeMap, day, clockMin, visible, routeStops, routeSegmentSpeed, routeStopRidership }) {
   if (!visible || !routeLines || !lineShapeMap) return null
 
   const lineById = new Map(routeLines.features.map((f) => [f.properties.routeId, f]))
@@ -1445,6 +1475,7 @@ function AllBusSimulation({ routeLines, routeList, lineShapeMap, day, clockMin, 
         key: `${routeId}-${info.trainId}`,
         position: info.position,
         routeNo: route?.routeNo,
+        routeName: routeDisplayName(route),
         nextStopName: stopNameById.get(info.toStopId) || info.toStopId,
         speedKmh,
         isReal,
@@ -1456,15 +1487,17 @@ function AllBusSimulation({ routeLines, routeList, lineShapeMap, day, clockMin, 
   return (
     <>
       {buses.map((b) => (
-        <Marker key={b.key} position={b.position} icon={getVehicleIcon('🚌', occupancyColor(b.occupancy, BUS_CAPACITY))} interactive pane="busTrainPane">
+        <Marker key={b.key} position={b.position} icon={getVehicleIcon('🚌', occupancyColor(b.occupancy, BUS_CAPACITY), zoom < 14)} interactive pane="busTrainPane">
           <Popup>
-            {b.routeNo}번 버스
+            {b.routeName || `${b.routeNo}번`} 버스
             <br />
             다음 정류장: {b.nextStopName}
             <br />
             속도: 약 {b.speedKmh}km/h ({b.isReal ? '실측' : '배차표 기반 추정'})
             <br />
             탑승 인원: {b.occupancy != null ? `약 ${b.occupancy}명 (정원 ${BUS_CAPACITY}명 기준 추정)` : '승하차 데이터 없음'}
+            <br />
+            <span style={{ color: '#888', fontSize: 11 }}>※ 정류소마다 탄 인원을 이후 정류소 하차 비중대로 나눠 추정(회차점에서 왕복 분리)</span>
           </Popup>
         </Marker>
       ))}
@@ -1574,7 +1607,7 @@ function MapLegend({
         </div>
 
         <div className="legend-note">
-          건물은 확대 레벨 15부터 표시됩니다.
+          정류소·시설·타슈는 확대 레벨 14, 건물은 15부터 표시됩니다.
         </div>
       </div>
     </div>
@@ -1585,6 +1618,156 @@ function MapLegend({
 // 버스 노선 목록 / 상세 패널
 // ==========================================
 
+// ==========================================
+// 지하철·트램 노선 패널: 역을 순서대로 세로로 나열하고, 지금 시각에 운행 중인
+// 열차가 어느 역 사이를 지나는지(방향, 탑승 인원)를 보여준다.
+// ==========================================
+
+function computeSubwayLive({ stations, lineShape, timetable, headway, dayType, day, clockMin, ridership }) {
+  if (!stations?.features || !lineShape) return null
+  const sorted = [...stations.features].sort((a, b) => Number(a.properties.stationNo) - Number(b.properties.stationNo))
+  const names = sorted.map((f) => f.properties.name)
+  const n = names.length
+  const trains = []
+  for (const dir of SUBWAY_DIRECTIONS) {
+    const deps = timetable?.[dayType]?.[dir]?.length
+      ? timetable[dayType][dir]
+      : headway?.[dayType]?.[dir] ? synthesizeDepartures(headway[dayType][dir]) : []
+    const ordered = dir === '반석(칠성대)' ? sorted : [...sorted].reverse()
+    const offsets = dir === '반석(칠성대)'
+      ? ordered.map((s) => s.properties.offsetFromPanamMin)
+      : ordered.map((s) => s.properties.offsetFromBanseokMin)
+    for (const dep of deps) {
+      const elapsed = clockMin - dep
+      if (elapsed < 0 || elapsed > 40) continue
+      const info = getSubwayTrainPosition(sorted, elapsed, dir, lineShape)
+      if (!info) continue
+      const occ = estimateSubwayOccupancy(ordered, offsets, info.stationOrderIndex, dep, ridership, day, deps)
+      const k = info.stationOrderIndex
+      // 판암→반석 목록 기준 "몇 번째 역 다음 구간"인지로 바꿔서 저장
+      const seg = dir === '반석(칠성대)' ? k : n - 2 - k
+      trains.push({ key: `${dir}-${dep}`, seg, down: dir === '반석(칠성대)', label: dir === '반석(칠성대)' ? '반석행' : '판암행', occ })
+    }
+  }
+  return [{ name: '1호선 (판암 ↔ 반석)', stations: names, trains, capacity: SUBWAY_CAPACITY }]
+}
+
+function computeTramLive({ lineShape, clockMin }) {
+  if (!lineShape) return null
+  const effectiveClock = clockMin < TRAM_SERVICE_START_MIN ? clockMin + 1440 : clockMin
+  const running = effectiveClock <= TRAM_SERVICE_END_MIN
+  const headway = isTramMainlinePeak(effectiveClock) ? TRAM_MAINLINE_PEAK_HEADWAY : TRAM_MAINLINE_OFFPEAK_HEADWAY
+  const lines = []
+  const defs = [
+    ['mainline', '2호선 본선 (순환)', true, headway],
+    ['yeonchuk', '연축지선', false, TRAM_BRANCH_HEADWAY],
+    ['jinjam', '진잠지선', false, TRAM_BRANCH_HEADWAY],
+  ]
+  for (const [key, name, isLoop, hw] of defs) {
+    const branch = lineShape[key]
+    if (!branch) continue
+    const order = branch.stationOrder
+    const n = order.length
+    const trains = []
+    if (running) {
+      for (const reverse of isLoop ? [false, true] : [false]) {
+        for (const info of getCirculatingTrains(branch, effectiveClock, hw, isLoop, reverse)) {
+          // 지선은 한 열차가 왕복해서 다음 역 이름으로 방향을 판단
+          const nextIdx = order.indexOf(info.nextStationName)
+          let seg, down
+          if (isLoop) {
+            seg = reverse ? n - 2 - info.stationOrderIndex : info.stationOrderIndex
+            down = !reverse
+          } else {
+            down = nextIdx >= 0 && order[info.stationOrderIndex + 1] === info.nextStationName
+            seg = down ? info.stationOrderIndex : n - 2 - info.stationOrderIndex
+          }
+          trains.push({ key: `${key}-${reverse}-${info.trainId}`, seg, down, label: down ? '순방향' : '역방향', occ: null })
+        }
+      }
+    }
+    lines.push({ name: `${name} · 배차 ${Math.round(hw * 10) / 10}분`, stations: order, trains, capacity: null })
+  }
+  return lines
+}
+
+function RailLivePanel({ title, lines, onClose, clockMin, day, note }) {
+  const hh = String(Math.floor((((clockMin % 1440) + 1440) % 1440) / 60)).padStart(2, '0')
+  const mm = String(Math.floor(clockMin) % 60).padStart(2, '0')
+  return (
+    <div className="bus-panel">
+      <div className="bus-panel-header">
+        <div className="bus-panel-title">{title}</div>
+        <button type="button" className="bus-panel-close" onClick={onClose}>✕</button>
+      </div>
+      <div className="live-route-now" style={{ marginBottom: 6 }}>
+        {hh}:{mm} ({day}) · 운행 중 {(lines || []).reduce((a, l) => a + l.trains.length, 0)}대
+      </div>
+      <div className="live-stop-list">
+        {(lines || []).map((line) => {
+          const bySeg = new Map()
+          for (const t of line.trains) {
+            const arr = bySeg.get(t.seg) || []
+            arr.push(t)
+            bySeg.set(t.seg, arr)
+          }
+          return (
+            <div key={line.name} className="rail-line">
+              <div className="live-route-ends" style={{ margin: '6px 0' }}>{line.name}</div>
+              <ol className="live-stop-list" style={{ overflow: 'visible' }}>
+                {line.stations.map((name, i) => {
+                  const last = i === line.stations.length - 1
+                  return (
+                    <li className="live-stop" key={`${name}-${i}`}>
+                      <div className="live-rail">
+                        <span className="live-dot" />
+                        {!last && <span className="live-seg" style={{ background: '#38bdf8' }} />}
+                      </div>
+                      <div className="live-body">
+                        <div className="live-name">
+                          <span className="live-seq">{i + 1}</span>
+                          {name}
+                        </div>
+                        {(bySeg.get(i) || []).map((t) => {
+                          const color = t.occ != null && line.capacity ? occupancyColor(t.occ, line.capacity) : '#38bdf8'
+                          return (
+                            <div className="live-bus" key={t.key} style={{ borderColor: color }}>
+                              <span className="live-bus-icon" style={{ background: color }}>{t.down ? '↓' : '↑'}</span>
+                              {t.label}
+                              {t.occ != null && <b>{` 약 ${t.occ}명`}</b>}
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </li>
+                  )
+                })}
+              </ol>
+            </div>
+          )
+        })}
+      </div>
+      {note && <div className="live-legend"><span className="live-legend-note">{note}</span></div>}
+    </div>
+  )
+}
+
+// 노선 구분(routeType)에 따라 실제 부르는 이름으로 표시: 급행3번, 마을1번, 첨단2번 등
+// (대전 BIS 노선유형 코드: 1 급행, 5 마을, 6 첨단 - build_route_stop_ridership.cjs와 같은 기준)
+const ROUTE_TYPE_PREFIX = { 1: '급행', 5: '마을', 6: '첨단' }
+function routeDisplayName(route) {
+  if (!route) return ''
+  return `${ROUTE_TYPE_PREFIX[route.routeType] || ''}${route.routeNo}번`
+}
+
+// 구간 속도(km/h) → 노선도 색: 원활/서행/정체/정보 없음
+function segmentSpeedColor(v) {
+  if (v == null) return '#94a3b8'
+  if (v >= 25) return '#22c55e'
+  if (v >= 15) return '#facc15'
+  return '#ef4444'
+}
+
 function BusRoutePanel({
   open,
   onToggle,
@@ -1592,22 +1775,30 @@ function BusRoutePanel({
   routeStops,
   selectedRouteId,
   onSelectRoute,
+  routeLine,
+  shape,
+  day,
+  clockMin,
+  routeSegmentSpeed,
+  routeStopRidership,
 }) {
-  if (!open) {
-    return (
-      <button
-        type="button"
-        className="bus-panel-toggle"
-        onClick={onToggle}
-      >
-        🚌 버스 노선
-      </button>
-    )
-  }
+  if (!open) return null
 
   const selectedRoute = routeList.find(
     (route) => route.routeId === selectedRouteId
   )
+
+  // 이름이 같은 노선(B2번 2개, M1번 2개, 302번 2개)은 출발 정류소를 붙여 구분하고,
+  // 출발 정류소까지 같으면 노선ID 끝 4자리를 붙인다.
+  const baseCount = {}
+  for (const r of routeList) baseCount[routeDisplayName(r)] = (baseCount[routeDisplayName(r)] || 0) + 1
+  const firstStop = (r) => routeStops?.[r.routeId]?.[0]?.name || ''
+  const panelName = (r) => {
+    const base = routeDisplayName(r)
+    if ((baseCount[base] || 0) < 2) return base
+    const same = routeList.filter((x) => routeDisplayName(x) === base && firstStop(x) === firstStop(r)).length > 1
+    return same ? `${base}(${String(r.routeId).slice(-4)})` : `${base}(${firstStop(r)} 출발)`
+  }
 
   const selectedStops = selectedRouteId
     ? routeStops[selectedRouteId] || []
@@ -1617,7 +1808,7 @@ function BusRoutePanel({
     <div className="bus-panel">
       <div className="bus-panel-header">
         <div className="bus-panel-title">
-          {selectedRoute ? `${selectedRoute.routeNo}번` : '버스 노선 목록'}
+          {selectedRoute ? panelName(selectedRoute) : '버스 노선 목록'}
         </div>
 
         <button
@@ -1669,14 +1860,16 @@ function BusRoutePanel({
             </div>
           </div>
 
-          <ol className="bus-stop-list">
-            {selectedStops.map((stop, index) => (
-              <li className="bus-stop-row" key={`${stop.stopId}-${index}`}>
-                <span className="bus-stop-seq">{index + 1}</span>
-                <span>{stop.name || '(이름 없음)'}</span>
-              </li>
-            ))}
-          </ol>
+          <BusLiveStopList
+            route={selectedRoute}
+            stops={selectedStops}
+            routeLine={routeLine}
+            shape={shape}
+            day={day}
+            clockMin={clockMin}
+            routeSegmentSpeed={routeSegmentSpeed}
+            routeStopRidership={routeStopRidership}
+          />
         </>
       ) : (
         <div className="bus-route-list">
@@ -1686,7 +1879,7 @@ function BusRoutePanel({
               key={route.routeId}
               onClick={() => onSelectRoute(route.routeId)}
             >
-              <span className="bus-route-no">{route.routeNo}번</span>
+              <span className="bus-route-no">{panelName(route)}</span>
               <span className="bus-route-meta">
                 정류소 {route.busStopCount}개
               </span>
@@ -1701,6 +1894,87 @@ function BusRoutePanel({
 // ==========================================
 // 선택한 버스 노선으로 지도 이동
 // ==========================================
+
+// 선택한 노선의 정류소를 순서대로 세로로 나열하고, 지금 시각에 운행 중인 버스가
+// 어느 정류소 사이를 지나는지(몇 명 타고 있는지)와 구간별 실측 속도를 같이 보여준다.
+function BusLiveStopList({ route, stops, routeLine, shape, day, clockMin, routeSegmentSpeed, routeStopRidership }) {
+  if (!route || !stops?.length) return null
+  const routeId = route.routeId
+  const headwayMin = getBusHeadwayMin(route, day)
+  const infos = shape && routeLine ? getBusPositionsForRoute(routeLine, route, shape, day, clockMin) : []
+  const turnIdx = shape && routeLine ? getBusTurnIndex(shape, routeLine.geometry?.coordinates) : -1
+  const dayType = dayToSpeedDayType(day)
+  const timeLabel = timeSlotLabel(clockMin)
+  const busesBySeg = new Map()
+  for (const info of infos) {
+    const occ = shape
+      ? estimateBusOccupancy(routeId, shape.stopIds, shape.stopOffsetMin, info.stopSeqIndex, info.entryTime, routeStopRidership, day, headwayMin, turnIdx)
+      : null
+    const list = busesBySeg.get(info.stopSeqIndex) || []
+    list.push({ key: info.trainId, occ })
+    busesBySeg.set(info.stopSeqIndex, list)
+  }
+  const ids = shape?.stopIds || stops.map((s) => s.stopId)
+  const speedAt = (i) =>
+    i < ids.length - 1
+      ? routeSegmentSpeed?.routes?.[routeId]?.segments?.[`${ids[i]}>${ids[i + 1]}`]?.[dayType]?.[timeLabel] ?? null
+      : null
+  const endName = turnIdx > 0 && stops[turnIdx] ? stops[turnIdx].name : stops[stops.length - 1]?.name
+  const hh = String(Math.floor(((clockMin % 1440) + 1440) % 1440 / 60)).padStart(2, '0')
+  const mm = String(Math.floor(clockMin) % 60).padStart(2, '0')
+
+  return (
+    <div className="live-route">
+      <div className="live-route-head">
+        <div className="live-route-ends">{stops[0]?.name} ↔ {endName}</div>
+        <div className="live-route-now">
+          {hh}:{mm} ({day}) · 운행 중 {infos.length}대{headwayMin ? ` · 배차 ${headwayMin}분` : ''}
+        </div>
+      </div>
+      <ol className="live-stop-list">
+        {stops.map((stop, i) => {
+          const buses = busesBySeg.get(i) || []
+          const color = segmentSpeedColor(speedAt(i))
+          const last = i === stops.length - 1
+          return (
+            <li className="live-stop" key={`${stop.stopId}-${i}`}>
+              <div className="live-rail">
+                <span className={`live-dot${i === turnIdx ? ' turn' : ''}`} />
+                {!last && <span className="live-seg" style={{ background: color }} />}
+              </div>
+              <div className="live-body">
+                <div className="live-name">
+                  <span className="live-seq">{i + 1}</span>
+                  {stop.name || `정류소 ${stop.stopId}`}
+                  {i === turnIdx && <span className="live-tag">회차</span>}
+                </div>
+                <div className="live-id">{stop.stopId}</div>
+                {buses.map((b) => (
+                  <div
+                    className="live-bus"
+                    key={b.key}
+                    style={{ borderColor: occupancyColor(b.occ, BUS_CAPACITY) }}
+                  >
+                    <span className="live-bus-icon" style={{ background: occupancyColor(b.occ, BUS_CAPACITY) }}>🚌</span>
+                    {stops[i + 1] ? `${stops[i + 1].name} 가는 중` : '종점 도착'}
+                    <b>{b.occ != null ? ` 약 ${b.occ}명` : ' 인원 정보 없음'}</b>
+                  </div>
+                ))}
+              </div>
+            </li>
+          )
+        })}
+      </ol>
+      <div className="live-legend">
+        <span><i style={{ background: '#22c55e' }} />원활</span>
+        <span><i style={{ background: '#facc15' }} />서행</span>
+        <span><i style={{ background: '#ef4444' }} />정체</span>
+        <span><i style={{ background: '#94a3b8' }} />정보 없음</span>
+        <span className="live-legend-note">구간 색 = 대전교통포털 실측 평균 속도</span>
+      </div>
+    </div>
+  )
+}
 
 function FitBoundsOnRouteSelect({ routeId, routeLines }) {
   const map = useMap()
@@ -1832,6 +2106,17 @@ export default function TransitMap() {
   const [subwayRidership, setSubwayRidership] = useState(null)
   const [subwayRidershipByAge, setSubwayRidershipByAge] = useState(null)
   const [busPanelOpen, setBusPanelOpen] = useState(false)
+  // 왼쪽 아래 패널: 'subway' | 'tram' | null (버스는 busPanelOpen) - 한 번에 하나만 연다
+  const [railPanel, setRailPanel] = useState(null)
+  const openPanel = (which) => {
+    if (which === 'bus') {
+      setRailPanel(null)
+      setBusPanelOpen((v) => !v)
+    } else {
+      setBusPanelOpen(false)
+      setRailPanel((cur) => (cur === which ? null : which))
+    }
+  }
   const [selectedRouteId, setSelectedRouteId] = useState(null)
 
   const [loading, setLoading] = useState(true)
@@ -1924,6 +2209,30 @@ export default function TransitMap() {
   useOptionalGeoJSON(BUS_ROUTE_LINES_URL, '버스 노선', setBusRouteLines)
   useOptionalGeoJSON(BUS_ROUTE_LIST_URL, '버스 노선 목록', setBusRouteListRaw)
   useOptionalGeoJSON(BUS_ROUTE_STOPS_URL, '버스 노선별 정류소', setBusRouteStops)
+
+  // 승하차 원본(대전교통포털)과 노선 정류소 목록(BIS)의 정류소ID가 220곳에서 서로 달라
+  // 그 정류소는 승하차가 0으로 빠졌다. 같은 노선 안에서 이름이 같은 정류소로 연결해 채운다.
+  const routeStopRidershipMapped = useMemo(() => {
+    if (!routeStopRidership?.routes || !busRouteStops) return routeStopRidership
+    const norm = (t) => String(t || '').replace(/\s+/g, '')
+    const routes = {}
+    for (const [rid, r] of Object.entries(routeStopRidership.routes)) {
+      const seq = busRouteStops[rid] || []
+      const seqIds = new Set(seq.map((s) => s.stopId))
+      const stops = { ...r.stops }
+      const orphanByName = new Map()
+      for (const [sid, st] of Object.entries(r.stops)) {
+        if (!seqIds.has(sid)) orphanByName.set(norm(st.name), st)
+      }
+      for (const s of seq) {
+        if (stops[s.stopId]) continue
+        const hit = orphanByName.get(norm(s.name))
+        if (hit) stops[s.stopId] = hit
+      }
+      routes[rid] = { ...r, stops }
+    }
+    return { ...routeStopRidership, routes }
+  }, [routeStopRidership, busRouteStops])
   useOptionalGeoJSON(ROUTE_SEGMENT_SPEED_URL, '노선 구간 실측 속도', setRouteSegmentSpeed)
   useOptionalGeoJSON(ROUTE_STOP_RIDERSHIP_URL, '정류장별 승하차 인원', setRouteStopRidership)
   useOptionalGeoJSON(SUBWAY_STATION_RIDERSHIP_URL, '지하철역 승하차 인원', setSubwayRidership)
@@ -1966,6 +2275,22 @@ export default function TransitMap() {
 
     return () => clearInterval(timer)
   }, [layers.subwayTrains, layers.tramTrains, layers.busTrains, layers.busTrainsAll, subwayRunning, subwaySpeed])
+
+  // 재생 중 자정(24:00)을 넘으면 요일도 다음 날로 넘긴다(월 → 화 → … → 일 → 월).
+  // 시간을 직접 입력해서 시각이 앞으로 돌아간 경우는 요일을 바꾸지 않는다.
+  const prevClockRef = useRef(subwayClockMin)
+  const manualSeekRef = useRef(false)
+  useEffect(() => {
+    const prev = prevClockRef.current
+    prevClockRef.current = subwayClockMin
+    if (manualSeekRef.current) {
+      manualSeekRef.current = false
+      return
+    }
+    if (subwayRunning && subwayClockMin < prev) {
+      setSubwayDay((d) => DAYS_OF_WEEK[(DAYS_OF_WEEK.indexOf(d) + 1) % DAYS_OF_WEEK.length])
+    }
+  }, [subwayClockMin, subwayRunning])
 
   // 스페이스바로 재생/정지 토글 - 입력창에 타이핑 중일 땐 막음(스크롤도 막아야
   // 페이지가 같이 안 움직임)
@@ -2114,6 +2439,39 @@ export default function TransitMap() {
           z-index: 1300;
         }
 
+        .left-dock {
+          position: absolute;
+          z-index: 1200;
+          top: 66px;
+          left: 60px;
+          bottom: 78px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          pointer-events: none;
+        }
+        .left-dock .map-status { position: static; }
+        .left-dock .bus-panel {
+          position: static;
+          pointer-events: auto;
+          flex: 1 1 auto;
+          min-height: 0;
+          max-height: none;
+          width: 300px;
+        }
+        .panel-toggles {
+          position: absolute;
+          z-index: 1200;
+          left: 14px;
+          bottom: 25px;
+          display: flex;
+          gap: 8px;
+        }
+        .panel-toggles .bus-panel-toggle { position: static; }
+        .bus-panel-toggle.active { border-color: var(--accent); }
+        .rail-line { margin-bottom: 8px; }
+
         .bus-panel-toggle {
           position: absolute;
           z-index: 1200;
@@ -2146,6 +2504,27 @@ export default function TransitMap() {
           font-size: 12px;
           overflow: hidden;
         }
+
+        .live-route { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+        .live-route-head { padding: 6px 2px 8px; border-bottom: 1px solid var(--panel-border); margin-bottom: 6px; }
+        .live-route-ends { font-size: 12px; color: var(--text-primary); font-weight: 600; }
+        .live-route-now { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+        .live-stop-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; min-height: 0; flex: 1; }
+        .live-stop { display: flex; gap: 8px; }
+        .live-rail { position: relative; width: 14px; flex-shrink: 0; }
+        .live-dot { position: absolute; top: 6px; left: 3px; width: 8px; height: 8px; border-radius: 50%; background: #0f172a; border: 2px solid #e2e8f0; z-index: 1; }
+        .live-dot.turn { background: #f97316; border-color: #fff; }
+        .live-seg { position: absolute; top: 12px; bottom: -6px; left: 5px; width: 4px; border-radius: 2px; }
+        .live-body { padding: 2px 0 10px; min-width: 0; flex: 1; }
+        .live-name { font-size: 12px; color: var(--text-primary); display: flex; align-items: center; gap: 6px; }
+        .live-seq { font-size: 10px; color: var(--text-secondary); min-width: 18px; }
+        .live-tag { font-size: 10px; background: #f97316; color: #fff; border-radius: 6px; padding: 0 5px; }
+        .live-id { font-size: 10px; color: var(--text-secondary); margin-left: 24px; }
+        .live-bus { margin: 5px 0 0 20px; font-size: 11px; color: var(--text-primary); border: 1px solid; border-radius: 10px; padding: 2px 8px 2px 2px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); }
+        .live-bus-icon { width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; }
+        .live-legend { display: flex; flex-wrap: wrap; gap: 8px; font-size: 10px; color: var(--text-secondary); padding-top: 6px; border-top: 1px solid var(--panel-border); margin-top: 4px; }
+        .live-legend i { display: inline-block; width: 10px; height: 4px; border-radius: 2px; margin-right: 3px; vertical-align: middle; }
+        .live-legend-note { width: 100%; }
 
         .bus-panel-header {
           display: flex;
@@ -2606,7 +2985,7 @@ export default function TransitMap() {
             <path d="M4 17h16M6 17V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8M8 21v-2M16 21v-2" stroke="#0b0f14" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </div>
-        대전 교통 지도
+        대전 교통 시뮬레이션
       </div>
 
       {loading && (
@@ -2629,6 +3008,7 @@ export default function TransitMap() {
 
       {mapData && (
         <>
+          <div className="left-dock">
           <div className="map-status">
             <strong>대전 교통 현황</strong>
             <br />
@@ -2657,7 +3037,10 @@ export default function TransitMap() {
                       // 리셋되지 않고 그 자리부터 이어서 재생되게 함
                       setSubwayStartTime(e.target.value)
                       const [h, m] = e.target.value.split(':').map(Number)
-                      if (Number.isFinite(h) && Number.isFinite(m)) setSubwayClockMin(h * 60 + m)
+                      if (Number.isFinite(h) && Number.isFinite(m)) {
+                        manualSeekRef.current = true
+                        setSubwayClockMin(h * 60 + m)
+                      }
                     }}
                   />
                   <button className="subway-sim-toggle" onClick={() => setSubwayRunning((r) => !r)}>
@@ -2679,6 +3062,57 @@ export default function TransitMap() {
                 {String(Math.floor(subwayClockMin) % 60).padStart(2, '0')} ({subwayDay})
               </>
             )}
+          </div>
+
+          {railPanel === 'subway' && (
+            <RailLivePanel
+              title="지하철 1호선"
+              day={subwayDay}
+              clockMin={subwayClockMin}
+              onClose={() => setRailPanel(null)}
+              note="↓ 반석행, ↑ 판암행 · 공식 시각표 기준 · 탑승 인원은 2026년 1~10월 승하차 평균으로 추정"
+              lines={computeSubwayLive({
+                stations: subwayStationsOfficial,
+                lineShape: subwayLineShape,
+                timetable: subwayTimetableOfficial,
+                headway: subwayRouteOfficial?.features?.[0]?.properties?.headway,
+                dayType: dayToHeadwayType(subwayDay),
+                day: subwayDay,
+                clockMin: subwayClockMin,
+                ridership: subwayRidership,
+              })}
+            />
+          )}
+          {railPanel === 'tram' && (
+            <RailLivePanel
+              title="트램 2호선 (개통 예정)"
+              day={subwayDay}
+              clockMin={subwayClockMin}
+              onClose={() => setRailPanel(null)}
+              note="개통 전이라 실측 자료 없음 · 첨두(07~09, 18~20시) 8분, 그 외 10.67분 배차로 가정"
+              lines={computeTramLive({ lineShape: tramLineShape, clockMin: subwayClockMin })}
+            />
+          )}
+          <BusRoutePanel
+            open={busPanelOpen}
+            onToggle={() => setBusPanelOpen(false)}
+            routeList={busRouteList}
+            routeStops={busRouteStops}
+            selectedRouteId={selectedRouteId}
+            onSelectRoute={setSelectedRouteId}
+            routeLine={getSelectedRouteLine(busRouteLines, selectedRouteId)}
+            shape={busLineShape?.[selectedRouteId]}
+            day={subwayDay}
+            clockMin={subwayClockMin}
+            routeSegmentSpeed={routeSegmentSpeed}
+            routeStopRidership={routeStopRidershipMapped}
+          />
+          </div>
+
+          <div className="panel-toggles">
+            <button type="button" className={`bus-panel-toggle${railPanel === 'subway' ? ' active' : ''}`} onClick={() => openPanel('subway')}>🚇 지하철</button>
+            <button type="button" className={`bus-panel-toggle${railPanel === 'tram' ? ' active' : ''}`} onClick={() => openPanel('tram')}>🚊 트램</button>
+            <button type="button" className={`bus-panel-toggle${busPanelOpen ? ' active' : ''}`} onClick={() => openPanel('bus')}>🚌 버스 노선</button>
           </div>
 
           <MapContainer
@@ -2931,7 +3365,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="hospitalsPane" style={{ zIndex: 453 }}>
-              {layers.hospitals && hospitals && (
+              {layers.hospitals && zoom >= POINT_MIN_ZOOM && hospitals && (
                 <GeoJSON
                   key="hospitals-layer"
                   data={hospitals}
@@ -2942,7 +3376,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="pharmaciesPane" style={{ zIndex: 454 }}>
-              {layers.pharmacies && pharmacies && (
+              {layers.pharmacies && zoom >= POINT_MIN_ZOOM && pharmacies && (
                 <GeoJSON
                   key="pharmacies-layer"
                   data={pharmacies}
@@ -2953,7 +3387,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="welfareFacilitiesPane" style={{ zIndex: 456 }}>
-              {layers.welfareFacilities && welfareFacilities && (
+              {layers.welfareFacilities && zoom >= POINT_MIN_ZOOM && welfareFacilities && (
                 <GeoJSON
                   key="welfare-facilities-layer"
                   data={welfareFacilities}
@@ -2964,7 +3398,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="welfareCentersPane" style={{ zIndex: 457 }}>
-              {layers.welfareCenters && welfareCenters && (
+              {layers.welfareCenters && zoom >= POINT_MIN_ZOOM && welfareCenters && (
                 <GeoJSON
                   key="welfare-centers-layer"
                   data={welfareCenters}
@@ -2975,7 +3409,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="tashuPane" style={{ zIndex: 457 }}>
-              {layers.tashu && tashuStations && (
+              {layers.tashu && zoom >= POINT_MIN_ZOOM && tashuStations && (
                 <GeoJSON
                   key={`tashu-layer-${tashuUsage ? 'u' : 'n'}`}
                   data={tashuStations}
@@ -2986,7 +3420,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="schoolsPane" style={{ zIndex: 458 }}>
-              {layers.schools && schools && (
+              {layers.schools && zoom >= POINT_MIN_ZOOM && schools && (
                 <GeoJSON
                   key="schools-layer"
                   data={schools}
@@ -2997,7 +3431,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="marketsPane" style={{ zIndex: 459 }}>
-              {layers.markets && markets && (
+              {layers.markets && zoom >= POINT_MIN_ZOOM && markets && (
                 <GeoJSON
                   key="markets-layer"
                   data={markets}
@@ -3008,7 +3442,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="governmentOfficesPane" style={{ zIndex: 460 }}>
-              {layers.governmentOffices && governmentOffices && (
+              {layers.governmentOffices && zoom >= POINT_MIN_ZOOM && governmentOffices && (
                 <GeoJSON
                   key="government-offices-layer"
                   data={governmentOffices}
@@ -3025,7 +3459,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="officialBusStopPane" style={{ zIndex: 461 }}>
-              {layers.officialBusStops && officialBusStops && (
+              {layers.officialBusStops && zoom >= POINT_MIN_ZOOM && officialBusStops && (
                 <GeoJSON
                   key="official-bus-stop-layer"
                   data={officialBusStops}
@@ -3036,7 +3470,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="stopCentralityPane" style={{ zIndex: 462 }}>
-              {layers.stopCentrality && stopCentrality && (
+              {layers.stopCentrality && zoom >= POINT_MIN_ZOOM && stopCentrality && (
                 <GeoJSON
                   key="stop-centrality-layer"
                   data={stopCentrality}
@@ -3047,7 +3481,7 @@ export default function TransitMap() {
             </Pane>
 
             <Pane name="stopBetweennessPane" style={{ zIndex: 463 }}>
-              {layers.stopBetweenness && stopCentrality && (
+              {layers.stopBetweenness && zoom >= POINT_MIN_ZOOM && stopCentrality && (
                 <GeoJSON
                   key="stop-betweenness-layer"
                   data={stopCentrality}
@@ -3086,6 +3520,7 @@ export default function TransitMap() {
                 있었음 - 지하철/트램을 더 높은 zIndex의 별도 pane으로 분리 */}
             <Pane name="railTrainPane" style={{ zIndex: 702 }}>
               <SubwayTrainSimulation
+                zoom={zoom}
                 stations={subwayStationsOfficial}
                 lineShape={subwayLineShape}
                 headway={subwayRouteOfficial?.features?.[0]?.properties?.headway}
@@ -3106,6 +3541,7 @@ export default function TransitMap() {
 
             <Pane name="busTrainPane" style={{ zIndex: 701 }}>
               <BusSimulation
+                zoom={zoom}
                 routeLine={getSelectedRouteLine(busRouteLines, selectedRouteId)}
                 route={busRouteList.find((r) => r.routeId === selectedRouteId)}
                 shape={busLineShape?.[selectedRouteId]}
@@ -3114,9 +3550,10 @@ export default function TransitMap() {
                 visible={layers.busTrains}
                 routeStops={busRouteStops[selectedRouteId]}
                 routeSegmentSpeed={routeSegmentSpeed}
-                routeStopRidership={routeStopRidership}
+                routeStopRidership={routeStopRidershipMapped}
               />
               <AllBusSimulation
+                zoom={zoom}
                 routeLines={busRouteLines}
                 routeList={busRouteList}
                 lineShapeMap={busLineShape}
@@ -3125,7 +3562,7 @@ export default function TransitMap() {
                 visible={layers.busTrainsAll}
                 routeStops={busRouteStops}
                 routeSegmentSpeed={routeSegmentSpeed}
-                routeStopRidership={routeStopRidership}
+                routeStopRidership={routeStopRidershipMapped}
               />
             </Pane>
 
@@ -3139,14 +3576,7 @@ export default function TransitMap() {
             zoom={zoom}
           />
 
-          <BusRoutePanel
-            open={busPanelOpen}
-            onToggle={() => setBusPanelOpen((value) => !value)}
-            routeList={busRouteList}
-            routeStops={busRouteStops}
-            selectedRouteId={selectedRouteId}
-            onSelectRoute={setSelectedRouteId}
-          />
+
         </>
       )}
     </div>
