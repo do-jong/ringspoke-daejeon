@@ -416,14 +416,59 @@ function createOfficialBusStopMarker(feature, latlng) {
   })
 }
 
-function bindOfficialBusStopPopup(feature, layer) {
-  const p = feature.properties || {}
+// 앱이 실제로 돌리는 노선 목록(141개, 대전 BIS 현재 노선) 기준 색인.
+// bus_stops.geojson의 routeCount에는 현재 BIS에 없는 노선 32개(폐지/계룡·세종)가
+// 섞여 있고, 정류소ID가 대전과 세종·계룡에서 겹치는 경우(43개)도 있어서
+// "같은 정류소ID + 100m 안"인 노선만 센다.
+function buildRouteIndex(routeList, routeStops) {
+  const ids = new Set(routeList.map((r) => r.routeId))
+  const baseCount = {}
+  for (const r of routeList) baseCount[routeDisplayName(r)] = (baseCount[routeDisplayName(r)] || 0) + 1
+  const firstStop = (r) => routeStops?.[r.routeId]?.[0]?.name || ''
+  const nameById = new Map()
+  for (const r of routeList) {
+    const base = routeDisplayName(r)
+    let name = base
+    if ((baseCount[base] || 0) > 1) {
+      const same = routeList.filter((x) => routeDisplayName(x) === base && firstStop(x) === firstStop(r)).length > 1
+      name = same ? `${base}(${String(r.routeId).slice(-4)})` : `${base}(${firstStop(r)} 출발)`
+    }
+    nameById.set(r.routeId, name)
+  }
+  const stopRoutes = new Map()
+  for (const routeId of ids) {
+    for (const s of routeStops?.[routeId] || []) {
+      if (!stopRoutes.has(s.stopId)) stopRoutes.set(s.stopId, [])
+      stopRoutes.get(s.stopId).push({ routeId, lat: s.lat, lng: s.lng })
+    }
+  }
+  const routeById = new Map(routeList.map((r) => [r.routeId, r]))
+  return { ids, nameById, stopRoutes, routeById, routeStops }
+}
 
-  layer.bindPopup(
-    `<strong>${p.name || '정류소명 미상'}</strong><br/>` +
-      `경유 노선 수: ${p.routeCount ?? 0}개<br/>` +
-      `정류소ID: ${p.stopId}`
-  )
+function routesAtStop(idx, feature) {
+  const [lng, lat] = feature.geometry?.coordinates || []
+  const found = new Set()
+  for (const c of idx?.stopRoutes.get(feature.properties?.stopId) || []) {
+    const d = Math.hypot((c.lng - lng) * 89900, (c.lat - lat) * 111000)
+    if (d <= 100) found.add(c.routeId)
+  }
+  return [...found]
+}
+
+function makeBindOfficialBusStopPopup(idx) {
+  return (feature, layer) => {
+    const p = feature.properties || {}
+    const names = routesAtStop(idx, feature)
+      .map((id) => idx.nameById.get(id))
+      .sort((a, b) => a.localeCompare(b, 'ko', { numeric: true }))
+    layer.bindPopup(
+      `<strong>${p.name || '정류소명 미상'}</strong><br/>` +
+        `경유 노선 수: ${names.length}개<br/>` +
+        (names.length ? `<span style="font-size:11px">${names.join(', ')}</span><br/>` : '') +
+        `정류소ID: ${p.stopId}`
+    )
+  }
 }
 
 // SGIS 2024 집계구 성연령별인구 기반. N/A(1~4명 비공개)는 2.5명으로 추정, 총인구는 공식 총괄값
@@ -748,8 +793,26 @@ function getBusRouteLineStyle() {
   }
 }
 
-function bindBusRouteLinePopup(feature, layer) {
-  layer.bindPopup(`노선ID: ${feature.properties?.routeId}`)
+function makeBindBusRouteLinePopup(idx) {
+  return (feature, layer) => bindBusRouteLinePopup(feature, layer, idx)
+}
+
+function bindBusRouteLinePopup(feature, layer, idx) {
+  const id = feature.properties?.routeId
+  const r = idx?.routeById.get(id)
+  const st = idx?.routeStops?.[id] || []
+  // 회차점 = 첫 정류소에서 가장 먼 정류소
+  let far = st[0]
+  for (const x of st) {
+    if (Math.hypot((x.lng - st[0].lng) * 0.8, x.lat - st[0].lat) > Math.hypot((far.lng - st[0].lng) * 0.8, far.lat - st[0].lat)) far = x
+  }
+  const ends = st.length ? `${st[0].name} ↔ ${far.name}` : ''
+  const hhmm = (v) => (v ? String(v).padStart(4, '0').replace(/(\d\d)(\d\d)/, '$1:$2') : '?')
+  layer.bindPopup(
+    r
+      ? `<strong>${idx.nameById.get(id)}</strong><br/>${ends}<br/>배차 평일 ${r.intervalMin ?? '?'}분 · ${hhmm(r.firstBus)}~${hhmm(r.lastBus)}`
+      : `노선ID: ${id}`
+  )
   layer.on('mouseover', () => {
     layer.setStyle({ weight: 5, opacity: 1, color: '#0891b2' })
     layer.bringToFront()
@@ -1112,7 +1175,7 @@ function TramTrainSimulation({ lineShape, clockMin, visible }) {
             <br />
             다음 역: {t.nextStationName}
             <br />
-            속도: 약 {t.speedKmh}km/h (시각표 기반 추정)
+            속도: 약 {t.speedKmh}km/h (계획 배차 기반 추정)
           </Popup>
         </Marker>
       ))}
@@ -1136,10 +1199,8 @@ function TramTrainSimulation({ lineShape, clockMin, visible }) {
 // 승차정원 47명(좌석 24 + 입석 22 + 운전석 1)을 '만차' 기준으로 쓴다.
 const BUS_CAPACITY = 47
 
-// 대전 1호선은 한국형 표준전동차 4량 편성(1000호대) - 동급 표준전동차
-// 1량당 정원이 보통 160명대로 알려져 있어 4량 기준 약 640명을 '만차'로 삼음
-// (대전교통공사 공식 제원표로 확인한 값은 아니라 근사치).
-const SUBWAY_CAPACITY = 640
+// 대전 1호선 4량 1편성 승객 정원 474명(대전교통공사 차량 제원)을 '만차'(100%) 기준으로 쓴다.
+const SUBWAY_CAPACITY = 474
 
 function occupancyColor(count, capacity) {
   if (count == null) return '#9aa3ad' // 승하차 데이터 없는 노선/구간(회색)
@@ -1406,7 +1467,9 @@ function getBusPositionsForRoute(routeLine, route, shape, day, clockMin) {
   if (!headwayMin) return [] // 그 요일엔 운행 없음(예: 주말 운행 없는 광역노선)
 
   const firstBusMin = parseBusClockMin(route.firstBus)
-  const lastBusMin = parseBusClockMin(route.lastBus)
+  // 막차가 자정을 넘는 노선(1000번 00:00, B2 00:23, B4 00:01 등)은 다음 날 시각으로 본다
+  let lastBusMin = parseBusClockMin(route.lastBus)
+  if (lastBusMin <= firstBusMin) lastBusMin += 1440
   const effectiveClock = clockMin < firstBusMin ? clockMin + 1440 : clockMin
 
   return getCirculatingBuses(
@@ -2315,6 +2378,8 @@ export default function TransitMap() {
   }, [layers.subwayTrains, layers.tramTrains, layers.busTrains, layers.busTrainsAll])
 
   const busRouteList = busRouteListRaw?.routes || []
+  const routeIndex = useMemo(() => buildRouteIndex(busRouteList, busRouteStops), [busRouteListRaw, busRouteStops])
+  const routeIndexKey = `${routeIndex.ids.size}-${Object.keys(busRouteStops || {}).length}`
 
   // ========================================
   // 메인 화면
@@ -3269,10 +3334,11 @@ export default function TransitMap() {
             <Pane name="busRouteLinePane" style={{ zIndex: 416 }}>
               {layers.busRouteLines && busRouteLines && (
                 <GeoJSON
-                  key="bus-route-line-layer"
+                  key={`bus-route-line-layer-${routeIndexKey}`}
                   data={busRouteLines}
+                  filter={(f) => routeIndex.ids.has(f.properties?.routeId)}
                   style={getBusRouteLineStyle}
-                  onEachFeature={bindBusRouteLinePopup}
+                  onEachFeature={makeBindBusRouteLinePopup(routeIndex)}
                 />
               )}
             </Pane>
@@ -3461,10 +3527,11 @@ export default function TransitMap() {
             <Pane name="officialBusStopPane" style={{ zIndex: 461 }}>
               {layers.officialBusStops && zoom >= POINT_MIN_ZOOM && officialBusStops && (
                 <GeoJSON
-                  key="official-bus-stop-layer"
+                  key={`official-bus-stop-layer-${routeIndexKey}`}
                   data={officialBusStops}
+                  filter={(f) => routeIndex.ids.size === 0 || routesAtStop(routeIndex, f).length > 0}
                   pointToLayer={createOfficialBusStopMarker}
-                  onEachFeature={bindOfficialBusStopPopup}
+                  onEachFeature={makeBindOfficialBusStopPopup(routeIndex)}
                 />
               )}
             </Pane>

@@ -1,0 +1,263 @@
+{
+ "generatedAt": "2026-11-10T16:24:32.303Z",
+ "total": 32,
+ "found": 0,
+ "routes": [
+  {
+   "routeId": "30300032",
+   "firstStop": "달전리마을회관",
+   "midStop": "대청댐(종점)",
+   "stopCount": 68,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300097",
+   "firstStop": "대전역동광장종점",
+   "midStop": "구완동",
+   "stopCount": 67,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300109",
+   "firstStop": "서남부터미널기점",
+   "midStop": "선바위",
+   "stopCount": 73,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300110",
+   "firstStop": "건양대병원",
+   "midStop": "도곡2교",
+   "stopCount": 108,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300111",
+   "firstStop": "건양대병원",
+   "midStop": "하대실",
+   "stopCount": 73,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300112",
+   "firstStop": "충대농대종점",
+   "midStop": "두마면사무소앞",
+   "stopCount": 88,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300113",
+   "firstStop": "품안마을아파트",
+   "midStop": "재실",
+   "stopCount": 61,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300115",
+   "firstStop": "두마면사무소앞",
+   "midStop": "향한리웃마을",
+   "stopCount": 64,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300116",
+   "firstStop": "대전역동광장종점",
+   "midStop": "용남고등학교",
+   "stopCount": 99,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300117",
+   "firstStop": "비룡동입구",
+   "midStop": "용호동종점",
+   "stopCount": 72,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300126",
+   "firstStop": "현충원역3번출구",
+   "midStop": "동학사입구",
+   "stopCount": 24,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300132",
+   "firstStop": "품안마을아파트",
+   "midStop": "재실",
+   "stopCount": 65,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300133",
+   "firstStop": "농소리마을회관",
+   "midStop": "광석리",
+   "stopCount": 63,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300134",
+   "firstStop": "두마면사무소앞",
+   "midStop": "계룡예술의전당",
+   "stopCount": 57,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300135",
+   "firstStop": "농소리마을회관",
+   "midStop": "계룡시민체육관",
+   "stopCount": 66,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300136",
+   "firstStop": "기성동기점지",
+   "midStop": "대전역동광장",
+   "stopCount": 62,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300138",
+   "firstStop": "신탄진네거리",
+   "midStop": "대청댐(헬기장)",
+   "stopCount": 18,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300139",
+   "firstStop": "대전역동광장종점",
+   "midStop": "장동주민문화센터",
+   "stopCount": 51,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300140",
+   "firstStop": "대전예술의전당",
+   "midStop": "대전예술의전당",
+   "stopCount": 27,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300142",
+   "firstStop": "비룡동입구",
+   "midStop": "용호동종점",
+   "stopCount": 78,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300143",
+   "firstStop": "용호동종점",
+   "midStop": "직동종점",
+   "stopCount": 40,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "30300149",
+   "firstStop": "한국과학기술원북문",
+   "midStop": "한국과학기술원대강당",
+   "stopCount": 46,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690109",
+   "firstStop": "서남부터미널기점",
+   "midStop": "입암리마을회관",
+   "stopCount": 75,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690113",
+   "firstStop": "품안마을아파트",
+   "midStop": "새터",
+   "stopCount": 64,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690115",
+   "firstStop": "두마면사무소앞",
+   "midStop": "광석리",
+   "stopCount": 57,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690132",
+   "firstStop": "품안마을아파트",
+   "midStop": "재실",
+   "stopCount": 65,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690133",
+   "firstStop": "농소리마을회관",
+   "midStop": "광석리",
+   "stopCount": 63,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690134",
+   "firstStop": "두마면사무소앞",
+   "midStop": "계룡예술의전당",
+   "stopCount": 57,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690135",
+   "firstStop": "농소리마을회관",
+   "midStop": "계룡시민체육관",
+   "stopCount": 66,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690137",
+   "firstStop": "한라비발디아파트",
+   "midStop": "세종고속시외버스터미널",
+   "stopCount": 75,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "69690139",
+   "firstStop": "계룡대쇼핑센터",
+   "midStop": "장자동 안길",
+   "stopCount": 33,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  },
+  {
+   "routeId": "93000328",
+   "firstStop": "반곡동(수루배마을)",
+   "midStop": "시청환승지",
+   "stopCount": 35,
+   "found": false,
+   "apiMessage": "결과가 없습니다."
+  }
+ ]
+}
