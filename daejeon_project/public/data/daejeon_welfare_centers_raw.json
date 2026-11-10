@@ -1,0 +1,4655 @@
+[
+  {
+    "seq": "625",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "동그라미발달연구소 사회적협동조합",
+    "phone": "070-4490-7100",
+    "address": "대전 중구 보문로 310 (선화동, 대제빌딩) 대제빌딩2층",
+    "homepage": null
+  },
+  {
+    "seq": "623",
+    "district": "서구",
+    "orgType": "의료·체육시설",
+    "name": "대전요양원",
+    "phone": "042-226-3333",
+    "address": "대전 서구 조달청길 116 (도마동)",
+    "homepage": "http://http://cafe.naver.com/2263333"
+  },
+  {
+    "seq": "622",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전광역시중도장애인사회복귀지원센터",
+    "phone": "042-485-3890",
+    "address": "대전 서구 둔산중로 지하 55 (둔산동, 시청역)",
+    "homepage": "http://http://www.backontrack.or.kr"
+  },
+  {
+    "seq": "619",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "유성구평생학습원_구암평생학습센터",
+    "phone": "042-611-6562",
+    "address": "대전 유성구 유성대로626번길 57 (구암동, 구암평생학습센터) 구암평생학습센터",
+    "homepage": "http://https://lifelong.yuseong.go.kr/lly/lly/index.do"
+  },
+  {
+    "seq": "617",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "판암사회복지관",
+    "phone": "042-285-1005",
+    "address": "대전 동구 옥천로 152-9 (판암동, 주공아파트)",
+    "homepage": "http://www.panam.or.kr"
+  },
+  {
+    "seq": "616",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "한밭종합사회복지관",
+    "phone": "042-484-5325",
+    "address": "대전 서구 월평북로 11 (월평동, 주공아파트)",
+    "homepage": "http://www.hbswc.or.kr"
+  },
+  {
+    "seq": "615",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전광역시사회복지협의회",
+    "phone": "042-531-3711",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 805호",
+    "homepage": "http://www.djbokji.or.kr"
+  },
+  {
+    "seq": "614",
+    "district": "유성구",
+    "orgType": "공동생활가정",
+    "name": "안단테",
+    "phone": "042-543-1019",
+    "address": "대전 유성구 진잠로78번길 54 (원내동) 201호",
+    "homepage": null
+  },
+  {
+    "seq": "613",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "올리브",
+    "phone": "042-543-0307",
+    "address": "대전 서구 관저북로 80 (관저동, 원앙마을2단지) 204동 402호",
+    "homepage": "http:// blog.naver.com/olive230307"
+  },
+  {
+    "seq": "612",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "휴먼스토리",
+    "phone": "042-822-9215",
+    "address": "대전 유성구 원계산로 212 (계산동)",
+    "homepage": "http://www.villageoflove.co.kr/"
+  },
+  {
+    "seq": "611",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "꾸러기 아동발달센터",
+    "phone": "042-622-7105",
+    "address": "대전 대덕구 동춘당로94번길 11-7 (송촌동, 광혜빌딩) 7층 701호",
+    "homepage": "http://blog.naver.com/kkureogi_center"
+  },
+  {
+    "seq": "610",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "마음숲아동청소년발달센터",
+    "phone": "042-545-6333",
+    "address": "대전 서구 관저북로13번길 5 (관저동, 대주프라자) 601호, 604호",
+    "homepage": "http://https://mindforest.wdw.kr/"
+  },
+  {
+    "seq": "609",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "그로잉아동발달센터",
+    "phone": "042-541-3744",
+    "address": "대전 서구 원도안로224번길 47-31 (도안동, 대신빌딩) 3층 302호",
+    "homepage": "http://blog.naver.com/growingcenter"
+  },
+  {
+    "seq": "608",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "이영희아동청소년발달센터",
+    "phone": "042-485-8428",
+    "address": "대전 서구 신갈마로 203 (갈마동) 202호",
+    "homepage": null
+  },
+  {
+    "seq": "607",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "우리들장애인공동생활가정",
+    "phone": "042-274-2830",
+    "address": "대전 동구 학고개로 74-27 (이사동)",
+    "homepage": null
+  },
+  {
+    "seq": "606",
+    "district": "동구",
+    "orgType": "단기거주시설",
+    "name": "루루장애인단기거주시설",
+    "phone": "042-626-1086",
+    "address": "대전 동구 계족로 499 (용전동) 5층",
+    "homepage": "http://https://blog.naver.com/2021lulu"
+  },
+  {
+    "seq": "605",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "아회복지재단",
+    "phone": "042-538-1177",
+    "address": "대전 서구 갈마로211번길 24 (괴정동)",
+    "homepage": "http://http://www.ahoi.or.kr"
+  },
+  {
+    "seq": "604",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "한마음의집",
+    "phone": "042-585-0781",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://https://cafe.daum.net/hanmahum0781"
+  },
+  {
+    "seq": "603",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대전대덕구사회복지협의회",
+    "phone": "042-349-9000",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": null
+  },
+  {
+    "seq": "602",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "대전유성구사회복지협의회",
+    "phone": "042-862-4637",
+    "address": "대전 유성구 가정로 15 (신성동, 유성구노인복지회관)",
+    "homepage": null
+  },
+  {
+    "seq": "601",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전서구사회복지협의회",
+    "phone": "042-523-9182",
+    "address": "대전 서구 도마로13번길 25 (도마동)",
+    "homepage": null
+  },
+  {
+    "seq": "600",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전중구사회복지협의회",
+    "phone": "042-221-2579",
+    "address": "대전 중구 대전천서로 695 (중촌동, 주공아파트2단지)",
+    "homepage": null
+  },
+  {
+    "seq": "599",
+    "district": "유성구",
+    "orgType": "직업재활시설",
+    "name": "사나래장애인주간보호센터",
+    "phone": "042-825-4614",
+    "address": "대전 유성구 지족로 272 (지족동) 6층 3호",
+    "homepage": "http://sanarae1004.modoo.at/"
+  },
+  {
+    "seq": "598",
+    "district": "중구",
+    "orgType": "직업재활시설",
+    "name": "돌청장애인보호작업장",
+    "phone": "042-272-1006",
+    "address": "대전 중구 돌다리로 36 (석교동)",
+    "homepage": "http://doldariro.com"
+  },
+  {
+    "seq": "597",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "겸온장애인공동생활가정",
+    "phone": "042-522-5084",
+    "address": "대전 서구 도림1길 4 (도마동)",
+    "homepage": "http://https://blog.naver.com/gyumon2022"
+  },
+  {
+    "seq": "596",
+    "district": "대덕구",
+    "orgType": "의료·체육시설",
+    "name": "한남요양병원",
+    "phone": "042-624-1190",
+    "address": "대전 대덕구 한밭대로 1150 (중리동)",
+    "homepage": "http://www.hannamyoyang.com"
+  },
+  {
+    "seq": "595",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "튼튼요양병원",
+    "phone": "042-259-9988",
+    "address": "대전 중구 목중로 9 (목동, 대전튼튼요양병원)",
+    "homepage": "http://www.tntn9988.com"
+  },
+  {
+    "seq": "594",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "푸른노인요양원",
+    "phone": "042-584-7501",
+    "address": "대전 중구 천근로 34 (문화동)",
+    "homepage": "http://www.prnh.kr"
+  },
+  {
+    "seq": "593",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "천사주간보호센터",
+    "phone": "042-286-1313",
+    "address": "대전 유성구 도안북로 85-7 (용계동)",
+    "homepage": "http://https://blog.naver.com/saykso"
+  },
+  {
+    "seq": "592",
+    "district": "대덕구",
+    "orgType": "의료·체육시설",
+    "name": "웰니스요양병원",
+    "phone": "042-712-8500",
+    "address": "대전 대덕구 동서대로1777번길 2 (송촌동, 대전웰니스병원)",
+    "homepage": "http://www.wellmc.com"
+  },
+  {
+    "seq": "591",
+    "district": "동구",
+    "orgType": "의료·체육시설",
+    "name": "원동요양병원",
+    "phone": "042-535-9999",
+    "address": "대전 동구 대전로 742 (원동)",
+    "homepage": "http://www.원동요양병원.com"
+  },
+  {
+    "seq": "590",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "세명요양병원",
+    "phone": "042-224-8275",
+    "address": "대전 중구 대종로 599 (선화동)",
+    "homepage": "http://www.semyungmed.co.kr/"
+  },
+  {
+    "seq": "589",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "샤론주간보호센터",
+    "phone": "042-525-9839",
+    "address": "대전 서구 도산로 219 (변동, 제이엠빌딩)",
+    "homepage": "http://www.샤론주간보호센터.kr"
+  },
+  {
+    "seq": "588",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "지족요양원",
+    "phone": "042-825-5588",
+    "address": "대전 유성구 지족로 272 (지족동) 2층~5층",
+    "homepage": null
+  },
+  {
+    "seq": "587",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "부사효 주간보호센터(노인복지시설)",
+    "phone": "042-226-9983",
+    "address": "대전 중구 대종로 277 (부사동) 3층",
+    "homepage": "http://https://blog.naver.com/busa0801"
+  },
+  {
+    "seq": "586",
+    "district": "동구",
+    "orgType": "의료·체육시설",
+    "name": "밝은요양원",
+    "phone": "042-286-2863",
+    "address": "대전 동구 대전로 354-7 (대성동)",
+    "homepage": "http://www.brightsilvercare.co.kr/"
+  },
+  {
+    "seq": "585",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "돌봄주간보호센터",
+    "phone": "042-581-6667",
+    "address": "대전 중구 계백로 1580 (유천동) 2층",
+    "homepage": "http://https://blog.naver.com/dolbom6677"
+  },
+  {
+    "seq": "584",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "골든메디컬케어",
+    "phone": "042-521-1616",
+    "address": "대전 서구 유등로 507 (용문동)",
+    "homepage": "http://https://m.blog.naver.com/gd8900"
+  },
+  {
+    "seq": "583",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "노블케어요양원",
+    "phone": "042-223-5500",
+    "address": "대전 중구 대종로550번길 5 (선화동, 유원오피스텔) 2층",
+    "homepage": "http://www.노블케어.com"
+  },
+  {
+    "seq": "582",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "관저요양원",
+    "phone": "042-541-4155",
+    "address": "대전 서구 관저동로105번길 8 (관저동) 2층",
+    "homepage": "http://http://blog.naver.com/gwanjeo2011"
+  },
+  {
+    "seq": "581",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "마실어르신주야간보호센터",
+    "phone": "042-527-6401",
+    "address": "대전 서구 계룡로 616 (괴정동, 대전오렌지타운) 4층 409호",
+    "homepage": "http://blog.naver.com/seoho92"
+  },
+  {
+    "seq": "580",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "효성실버주간보호센터",
+    "phone": "042-582-2288",
+    "address": "대전 서구 정림로 78-10 (정림동) 2층",
+    "homepage": "http://https://blog.naver.com/hs-silver"
+  },
+  {
+    "seq": "579",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "백세실버케어",
+    "phone": "042-286-1008",
+    "address": "대전 동구 계족로 10 (효동) 메디시티 5층",
+    "homepage": "http://http://blog.naver.com/silver100years"
+  },
+  {
+    "seq": "578",
+    "district": "대덕구",
+    "orgType": "의료·체육시설",
+    "name": "대덕요양원",
+    "phone": "042-631-7576",
+    "address": "대전 대덕구 덕암북로104번길 42 (덕암동)",
+    "homepage": "http://daedeoksilver.modoo.at/"
+  },
+  {
+    "seq": "577",
+    "district": "대덕구",
+    "orgType": "의료·체육시설",
+    "name": "예사랑실버케어",
+    "phone": "042-621-1005",
+    "address": "대전 대덕구 우암로 478 (비래동)",
+    "homepage": "http://xn--9i2br6oune.net"
+  },
+  {
+    "seq": "576",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "우리함께주간보호센터",
+    "phone": "042-628-7286",
+    "address": "대전 대덕구 계족산로81번길 87 (송촌동)",
+    "homepage": "http://www.woori-together.co.kr"
+  },
+  {
+    "seq": "575",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "대흥동주간노인보호센터",
+    "phone": "042-222-0014",
+    "address": "대전 중구 대흥로 144 (대흥동)",
+    "homepage": "http://blog.naver.com/y2s2v"
+  },
+  {
+    "seq": "574",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "대전늘사랑노인주간보호센터",
+    "phone": "042-632-2200",
+    "address": "대전 동구 대전로 930 (삼성동) 2층",
+    "homepage": "http://https://blog.naver.com/boliwonsu"
+  },
+  {
+    "seq": "573",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "다누리주간보호센터",
+    "phone": "042-635-3046",
+    "address": "대전 대덕구 동춘당로 151 (법동, 그린타운아파트)",
+    "homepage": "http://https://blog.naver.com/cjstnr2005"
+  },
+  {
+    "seq": "572",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "늘사랑아동센터",
+    "phone": "042-634-0061",
+    "address": "대전 중구 학고개로34번길 33 (옥계동)",
+    "homepage": "http://bbomany.or.kr/"
+  },
+  {
+    "seq": "571",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "가족사랑주간보호센터",
+    "phone": "042-538-8880",
+    "address": "대전 서구 제비네1길 4 (도마동)",
+    "homepage": "http://https://m.blog.naver.com/silver5388880?tab=1"
+  },
+  {
+    "seq": "570",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "가나안노인복지센터",
+    "phone": "042-526-7288",
+    "address": "대전 서구 변정6길 99 (변동)",
+    "homepage": "http:// http://blog.naver.com/ganaancare"
+  },
+  {
+    "seq": "568",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "장애인정보화협회 대전시평생교육원",
+    "phone": "042-672-3131",
+    "address": "대전 중구 대흥로 9 (문화동) 대일빌딩 4층",
+    "homepage": null
+  },
+  {
+    "seq": "565",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "한국장애인직업재활시설협회 대전시협회",
+    "phone": "042-582-2254",
+    "address": "대전 서구 영골길 159-1 (오동, 사회복지법인 연광원)",
+    "homepage": null
+  },
+  {
+    "seq": "564",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전장애인자립생활센터총연합회",
+    "phone": "042-486-2373",
+    "address": "대전 서구 둔산로31번길 72 (둔산동) 홀리뷰빌딩 6층",
+    "homepage": null
+  },
+  {
+    "seq": "563",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "장애인인식개선오늘",
+    "phone": "042-826-6042",
+    "address": "대전 유성구 온천로 59 (봉명동, 동아벤처타워) 1017",
+    "homepage": null
+  },
+  {
+    "seq": "562",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "한국장애인선교단체총연합회 대전충북지회",
+    "phone": "042-221-0813",
+    "address": "대전 중구 대둔산로200번길 23-11 (안영동, 밀알빌라) 101호",
+    "homepage": "http://https://www.djmilal.or.kr/"
+  },
+  {
+    "seq": "561",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "유성구청 법률홈닥터",
+    "phone": "042-611-2931",
+    "address": "대전 유성구 대학로 211 (어은동, 유성구청)",
+    "homepage": "http://https://lawhomedoctor.moj.go.kr"
+  },
+  {
+    "seq": "560",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "동구청 법률홈닥터",
+    "phone": "042-251-6229",
+    "address": "대전 동구 동구청로 147 (가오동, 동구청)",
+    "homepage": null
+  },
+  {
+    "seq": "559",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대전아동가족통합지원센터",
+    "phone": "042-631-6007",
+    "address": "대전 대덕구 동춘당로94번길 11-7 (송촌동, 광혜빌딩) 701호",
+    "homepage": null
+  },
+  {
+    "seq": "558",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "창조아동발달센터",
+    "phone": "042-484-0508",
+    "address": "대전 유성구 계룡로132번길 10 (봉명동, 도안센트럴프라자)",
+    "homepage": "http://blog.naver.com/soulawaker0"
+  },
+  {
+    "seq": "557",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "정림아동발달지원센터",
+    "phone": "042-710-4458",
+    "address": "대전 서구 계백로1286번길 86 (정림동, 정림사회복지회관) 4층",
+    "homepage": "http://https://www.jlswc.or.kr/document/sub3_3"
+  },
+  {
+    "seq": "556",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "서구보건소장애아동재활지원센터",
+    "phone": "042-288-4500",
+    "address": "대전 서구 만년로 74 (만년동, 대전서구보건소)",
+    "homepage": "http://www.seogu.go.kr/health/main.do"
+  },
+  {
+    "seq": "555",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "크로바아동청소년발달센터",
+    "phone": "042-223-2911",
+    "address": "대전 중구 계룡로 769 (용두동) 2층",
+    "homepage": "http://https://blog.naver.com/clover2911"
+  },
+  {
+    "seq": "554",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "우리동네아동발달센터",
+    "phone": "070-4119-0811",
+    "address": "대전 중구 평촌로 58 (유천동, 동양빌딩) 402호",
+    "homepage": "http://https://blog.naver.com/neutinamu811"
+  },
+  {
+    "seq": "553",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "샤론원아동발달지원센터",
+    "phone": "042-585-9525",
+    "address": "대전 중구 산성동 136-3 2층",
+    "homepage": "http://sharonwon.co.kr/home/index02.php"
+  },
+  {
+    "seq": "551",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "다온",
+    "phone": "070-4063-8769",
+    "address": "대전 서구 가수원로 72 (가수원동, 은아아파트1단지) 103동 1304호",
+    "homepage": null
+  },
+  {
+    "seq": "550",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "예람장애인공동생활가정",
+    "phone": "042-541-4911",
+    "address": "대전 서구 계백로1300번길 86 (정림동)",
+    "homepage": null
+  },
+  {
+    "seq": "549",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "이든",
+    "phone": "042-587-8598",
+    "address": "대전 중구 보문산로171번안길 25 (문화동, 동양맨션) 가동 303호",
+    "homepage": null
+  },
+  {
+    "seq": "548",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "드림장애인공동생활가정",
+    "phone": "042-931-7330",
+    "address": "대전 대덕구 신탄진로804번길 48 (신탄진동)",
+    "homepage": "http://cafe.daum.net/dreamgrouphome"
+  },
+  {
+    "seq": "547",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "늘품",
+    "phone": "042-637-1837",
+    "address": "대전 대덕구 우암로491번길 41 (비래동) 2층",
+    "homepage": null
+  },
+  {
+    "seq": "546",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "나비장애인주간보호센터",
+    "phone": "042-528-0420",
+    "address": "대전 서구 도솔로 193 (도마동) 2층",
+    "homepage": null
+  },
+  {
+    "seq": "545",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "소담누리장애인주간보호센터",
+    "phone": "070-7620-5362",
+    "address": "대전 서구 도안동로 6 (도안동, 이레리치빌딩) 402호",
+    "homepage": "http://cafe.daum.net/sodamnuri"
+  },
+  {
+    "seq": "543",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "동그라미주간보호센터",
+    "phone": "042-272-0508",
+    "address": "대전 동구 산내로 495 (상소동)",
+    "homepage": null
+  },
+  {
+    "seq": "542",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "정림발달장애인주간보호센터",
+    "phone": "042-584-4450",
+    "address": "대전 서구 계백로1286번길 86 (정림동, 정림사회복지회관) 4층",
+    "homepage": "http://www.jlswc.or.kr/"
+  },
+  {
+    "seq": "541",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "장애인체육센터",
+    "phone": "042-724-3570",
+    "address": "대전 유성구 덕명로56번길 85 (덕명동, 장애인체육시설)",
+    "homepage": null
+  },
+  {
+    "seq": "540",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "한마음",
+    "phone": "042-585-0782",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://http://www.hanmaem.or.kr/"
+  },
+  {
+    "seq": "539",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "나사렛장애인주간보호센터",
+    "phone": "042-273-8135",
+    "address": "대전 중구 대종로 249 (석교동) 대운빌딩 2층 201호",
+    "homepage": "http://http://cafe.naver.com//nazarene2021"
+  },
+  {
+    "seq": "538",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "호산나공동체(무료급식소)",
+    "phone": "042-222-4149",
+    "address": "대전 중구 계룡로815번길 6 (용두동)",
+    "homepage": null
+  },
+  {
+    "seq": "536",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "성공회대전나눔의집",
+    "phone": "042-223-7178",
+    "address": "대전 중구 대종로488번길 9 (은행동, 대전광역시보육정보센터) 5층",
+    "homepage": "http://www.djnanum.com/sub/sub01_01.php"
+  },
+  {
+    "seq": "535",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "섬나의집",
+    "phone": "042-622-3389",
+    "address": "대전 대덕구 동심1길 51 (대화동, 빈들교회)",
+    "homepage": null
+  },
+  {
+    "seq": "534",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "새나루공동체(무료급식소)",
+    "phone": "042-222-6393",
+    "address": "대전 동구 선화로 226 (정동)",
+    "homepage": null
+  },
+  {
+    "seq": "533",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "사랑의먹거리나눔운동본부(급식소·도시락배달)",
+    "phone": "042-242-2700",
+    "address": "대전 중구 문창로 39 (부사동)",
+    "homepage": null
+  },
+  {
+    "seq": "532",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "대전이주외국인종합복지관",
+    "phone": "042-631-6242",
+    "address": "대전 중구 목척7길 6 (은행동)",
+    "homepage": "http://www.djmc.org"
+  },
+  {
+    "seq": "531",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대전이주민지원센터",
+    "phone": "010-6238-8541",
+    "address": "대전 대덕구 동심1길 51 (대화동, 빈들교회)",
+    "homepage": "http://https://cafe.naver.com/migrantscenter?iframe_url=/MyCafeIntro.nhn%3Fclubid=29797936"
+  },
+  {
+    "seq": "530",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "WBC복지TV 중부방송",
+    "phone": "042-224-4555",
+    "address": "대전 중구 선화로35번길 22 (용두동)",
+    "homepage": "http://http://www.iwbctv.co.kr/"
+  },
+  {
+    "seq": "529",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "함께하는 사랑밭 대전지부",
+    "phone": "042-622-6166",
+    "address": "대전 중구 대종로593번길 38-14 (선화동)",
+    "homepage": "http://withgo.or.kr/index.do"
+  },
+  {
+    "seq": "528",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "한밭사랑",
+    "phone": "042-484-3768",
+    "address": "대전 중구 문창로 39 (부사동)",
+    "homepage": "http://cafe.daum.net/nanum9090"
+  },
+  {
+    "seq": "527",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "한끼100원나눔운동본부",
+    "phone": "042-636-1331",
+    "address": "대전 동구 동산초교로45번길 26-14 (홍도동)",
+    "homepage": "http://100.djcaritas.or.kr/app/main/index"
+  },
+  {
+    "seq": "526",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "한국심리상담교육센터",
+    "phone": "042-331-9001",
+    "address": "대전 유성구 계룡로 84 (봉명동) 레자미3차오피스텔 312호",
+    "homepage": "http://www.ikcec.or.kr/"
+  },
+  {
+    "seq": "525",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "한국수양부모협회 대전지부",
+    "phone": "042-242-5240",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 804호",
+    "homepage": "http://www.djfoster.or.kr/"
+  },
+  {
+    "seq": "524",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "한국사회적기업실천연구회",
+    "phone": "042-624-1584",
+    "address": "대전 동구 대전로 930 (삼성동) 진영빌딩 4층",
+    "homepage": null
+  },
+  {
+    "seq": "522",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "한국보건복지인력개발원 대전교육센터",
+    "phone": "042-257-3293",
+    "address": "대전 중구 계룡로 807 (용두동) 동아일보 대전사옥 내 4층",
+    "homepage": "http://www.kohi.or.kr/index.do"
+  },
+  {
+    "seq": "521",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "한국디지털치료레크리에이션협회대전지회",
+    "phone": "042-537-6333",
+    "address": "대전 서구 동서대로 1034 (내동) 수정빌딩 3층",
+    "homepage": "http://http://www.djtra.or.kr/"
+  },
+  {
+    "seq": "520",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "한국도박문제관리센터 대전충남센터",
+    "phone": "042-867-0075",
+    "address": "대전 서구 둔산서로 15 (둔산동) 새천년빌딩 6층",
+    "homepage": "http://https://www.kcgp.or.kr/portal/center/cnterIntrcn/lcMain.do?cnterCd=0700&menuNo=200131"
+  },
+  {
+    "seq": "518",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "평화의마을",
+    "phone": "042-672-0034",
+    "address": "대전 동구 가양로 85 (가양동)",
+    "homepage": "http://http://www.peacevillage.or.kr/"
+  },
+  {
+    "seq": "517",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "천성원",
+    "phone": "042-349-2100",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": "http://www.chunsungwon.or.kr/contents/front.php"
+  },
+  {
+    "seq": "516",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "창미복지재단",
+    "phone": "042-586-2252",
+    "address": "대전 서구 금평6길 18 (흑석동, 엠마오요양원)",
+    "homepage": "http://www.cmwf.co.kr/"
+  },
+  {
+    "seq": "515",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "좋은지역사회만들기",
+    "phone": "042-542-1003",
+    "address": "대전 유성구 계룡로 55 (봉명동, 유성자이) 203호",
+    "homepage": null
+  },
+  {
+    "seq": "514",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "인구보건복지협회 대전ㆍ충남지회",
+    "phone": "042-712-1300",
+    "address": "대전 중구 오류로 98 (오류동, 인구보건복지협회)",
+    "homepage": "http://www.ppfk.or.kr/main.asp"
+  },
+  {
+    "seq": "513",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "이웃사랑복지재단",
+    "phone": "042-223-6767",
+    "address": "대전 중구 문창로 123 (문창동) 청산빌딩 4층",
+    "homepage": "http://xn--9i2br6oba743djzan0u.com/skin_mw2/"
+  },
+  {
+    "seq": "512",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "유성구행복누리재단",
+    "phone": "042-824-7420",
+    "address": "대전 유성구 죽동로 322 (죽동, 문화센터)",
+    "homepage": "http://ys-happy.or.kr/app/main/index"
+  },
+  {
+    "seq": "511",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "월드비전 대전세종충남지역본부",
+    "phone": "042-484-4323",
+    "address": "대전 서구 계룡로 314 (갈마동, 대전일보사) 601호",
+    "homepage": "http://https://www.worldvision.or.kr/"
+  },
+  {
+    "seq": "510",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "우리하나재단",
+    "phone": "042-273-6490",
+    "address": "대전 동구 옥천로653번길 175-9 (신상동, 한우리쉼터)",
+    "homepage": "http://www.woorihana.org/"
+  },
+  {
+    "seq": "508",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "열림사회서비스센터",
+    "phone": "042-274-9988",
+    "address": "대전 동구 옥천로176번길 15-4 (판암동) 2층",
+    "homepage": "http://blog.naver.com/NBlogTop.naver?isHttpsRedirect=true&blogId=yeollim2009"
+  },
+  {
+    "seq": "507",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "아름다운가게 대전세종본부",
+    "phone": "042-486-9008",
+    "address": "대전 동구 동부로 56-7 (판암동, 주공아파트4단지) 2층",
+    "homepage": "http://www.beautifulstore.org/"
+  },
+  {
+    "seq": "506",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "아노복지재단",
+    "phone": "042-528-5290",
+    "address": "대전 대덕구 오정동 464-5",
+    "homepage": "http://www.anobokji.org/"
+  },
+  {
+    "seq": "505",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "성화",
+    "phone": "042-825-1626",
+    "address": "대전 유성구 문화원로146번길 7-24 (봉명동)",
+    "homepage": "http://www.daejeon-rh.com/"
+  },
+  {
+    "seq": "504",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "생명의전화 대전상담소",
+    "phone": "042-522-9193",
+    "address": "대전 유성구 노은동로75번길 89 (노은동, 한밭빌딩) 3층 301호",
+    "homepage": "http://www.lifelinedj.or.kr/"
+  },
+  {
+    "seq": "503",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "새대전복지재단",
+    "phone": "042-271-5717",
+    "address": "대전 동구 새울로 54 (용운동, 새하얀어린이집)",
+    "homepage": null
+  },
+  {
+    "seq": "502",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "사회적기업 행복한밥상",
+    "phone": "042-622-3151",
+    "address": "대전 대덕구 우암로 472 (비래동)",
+    "homepage": null
+  },
+  {
+    "seq": "501",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "사회복지공동모금회 대전광역시지회",
+    "phone": "042-347-5171",
+    "address": "대전 서구 계룡로 314 (갈마동, 대전일보사) 9층",
+    "homepage": "http://daejeon.chest.or.kr/base.do"
+  },
+  {
+    "seq": "500",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "사랑의장기기증운동본부 대전충남지부",
+    "phone": "042-257-7567",
+    "address": "대전 유성구 반석로 7 (반석동, 애니빌프라자)",
+    "homepage": "http://www.donor.or.kr/home/branch/index.asp?id=dj"
+  },
+  {
+    "seq": "499",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "부스러기사랑나눔회 대전지부",
+    "phone": "042-226-2729",
+    "address": "대전 중구 보문로 310 (선화동, 대제빌딩) 302호",
+    "homepage": null
+  },
+  {
+    "seq": "498",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "법무부 대전솔로몬로파크",
+    "phone": "042-323-8800",
+    "address": "대전 유성구 엑스포로 219-39 (원촌동, 솔로몬로파크)",
+    "homepage": "http://https://solomon.lawnorder.go.kr/dj/front/main.do"
+  },
+  {
+    "seq": "497",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "법무부 대전보호관찰소(대전준법지원센터)",
+    "phone": "042-280-1201",
+    "address": "대전 중구 보문로 282 (선화동, 대전보호관찰소)",
+    "homepage": "http://https://www.cppb.go.kr/cppb/774/subview.do"
+  },
+  {
+    "seq": "496",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "민족사관",
+    "phone": "042-486-8300",
+    "address": "대전 서구 문정로170번길 111 (둔산동)",
+    "homepage": "http://www.xn--zb0b47z4pdkuj.com/"
+  },
+  {
+    "seq": "495",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "민들레의료복지사회적협동조합",
+    "phone": "042-638-9042",
+    "address": "대전 대덕구 계족로663번길 26 (법동) 4층",
+    "homepage": "http://www.mindlle.org/"
+  },
+  {
+    "seq": "494",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "미동",
+    "phone": "042-822-1045",
+    "address": "대전 서구 실미길 116 (우명동, 사회복지법인 미동)",
+    "homepage": "http://www.midong.or.kr/"
+  },
+  {
+    "seq": "493",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "물방울",
+    "phone": "070-8844-7373",
+    "address": "대전 동구 대전로 930 (삼성동) 진영빌딩 402호",
+    "homepage": "http://cafe.daum.net/drops"
+  },
+  {
+    "seq": "492",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "목원대학교 사회봉사지원센터",
+    "phone": "042-829-7826",
+    "address": "대전 서구 도안북로 88 (도안동, 목원대학교) 학생회관 1층 107-1호",
+    "homepage": "http://https://www.mokwon.ac.kr/vip/"
+  },
+  {
+    "seq": "491",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "동서크리스찬선교회",
+    "phone": "042-822-8807",
+    "address": "대전 유성구 대학로 31 (봉명동, 한진리조트) 1001호",
+    "homepage": null
+  },
+  {
+    "seq": "490",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "동그라미 자원봉사회",
+    "phone": "010-3467-3450",
+    "address": "대전 서구 도산로341번길 26 (용문동, 로뎀나무) 102호",
+    "homepage": null
+  },
+  {
+    "seq": "489",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대한적십자사 대전세종지사",
+    "phone": "042-220-0100",
+    "address": "대전 중구 선화서로 19 (선화동, 대한적십자사대전세종지사)",
+    "homepage": "http://https://www.redcross.or.kr/daejeon/main.do"
+  },
+  {
+    "seq": "488",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "대전하나센터(북한이탈주민지역적응센터)",
+    "phone": "042-368-9191",
+    "address": "대전 동구 동부로 56-7 (판암동, 주공아파트4단지)",
+    "homepage": null
+  },
+  {
+    "seq": "487",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "대전참여자시민연대",
+    "phone": "042-331-0092",
+    "address": "대전 서구 도산로370번길 22-1 (용문동, 공간이음)",
+    "homepage": "http://www.cham.or.kr/app/main/index"
+  },
+  {
+    "seq": "486",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "대전지역사회교육협의회",
+    "phone": "042-489-8177",
+    "address": "대전 서구 신갈마로195번길 13 (갈마동)",
+    "homepage": "http://https://ukace.or.kr/branch/dj"
+  },
+  {
+    "seq": "485",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "대전연탄은행",
+    "phone": "042-627-2937",
+    "address": "대전 동구 동대전로283번길 10 (가양동)",
+    "homepage": "http://www.hvnch.com/skin_mw2/"
+  },
+  {
+    "seq": "484",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전실업극복시민연대 일어서는사람들",
+    "phone": "042-223-8712",
+    "address": "대전 서구 계룡로 676 (용문동) 주원빌딩 503호",
+    "homepage": "http://https://sites.google.com/view/djstandingup/"
+  },
+  {
+    "seq": "483",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전사회복지실천연구소",
+    "phone": "010-8830-7704",
+    "address": "대전 서구 둔산로 133 (둔산동) 현대아이텔 311호",
+    "homepage": "http://http://www.tjswi.co.kr/"
+  },
+  {
+    "seq": "482",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "대전교도소",
+    "phone": "042-544-9301",
+    "address": "대전 유성구 한우물로66번길 6 (대정동)",
+    "homepage": null
+  },
+  {
+    "seq": "481",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전광역자살예방센터",
+    "phone": "042-486-0005",
+    "address": "대전 중구 대흥로121번길 25 (대흥동) 6층",
+    "homepage": "http://www.djpmhc.or.kr/index.php"
+  },
+  {
+    "seq": "480",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "대전광역시자원봉사연합회",
+    "phone": "042-270-2285",
+    "address": "대전 서구 둔산로 100 (둔산동, 대전광역시청) 4층",
+    "homepage": "http://http://www.bongsa365.or.kr/"
+  },
+  {
+    "seq": "479",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대전광역시사회복지행정연구회",
+    "phone": "042-259-7280",
+    "address": "대전 동구 대전로542번길 143 (천동, 효동행정복지센터)",
+    "homepage": null
+  },
+  {
+    "seq": "478",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전광역시사회복지사협회",
+    "phone": "042-254-7109",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 806호",
+    "homepage": "http://www.djasw.or.kr/"
+  },
+  {
+    "seq": "477",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전광역시사회복지관협회",
+    "phone": "042-544-3626",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 803호",
+    "homepage": "http://www.djaswc.or.kr/"
+  },
+  {
+    "seq": "476",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "한국마약퇴치운동본부 대전지부",
+    "phone": "042-628-8675",
+    "address": "대전 동구 대전로 866 (삼성동, 페이퍼칼라) 302호",
+    "homepage": "http://www.drugfree.or.kr/daejeon/"
+  },
+  {
+    "seq": "475",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전광역시둔산동근로자종합복지회관",
+    "phone": "042-488-9051",
+    "address": "대전 서구 둔산서로 84 (둔산동, 근로자종합복지관)",
+    "homepage": null
+  },
+  {
+    "seq": "474",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대전광역시대화동근로자종합복지회관",
+    "phone": "042-621-2462",
+    "address": "대전 대덕구 대화로 10 (대화동, 대전광역시립체육재활원)",
+    "homepage": "http://www.dwwc.org/app/main/index"
+  },
+  {
+    "seq": "473",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "대전광역시대덕테크노밸리근로자종합복지회관",
+    "phone": "042-670-0551",
+    "address": "대전 유성구 테크노6로 40-17 (관평동, DTV근로자종합복지회관)",
+    "homepage": "http://www.dtvwwc.or.kr/"
+  },
+  {
+    "seq": "472",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전과학기술대학교 부설 연구기관 보건복지문화지원센터",
+    "phone": "042-580-6405",
+    "address": "대전 서구 혜천로 100 (복수동, 대전과학기술대학교)",
+    "homepage": null
+  },
+  {
+    "seq": "471",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대전가톨릭사회복지회",
+    "phone": "042-635-5111",
+    "address": "대전 대덕구 신탄진로 63 (연축동) 3층",
+    "homepage": "http://www.djcaritas.or.kr/"
+  },
+  {
+    "seq": "470",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전 YWCA여성인력개발센터",
+    "phone": "042-534-4340",
+    "address": "대전 서구 계룡로 636 (용문동) 도산회관 5층",
+    "homepage": "http://www.djjob.or.kr/"
+  },
+  {
+    "seq": "469",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전 YMCA 유지재단",
+    "phone": "042-472-3399",
+    "address": "대전 서구 만년로68번길 23 (만년동)",
+    "homepage": "http://www.djymca.or.kr/newymca/new_2012_main.html"
+  },
+  {
+    "seq": "467",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대덕사랑교육문화복지재단",
+    "phone": "042-621-2024",
+    "address": "대전 대덕구 송촌북로36번길 10 (송촌동) 송촌컨벤션센터 507호",
+    "homepage": null
+  },
+  {
+    "seq": "466",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "다원",
+    "phone": "042-536-1239",
+    "address": "대전 서구 도산로 131-1 (도마동) 3층",
+    "homepage": "http://www.hanfence.or.kr/xe/index.php"
+  },
+  {
+    "seq": "465",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "나눔복지재단",
+    "phone": "042-257-0114",
+    "address": "대전 중구 보문로 241-1 (대흥동, 정진빌딩) 6층",
+    "homepage": "http://www.djnanum.co.kr/"
+  },
+  {
+    "seq": "464",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "기아대책 대전충남본부",
+    "phone": "042-254-0836",
+    "address": "대전 중구 선화서로 90-1 (선화동)",
+    "homepage": "http://www.kfhi.or.kr/"
+  },
+  {
+    "seq": "463",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "기독교연합봉사회",
+    "phone": "042-254-2323",
+    "address": "대전 중구 계백로 1712 (문화동, 기독교연합봉사회관)",
+    "homepage": "http://www.ucsc.or.kr/"
+  },
+  {
+    "seq": "462",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "금성복지재단",
+    "phone": "042-274-4700",
+    "address": "대전 동구 산내로560번길 18-13 (상소동, 금성노인요양원)",
+    "homepage": "http://www.true.or.kr/"
+  },
+  {
+    "seq": "461",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "국제휴먼클럽",
+    "phone": "042-631-6677",
+    "address": "대전 대덕구 대전로1088번길 29 (오정동)",
+    "homepage": "http://xn--3e0b93rjwb6vyg0jg9j.kr/"
+  },
+  {
+    "seq": "460",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "경일복지원",
+    "phone": "042-586-5185",
+    "address": "대전 서구 정각길 200-64 (산직동, 경일복지원)",
+    "homepage": "http://https://happyzone.or.kr/"
+  },
+  {
+    "seq": "459",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "K-water 나눔복지재단",
+    "phone": "042-629-5452",
+    "address": "대전 대덕구 신탄진로 200 (연축동, 한국수자원공사) 6층 별관 3층",
+    "homepage": "http://https://kwaternanum.or.kr/"
+  },
+  {
+    "seq": "458",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "J&M 재단",
+    "phone": "042-826-3982",
+    "address": "대전 유성구 온천로 59 (봉명동, 동아벤처타워) 624호",
+    "homepage": "http://jnmsangji.com/"
+  },
+  {
+    "seq": "457",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "평화요양병원",
+    "phone": "042-250-9100",
+    "address": "대전 중구 대전천서로 745 (중촌동)",
+    "homepage": "http://http://boguk.koreawebcenter.com/"
+  },
+  {
+    "seq": "456",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "패밀리요양병원",
+    "phone": "042-242-0875",
+    "address": "대전 중구 중교로 39 (대흥동, 한일의료재단패밀리요양병원)",
+    "homepage": "http://www.familyhospital.kr/"
+  },
+  {
+    "seq": "455",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "유성한가족요양병원",
+    "phone": "042-611-9000",
+    "address": "대전 유성구 온천동로 43 (봉명동)",
+    "homepage": "http://www.han.or.kr/_main/"
+  },
+  {
+    "seq": "454",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "웰시티요양병원",
+    "phone": "042-256-1177",
+    "address": "대전 중구 대종로 400 (대흥동)",
+    "homepage": "http://www.wellciti.com/"
+  },
+  {
+    "seq": "453",
+    "district": "서구",
+    "orgType": "의료·체육시설",
+    "name": "세민요양병원",
+    "phone": "042-537-7200",
+    "address": "대전 서구 유등로 491 (용문동)",
+    "homepage": null
+  },
+  {
+    "seq": "452",
+    "district": "동구",
+    "orgType": "의료·체육시설",
+    "name": "부모사랑요양병원",
+    "phone": "042-631-0100",
+    "address": "대전 동구 우암로 159 (성남동, 지앤지빌딩)",
+    "homepage": "http://http://bumolove.co.kr/default/"
+  },
+  {
+    "seq": "451",
+    "district": "동구",
+    "orgType": "의료·체육시설",
+    "name": "보광노인전문병원",
+    "phone": "042-274-6700",
+    "address": "대전 동구 산내로560번길 18-11 (상소동)",
+    "homepage": "http://www.true.or.kr/"
+  },
+  {
+    "seq": "450",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "대전연세요양병원",
+    "phone": "042-826-2772",
+    "address": "대전 유성구 한밭대로492번길 26-30 (봉명동)",
+    "homepage": null
+  },
+  {
+    "seq": "449",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "대전 온마음병원",
+    "phone": "042-823-9101",
+    "address": "대전 유성구 진잠옛로135번길 87 (학하동, 신생정신병원)",
+    "homepage": "http://www.ssbw.co.kr/"
+  },
+  {
+    "seq": "448",
+    "district": "동구",
+    "orgType": "의료·체육시설",
+    "name": "대전광역시립제2노인전문병원",
+    "phone": "042-272-9633",
+    "address": "대전 동구 산내로 300 (하소동, 제2시립노인전문병원)",
+    "homepage": "http://www.cmisilverdaejeon.com/"
+  },
+  {
+    "seq": "447",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "대전광역시립제1노인전문병원",
+    "phone": "042-280-5000",
+    "address": "대전 유성구 유성대로 1422 (방현동, 대전광역시립노인치매요양병원)",
+    "homepage": "http://www.ilovenoin.com/"
+  },
+  {
+    "seq": "446",
+    "district": "서구",
+    "orgType": "의료·체육시설",
+    "name": "나진요양병원",
+    "phone": "042-525-3800",
+    "address": "대전 서구 갈마로 122 (괴정동, 나진요양병원)",
+    "homepage": "http://www.njhosp.co.kr/"
+  },
+  {
+    "seq": "445",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "충남대학교(사회사업팀)",
+    "phone": "042-280-7106",
+    "address": "대전 중구 문화로 282 (대사동, 충남대학교병원)",
+    "homepage": "http://www.cnuh.co.kr/"
+  },
+  {
+    "seq": "444",
+    "district": "서구",
+    "orgType": "의료·체육시설",
+    "name": "을지대학교(사회사업팀)",
+    "phone": "042-259-1247",
+    "address": "대전 서구 둔산서로 95 (둔산동, 을지대학병원)",
+    "homepage": "http://www.emc.ac.kr/"
+  },
+  {
+    "seq": "443",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "대전선병원(의료사회복지실)",
+    "phone": "042-220-8017",
+    "address": "대전 중구 목중로 29 (목동, 선병원)",
+    "homepage": "http://www.sunhospital.com/"
+  },
+  {
+    "seq": "442",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "근로복지공단 대전병원(의료사회복지실)",
+    "phone": "042-670-5114",
+    "address": "대전 대덕구 계족로 637 (법동, 근로복지공단 대전병원)",
+    "homepage": "http://www.comwel.or.kr/daejeon/"
+  },
+  {
+    "seq": "441",
+    "district": "서구",
+    "orgType": "의료·체육시설",
+    "name": "건양대학교병원(대외협력팀-사회사업파트)",
+    "phone": "042-600-9036",
+    "address": "대전 서구 관저동로 158 (관저동, 건양대학교병원)",
+    "homepage": "http://www.kyuh.ac.kr/"
+  },
+  {
+    "seq": "440",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "가톨릭대학교 대전성모병원(사회사업파트)",
+    "phone": "042-220-9005",
+    "address": "대전 중구 대흥로 64 (대흥동, 성모병원)",
+    "homepage": "http://www.cmcdj.or.kr/"
+  },
+  {
+    "seq": "439",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "중촌사회복지관",
+    "phone": "042-221-2577",
+    "address": "대전 중구 대전천서로 695 (중촌동, 주공아파트2단지)",
+    "homepage": "http://www.jcwelfare.or.kr/"
+  },
+  {
+    "seq": "438",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "중리종합사회복지관",
+    "phone": "042-628-1476",
+    "address": "대전 대덕구 계족로663번길 34 (법동, 주공아파트)",
+    "homepage": "http://www.junglibokji.or.kr/"
+  },
+  {
+    "seq": "437",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "유성구종합사회복지관",
+    "phone": "042-825-3183",
+    "address": "대전 유성구 도안대로589번길 27 (봉명동, 유성구종합사회복지관)",
+    "homepage": "http://www.yuseongswc.or.kr/"
+  },
+  {
+    "seq": "436",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "용운종합사회복지관",
+    "phone": "042-284-5717",
+    "address": "대전 동구 용운로 110 (용운동)",
+    "homepage": "http://www.yusw.or.kr/"
+  },
+  {
+    "seq": "435",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "용문종합사회복지관",
+    "phone": "042-537-0615",
+    "address": "대전 서구 계룡로 626-1 (용문동)",
+    "homepage": "http://www.ymswc.or.kr/"
+  },
+  {
+    "seq": "434",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "성락종합사회복지관",
+    "phone": "042-254-6396",
+    "address": "대전 중구 선화로43번길 13 (용두동)",
+    "homepage": "http://www.sunglak.or.kr/"
+  },
+  {
+    "seq": "433",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "산내종합복지관",
+    "phone": "042-272-0591",
+    "address": "대전 동구 산내로 1352-25 (낭월동, 주공아파트)",
+    "homepage": "http://www.sannaewf.or.kr/"
+  },
+  {
+    "seq": "432",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "보문종합사회복지관",
+    "phone": "042-716-1001",
+    "address": "대전 중구 부용로41번길 55 (부사동)",
+    "homepage": "http://www.bmwc.or.kr/default/"
+  },
+  {
+    "seq": "431",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "법동종합사회복지관",
+    "phone": "042-633-0239",
+    "address": "대전 대덕구 계족로664번길 27 (법동, 한마음아파트)",
+    "homepage": "http://www.bubdong9.com/"
+  },
+  {
+    "seq": "430",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "대전광역시시설관리공단기성종합복지관",
+    "phone": "042-610-9400",
+    "address": "대전 서구 장안로 54 (흑석동, 기성중학교)",
+    "homepage": "http://www.djsiseol.or.kr/index.asp?"
+  },
+  {
+    "seq": "429",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "행복원",
+    "phone": "042-586-4664",
+    "address": "대전 서구 요골길 352 (원정동)",
+    "homepage": "http://www.happyone.or.kr/happyone/"
+  },
+  {
+    "seq": "428",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "장애인복지신문 대전지사",
+    "phone": "010-3404-6488",
+    "address": "대전 동구 동부로10번길 55 (판암동) 108동 1603호 (삼정그린코아1단지)",
+    "homepage": null
+  },
+  {
+    "seq": "427",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "밀알선교단",
+    "phone": "042-221-0813",
+    "address": "대전 중구 대둔산로200번길 23-11 (안영동, 밀알빌라) 101호",
+    "homepage": "http://djmilal.or.kr/"
+  },
+  {
+    "seq": "426",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "대전장애인공동생활가정연합회",
+    "phone": "042-545-9847",
+    "address": "대전 유성구 진잠옛로 35-25 (용계동) 1층",
+    "homepage": null
+  },
+  {
+    "seq": "425",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전여성장애인자립지원센터",
+    "phone": "042-223-2362",
+    "address": "대전 서구 월평서로 9 (월평동) 월평빌딩 3층",
+    "homepage": "http://www.djdaws.or.kr/"
+  },
+  {
+    "seq": "424",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시장애인IT협회",
+    "phone": "042-252-2700",
+    "address": "대전 중구 대종로529번길 43 (선화동, 유진빌딩) 501호",
+    "homepage": null
+  },
+  {
+    "seq": "423",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시자폐성장애인자립지원센터",
+    "phone": "042-861-2527",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 701호",
+    "homepage": null
+  },
+  {
+    "seq": "422",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "한밭제일복지재단",
+    "phone": "042-542-6368",
+    "address": "대전 유성구 계백로 913 (원내동, 한밭제일교회)",
+    "homepage": "http://https://www.hbwel.co.kr/"
+  },
+  {
+    "seq": "421",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "사나래장애인주간보호센터",
+    "phone": "042-825-4614",
+    "address": "대전 유성구 지족로 272 (지족동) 6층 3호",
+    "homepage": null
+  },
+  {
+    "seq": "419",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "이새장애인공동생활가정",
+    "phone": "042-537-8505",
+    "address": "대전 서구 동서대로1063번길 14-48 (내동, 한빛맨션) 가동 101호",
+    "homepage": null
+  },
+  {
+    "seq": "418",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "한국행복한재단",
+    "phone": "042-822-8591",
+    "address": "대전 유성구 노은서로266번길 61 (지족동, 계룡리슈빌스카이) B01호",
+    "homepage": "http://cafe.daum.net/happyfoun"
+  },
+  {
+    "seq": "417",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "한국정신요양시설협회 대전지회",
+    "phone": "042-585-2778",
+    "address": "대전 서구 장안로 835 (장안동)",
+    "homepage": "http://www.suyangwon.com"
+  },
+  {
+    "seq": "416",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전광역시정신재활시설협회",
+    "phone": "042-587-7888",
+    "address": "대전 서구 변동로 12-1 (변동)",
+    "homepage": "http://cafe.naver.com/dss7018"
+  },
+  {
+    "seq": "413",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "한국장애인복지시설협회 대전광역시협회",
+    "phone": "042-349-6600",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원) 온달의집",
+    "homepage": "http://https://kawid.or.kr/"
+  },
+  {
+    "seq": "412",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "한국장애인복지관협회 대전세종시협회",
+    "phone": "042-822-3637",
+    "address": "대전 유성구 북유성대로 166 (죽동, 유성구장애인종합복지관)",
+    "homepage": "http://www.hinet.or.kr"
+  },
+  {
+    "seq": "411",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "포도원",
+    "phone": "042-622-0675",
+    "address": "대전 대덕구 대전로 1081 (오정동, 오정빌딩) 1층",
+    "homepage": "http://rodem1004.com"
+  },
+  {
+    "seq": "410",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "연광복지재단",
+    "phone": "042-581-2220",
+    "address": "대전 서구 영골길 159 (오동, 사회복지법인 연광원)",
+    "homepage": "http://www.yunkwang.co.kr"
+  },
+  {
+    "seq": "409",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "밀알복지재단 대전충청지부",
+    "phone": "042-223-4669",
+    "address": "대전 대덕구 동서대로1777번길 1 (송촌동) 503호",
+    "homepage": "http://www.miral.org"
+  },
+  {
+    "seq": "408",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대전가톨릭장애인사목부",
+    "phone": "042-637-1838",
+    "address": "대전 대덕구 한남로150번길 101 (오정동)",
+    "homepage": "http://http://dcj.djcaritas.or.kr/insiter.php"
+  },
+  {
+    "seq": "407",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "한국장애인사진콘텐츠협회",
+    "phone": "042-710-8890",
+    "address": "대전 동구 새울로 41 (판암동) 판암테크노타운 203",
+    "homepage": "http://http://kdphoto.org/"
+  },
+  {
+    "seq": "406",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "한국장애인근로협회",
+    "phone": "042-580-2894",
+    "address": "대전 서구 영골길 151 (오동, 사회복지법인 연광원) 씨동",
+    "homepage": null
+  },
+  {
+    "seq": "405",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전장애인자립생활센터",
+    "phone": "042-524-6990",
+    "address": "대전 중구 계룡로 825 (용두동, 희영빌딩) 1층",
+    "homepage": "http://www.djcil.org"
+  },
+  {
+    "seq": "404",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "빛나눔장애인자립생활센터",
+    "phone": "042-226-8037",
+    "address": "대전 중구 대둔산로 413 (산성동) 3층",
+    "homepage": "http://http://www.bncil.net/"
+  },
+  {
+    "seq": "403",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "사)나눔의마을",
+    "phone": "042-482-3850",
+    "address": "대전 유성구 지족로 272 (지족동) 사나래빌딩 6층",
+    "homepage": "http://https://nnime1004.modoo.at/"
+  },
+  {
+    "seq": "402",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "그루터기 여성장애인협회",
+    "phone": "042-639-0315",
+    "address": "대전 대덕구 선비마을로5번길 9 (송촌동) 방주빌딩 2층",
+    "homepage": "http://cafe.naver.com/gruteogi2014"
+  },
+  {
+    "seq": "401",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "국제장애인문화교류 대전광역시협회",
+    "phone": "042-631-5858",
+    "address": "대전 대덕구 계족산로36번길 27 (중리동) JC빌딩 1층",
+    "homepage": null
+  },
+  {
+    "seq": "400",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "대전광역시장애우권익옹호기관",
+    "phone": "042-631-5667",
+    "address": "대전 동구 계족로 499 (용전동) 루루재활센터 3층",
+    "homepage": "http://www.djaapd.or.kr"
+  },
+  {
+    "seq": "399",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "되살미사랑나눔봉사대",
+    "phone": "042-222-2332",
+    "address": "대전 서구 정림동로 29-14 (정림동) 지하1층",
+    "homepage": "http://www.npov.org"
+  },
+  {
+    "seq": "398",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "대전장애인인권포럼",
+    "phone": "042-300-0034",
+    "address": "대전 동구 신기로101번길 36-17 (가오동)",
+    "homepage": "http://http://hrableforum.or.kr/"
+  },
+  {
+    "seq": "397",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전발달장애인부모협회",
+    "phone": "042-222-0423",
+    "address": "대전 서구 도솔로 487-9 (탄방동) 1층 101호",
+    "homepage": null
+  },
+  {
+    "seq": "396",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "한국장애인연맹대전DPI",
+    "phone": "042-226-0527",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 708호",
+    "homepage": "http://http://www.djdpi.or.kr/"
+  },
+  {
+    "seq": "395",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "한국자폐인사랑협회 대전지부",
+    "phone": "042-861-2527",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 701호",
+    "homepage": "http://autismkorea.kr"
+  },
+  {
+    "seq": "394",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전광역시발달장애인지원센터",
+    "phone": "042-719-1085",
+    "address": "대전 서구 둔산서로 69 (둔산동, 한국야구르트) 5층",
+    "homepage": "http://broso.or.kr/daejeon"
+  },
+  {
+    "seq": "393",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "한국장애인주간보호시설협회 대전시협회",
+    "phone": "042-621-3026",
+    "address": "대전 대덕구 한남로137번길 57 (오정동)",
+    "homepage": null
+  },
+  {
+    "seq": "392",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전장애인단기거주시설협회",
+    "phone": "042-584-5035",
+    "address": "대전 중구 문화로 34-16 (산성동)",
+    "homepage": null
+  },
+  {
+    "seq": "391",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "대전신체장애인복지회",
+    "phone": "042-822-4610",
+    "address": "대전 유성구 지족로 272 (지족동) 사나래빌딩 7층",
+    "homepage": null
+  },
+  {
+    "seq": "390",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시근육장애인협회",
+    "phone": "042-524-6778",
+    "address": "대전 중구 계룡로 825 (용두동, 희영빌딩) 1층",
+    "homepage": "http://cafe.daum.net/cckmda"
+  },
+  {
+    "seq": "389",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "한국장루협회 대전지부",
+    "phone": "042-536-5070",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 702호",
+    "homepage": "http://www.ostomy.or.kr/"
+  },
+  {
+    "seq": "388",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "한국농아인협회 대전광역시협회",
+    "phone": "042-673-1518",
+    "address": "대전 동구 중앙로200번길 66 (원동) DMC중앙스퀘어빌딩 205호",
+    "homepage": "http://www.daejeondeaf.or.kr"
+  },
+  {
+    "seq": "387",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대한안마사협회 대전지부",
+    "phone": "042-222-0353",
+    "address": "대전 중구 대흥로10번길 53 (대사동) 2층",
+    "homepage": null
+  },
+  {
+    "seq": "386",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시척수장애인협회",
+    "phone": "042-255-0080",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 707호",
+    "homepage": "http://www.ksciad.org"
+  },
+  {
+    "seq": "385",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대전광역시지적발달장애인복지협회",
+    "phone": "042-625-3010",
+    "address": "대전 대덕구 한밭대로 1015 (오정동) 3층",
+    "homepage": "http://blog.naver.com/djaidd"
+  },
+  {
+    "seq": "384",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "대전점자도서관",
+    "phone": "042-252-0055",
+    "address": "대전 중구 서문로 10 (문화동, 한밭도서관) 별관 1층",
+    "homepage": "http://djdosg.or.kr"
+  },
+  {
+    "seq": "383",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전장애인정보화협회",
+    "phone": "042-482-8673",
+    "address": "대전 중구 대흥로 9 (문화동) 대일빌딩 5층",
+    "homepage": "http://https://kadi042.tistory.com/"
+  },
+  {
+    "seq": "382",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시장애인재활협회",
+    "phone": "042-225-8365",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 706호",
+    "homepage": "http://www.doumjigi.com"
+  },
+  {
+    "seq": "381",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시장애인부모회",
+    "phone": "042-488-9457",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 704호",
+    "homepage": "http://http://www.dotorihanal.org/app/main/index"
+  },
+  {
+    "seq": "379",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전여성장애인연대",
+    "phone": "042-223-2362",
+    "address": "대전 서구 월평서로 9 (월평동) 월평빌딩 3층",
+    "homepage": "http://www.djdaws.or.kr"
+  },
+  {
+    "seq": "377",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전뇌병변장애인인권협회",
+    "phone": "042-252-0512",
+    "address": "대전 중구 계백로 1719 (오류동, 센트리아오피스텔) 17층 18호",
+    "homepage": null
+  },
+  {
+    "seq": "376",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시교통장애인재활협회",
+    "phone": "042-631-1010",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 703호",
+    "homepage": null
+  },
+  {
+    "seq": "375",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "대전지체장애인협회",
+    "phone": "042-471-0084",
+    "address": "대전 동구 중앙로200번길 66 (원동) DMC 중앙스퀘어 1004호",
+    "homepage": "http://www.dappd.co.kr"
+  },
+  {
+    "seq": "374",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "신생원",
+    "phone": "042-822-9215",
+    "address": "대전 유성구 원계산로 212 (계산동)",
+    "homepage": "http://www.villageoflove.co.kr/"
+  },
+  {
+    "seq": "373",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대전지체장애인협회 대덕지회",
+    "phone": "042-710-2880",
+    "address": "대전 대덕구 중리서로 83 (중리동) 럭키스포츠프라자 9층",
+    "homepage": null
+  },
+  {
+    "seq": "371",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "(사)대전광역시시각장애인연합회",
+    "phone": "042-226-8038",
+    "address": "대전 중구 유등천동로 232 (산성동)",
+    "homepage": "http://www.djbu.or.kr/"
+  },
+  {
+    "seq": "369",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "대전광역시사회서비스원",
+    "phone": "042-331-8901",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 10층",
+    "homepage": "http://daejeon.pass.or.kr"
+  },
+  {
+    "seq": "368",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "전국장애인부모연대 대전지부",
+    "phone": "042-223-0420",
+    "address": "대전 동구 합내로 48 (가양동)",
+    "homepage": "http://djbumo.or.kr/"
+  },
+  {
+    "seq": "367",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "한국키즈웰아동발달센터",
+    "phone": "042-627-8279",
+    "address": "대전 대덕구 계족산로81번길 95 (송촌동) 6층 601",
+    "homepage": null
+  },
+  {
+    "seq": "366",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "마마스마일 아동발달센터",
+    "phone": "010-3699-1300",
+    "address": "대전 유성구 노은로 178 (지족동, 금강프라자) 306",
+    "homepage": "http://blog.naver.com/frommms"
+  },
+  {
+    "seq": "365",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "위드아동발달센터",
+    "phone": "042-335-8250",
+    "address": "대전 유성구 온천로107번길 15 (봉명동, 좋은하루3차) 302",
+    "homepage": "http://https://blog.naver.com/with-center"
+  },
+  {
+    "seq": "364",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "마음더하기 아동발달상담센터",
+    "phone": "042-825-5529",
+    "address": "대전 유성구 계룡로 64 (봉명동, 미성샤르망) 2층",
+    "homepage": "http://www.maeumplus5529.com/"
+  },
+  {
+    "seq": "363",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "별빛아동발달센터",
+    "phone": "070-4407-4127",
+    "address": "대전 유성구 온천로107번길 15 (봉명동, 좋은하루3차) 3층",
+    "homepage": "http://www.xn--bk1bmbv6bm0xqtg2ug1kf36v.kr/"
+  },
+  {
+    "seq": "362",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "아이꿈아동발달연구소",
+    "phone": "042-822-5733",
+    "address": "대전 유성구 반석로 10 (반석동, 반석역프라자) 6층 602",
+    "homepage": "http://www.xn--2e0bt8b60dc1af61ay9hiwgba56my6g.kr/"
+  },
+  {
+    "seq": "361",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "대전시립장애인복지관",
+    "phone": "042-540-3500",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://www.djrc.or.kr/"
+  },
+  {
+    "seq": "360",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "임정란 아동 청소년 발달연구소",
+    "phone": "042-863-8006",
+    "address": "대전 유성구 대학로 231-1 (어은동)",
+    "homepage": null
+  },
+  {
+    "seq": "359",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "이화아동발달연구소",
+    "phone": "042-862-7151",
+    "address": "대전 유성구 대학로 233-1 (어은동)",
+    "homepage": "http://www.ewha-daejeon.com/"
+  },
+  {
+    "seq": "358",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "사과나무 언어심리 상담센터",
+    "phone": "042-477-2773",
+    "address": "대전 유성구 노은서로112번길 88 (노은동) 2층",
+    "homepage": "http://blog.naver.com/appletreecenter"
+  },
+  {
+    "seq": "357",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "웃는마음 인지학습클리닉",
+    "phone": "042-541-2013",
+    "address": "대전 서구 관저동로 72 (관저동, 크로바타워) 301",
+    "homepage": "http://hatu.nemotic.kr/"
+  },
+  {
+    "seq": "356",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "온브레인 대전센터",
+    "phone": "042-488-2143",
+    "address": "대전 유성구 대학로 86 (궁동, 포커스타운) 4층 403호",
+    "homepage": "http://blog.naver.com/onbrain79"
+  },
+  {
+    "seq": "355",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "시온아동발달센터",
+    "phone": "042-542-5585",
+    "address": "대전 서구 도안동로12번길 9 (도안동)",
+    "homepage": "http://https://blog.naver.com/zion-center"
+  },
+  {
+    "seq": "354",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "조이아동청소년발달센터",
+    "phone": "042-543-8357",
+    "address": "대전 서구 관저북로13번길 23-12 (관저동) 3층 301",
+    "homepage": "http://http://whdldkehd.79.ypage.kr/"
+  },
+  {
+    "seq": "353",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "연세아동발달센터",
+    "phone": "042-488-6716",
+    "address": "대전 서구 둔산서로 59 (둔산동, 고운손빌딩) 201호",
+    "homepage": "http://https://yonseichildren.wixsite.com/yonsei"
+  },
+  {
+    "seq": "352",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "유앤아이발달클리닉",
+    "phone": "010-7486-3660",
+    "address": "대전 서구 만년동 294 6층",
+    "homepage": "http://blog.naver.com/sukicln33"
+  },
+  {
+    "seq": "351",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "김주언어클리닉",
+    "phone": "042-536-0324",
+    "address": "대전 서구 계룡로 566 (괴정동)",
+    "homepage": null
+  },
+  {
+    "seq": "350",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "한국랭귀지아트 아동청소년발달지원센터",
+    "phone": "0507-1372-8987",
+    "address": "대전 서구 계백로 1286 (정림동)",
+    "homepage": "http://blog.naver.com/dduk1110"
+  },
+  {
+    "seq": "349",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "류지혜언어심리상담센터",
+    "phone": "0507-1312-0410",
+    "address": "대전 서구 도안동로 6 (도안동, 이레리치빌딩) 3층",
+    "homepage": null
+  },
+  {
+    "seq": "348",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "여우별아동발달센터",
+    "phone": "042-484-6330",
+    "address": "대전 서구 월평북로 95 (월평동) 302",
+    "homepage": "http://blog.naver.com/limey1972"
+  },
+  {
+    "seq": "347",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "강남한방병원",
+    "phone": "042-719-7533",
+    "address": "대전 중구 태평로 83 (태평동, 삼부스포렉스) 3층",
+    "homepage": "http://knhanbang.co.kr/home/index02.php"
+  },
+  {
+    "seq": "346",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "아동발달센터숲",
+    "phone": "042-537-3007",
+    "address": "대전 중구 유천동 326-1 대성빌딩 2층",
+    "homepage": null
+  },
+  {
+    "seq": "345",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "해밀복지재단 아동발달연구소",
+    "phone": "042-581-5525",
+    "address": "대전 중구 보문산로177번안길 20 (문화동)",
+    "homepage": "http://https://cafe.daum.net/haemilchild"
+  },
+  {
+    "seq": "344",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "김선정아동발달교육원",
+    "phone": "042-256-5397",
+    "address": "대전 중구 선화로 3-1 (용두동)",
+    "homepage": "http://www.kimscdi.com/"
+  },
+  {
+    "seq": "343",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전광역시립산성종합복지관 장애아동치료실",
+    "phone": "042-586-8033",
+    "address": "대전 중구 유등천동로 232 (산성동) 2층",
+    "homepage": "http://www.djsswel.or.kr/"
+  },
+  {
+    "seq": "342",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "대전기독교종합사회복지관",
+    "phone": "042-586-1500",
+    "address": "대전 중구 보문산로333번길 29 (문화동)",
+    "homepage": "http://www.nanume.org/index.php"
+  },
+  {
+    "seq": "341",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "대전중구정신건강복지센터",
+    "phone": "042-257-9930",
+    "address": "대전 중구 수도산로 15 (대흥동, 대전중구정신건강증진센터)",
+    "homepage": "http://https://www.djjunggu.go.kr/mental/index.do"
+  },
+  {
+    "seq": "340",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "대전유성구정신건강복지센터",
+    "phone": "042-825-3527",
+    "address": "대전 유성구 박산로 177 (구암동, 유성구보건소)",
+    "homepage": "http://www.yesmental.or.kr"
+  },
+  {
+    "seq": "339",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "대전서구정신건강복지센터",
+    "phone": "042-488-9741",
+    "address": "대전 서구 만년로 74 (만년동, 대전서구보건소)",
+    "homepage": "http://http://www.emind.or.kr/main/"
+  },
+  {
+    "seq": "338",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "대전동구정신건강복지센터",
+    "phone": "042-673-4619",
+    "address": "대전 동구 현암로 22 (삼성동) 동구보건지소 내 별관",
+    "homepage": "http://http://www.ddmhc.or.kr/"
+  },
+  {
+    "seq": "337",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "대전대덕구정신건강복지센터",
+    "phone": "042-931-1671",
+    "address": "대전 대덕구 석봉로38번길 55 (석봉동, 대덕구보건소) 2층",
+    "homepage": "http://https://omind.or.kr/"
+  },
+  {
+    "seq": "336",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "대전광역정신건강복지센터",
+    "phone": "042-486-0005",
+    "address": "대전 중구 대종로488번길 9 (은행동, 대전광역시보육정보센터) 2층",
+    "homepage": "http://www.djpmhc.or.kr"
+  },
+  {
+    "seq": "335",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "힐링타운",
+    "phone": "042-624-1329",
+    "address": "대전 대덕구 송촌남로 55-12 (송촌동)",
+    "homepage": "http://blog.naver.com/rntkdgns1329"
+  },
+  {
+    "seq": "334",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "행복울타리",
+    "phone": "070-4222-2066",
+    "address": "대전 대덕구 대전로1387번길 28 (읍내동)",
+    "homepage": "http://blog.naver.com/fist1004"
+  },
+  {
+    "seq": "333",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "해찬솔",
+    "phone": "042-933-4360",
+    "address": "대전 동구 대학로50번길 53 (용운동, 한화꿈에그린아파트) 106동 102호",
+    "homepage": "http://http://www.mind.or.kr/"
+  },
+  {
+    "seq": "332",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "한가정",
+    "phone": "042-488-0803",
+    "address": "대전 서구 남선로60번길 45 (탄방동) 3층",
+    "homepage": "http://www.hgj.co.kr"
+  },
+  {
+    "seq": "331",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "섭리가정",
+    "phone": "042-544-7933",
+    "address": "대전 서구 관저로 83 (관저동, 신선마을아파트) 205동 201호",
+    "homepage": "http://https://blog.naver.com/vorsehung"
+  },
+  {
+    "seq": "330",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "사랑채",
+    "phone": "042-525-8582",
+    "address": "대전 서구 정림동로 29-11 (정림동)",
+    "homepage": "http://www.sarangche.or.kr"
+  },
+  {
+    "seq": "329",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "보금자리",
+    "phone": "042-824-1601",
+    "address": "대전 유성구 유성대로694번길 95 (봉명동) 3층",
+    "homepage": "http://https://cafe.daum.net/bokumjary15"
+  },
+  {
+    "seq": "328",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "마중물",
+    "phone": "042-582-2337",
+    "address": "대전 대덕구 중리동로27번길 14-11 (중리동)",
+    "homepage": "http://https://cafe.naver.com/primingpump"
+  },
+  {
+    "seq": "327",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "동행",
+    "phone": "042-585-0552",
+    "address": "대전 중구 유천로48번길 31 (유천동)",
+    "homepage": "http://-"
+  },
+  {
+    "seq": "326",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "도란도란",
+    "phone": "070-8286-0992",
+    "address": "대전 유성구 송강로42번길 61 (송강동, 청솔아파트) 511동 1009호",
+    "homepage": "http://blog.naver.com/dorandoran5"
+  },
+  {
+    "seq": "325",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "다원공동체",
+    "phone": "042-822-7169",
+    "address": "대전 유성구 노은동로87번길 12-2 (노은동)",
+    "homepage": null
+  },
+  {
+    "seq": "324",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "다옴공동체",
+    "phone": "042-545-6567",
+    "address": "대전 유성구 원내로 9-8 (원내동)",
+    "homepage": "http://www.daomvil.com"
+  },
+  {
+    "seq": "323",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "다솜",
+    "phone": "042-822-7942",
+    "address": "대전 유성구 한밭대로 144 (노은동, 베르디아망) 1302호",
+    "homepage": null
+  },
+  {
+    "seq": "322",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "꽃피는집",
+    "phone": "070-7867-8338",
+    "address": "대전 중구 테미로 8 (대흥동)",
+    "homepage": null
+  },
+  {
+    "seq": "321",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "고운누리",
+    "phone": "042-522-8875",
+    "address": "대전 서구 도마로25번길 54 (도마동)",
+    "homepage": "http://blog.naver.com/h_people2006"
+  },
+  {
+    "seq": "320",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "한빛둥지",
+    "phone": "042-587-7888",
+    "address": "대전 서구 변동로 12-1 (변동)",
+    "homepage": "http://cafe.naver.com/cjdwnrksgh"
+  },
+  {
+    "seq": "319",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "섭리행복가정",
+    "phone": "042-545-1916",
+    "address": "대전 서구 관저로 48 (관저동, 구봉마을 7단지) 702동 309호",
+    "homepage": null
+  },
+  {
+    "seq": "318",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "섭리그룹홈",
+    "phone": "042-543-8532",
+    "address": "대전 서구 관저로 48 (관저동, 구봉마을 7단지) 704동 101호",
+    "homepage": "http://blog.naver.com/suprigrouphome"
+  },
+  {
+    "seq": "317",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "뷰티플마인드",
+    "phone": "042-335-0330",
+    "address": "대전 동구 비래서로42번길 134 (가양동) 2층",
+    "homepage": "http://www.mind.or.kr"
+  },
+  {
+    "seq": "316",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "어울림",
+    "phone": "042-533-8875",
+    "address": "대전 서구 도마로25번길 54 (도마동) 2층",
+    "homepage": "http://blog.naver.com/h_people2006"
+  },
+  {
+    "seq": "315",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "우리누리",
+    "phone": "042-585-2778",
+    "address": "대전 서구 장안로 835 (장안동)",
+    "homepage": "http://www.urinuri.or.kr"
+  },
+  {
+    "seq": "314",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "심경장원",
+    "phone": "042-822-1601",
+    "address": "대전 유성구 진잠옛로 222-170 (학하동, 심경장원)",
+    "homepage": "http://www.skjw.co.kr"
+  },
+  {
+    "seq": "313",
+    "district": "동구",
+    "orgType": "의료·체육시설",
+    "name": "대전정신요양원",
+    "phone": "042-284-6604",
+    "address": "대전 동구 옥천로 315 (삼정동)",
+    "homepage": "http://www.soungsin.or.kr"
+  },
+  {
+    "seq": "312",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "쉼터공동체",
+    "phone": "042-825-8269",
+    "address": "대전 유성구 세동로 474-35 (세동)",
+    "homepage": "http://www.shimter8269.or.kr"
+  },
+  {
+    "seq": "311",
+    "district": "중구",
+    "orgType": "거주(생활)시설",
+    "name": "아름드리",
+    "phone": "042-222-1140",
+    "address": "대전 중구 대흥로 87 (대흥동) 2층",
+    "homepage": "http://www.ardr1140.or.kr"
+  },
+  {
+    "seq": "310",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "한울타리",
+    "phone": "042-536-1239",
+    "address": "대전 서구 도산로 131-1 (도마동) 3층",
+    "homepage": "http://www.hanfence.or.kr"
+  },
+  {
+    "seq": "309",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "소망의집",
+    "phone": "042-586-9954",
+    "address": "대전 서구 실미길 116 (우명동, 사회복지법인 미동)",
+    "homepage": "http://http://www.smhouse.net/"
+  },
+  {
+    "seq": "308",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "햇살한줌",
+    "phone": "042-622-7018",
+    "address": "대전 대덕구 한남로150번길 16 (오정동)",
+    "homepage": "http://www.sunhanjum.com"
+  },
+  {
+    "seq": "307",
+    "district": "중구",
+    "orgType": "직업재활시설",
+    "name": "좋은이웃센터",
+    "phone": "042-223-8582",
+    "address": "대전 중구 대흥로 171 (대흥동) 4층",
+    "homepage": "http://https://goodcenter.clickn.co.kr/"
+  },
+  {
+    "seq": "306",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "생명의터",
+    "phone": "042-274-1982",
+    "address": "대전 동구 동부로 56-7 (판암동, 주공아파트4단지) 3층",
+    "homepage": "http://www.life-nest.co.kr"
+  },
+  {
+    "seq": "305",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "버팀목",
+    "phone": "042-223-6767",
+    "address": "대전 중구 문창로 123 (문창동) 청산빌딩 4층",
+    "homepage": "http://blog.naver.com/btm6767"
+  },
+  {
+    "seq": "304",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "밝은세상",
+    "phone": "042-224-1500",
+    "address": "대전 중구 대종로 449 (대흥동) 3층",
+    "homepage": "http://www.rworld.co.kr"
+  },
+  {
+    "seq": "303",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전지역자활센터협회",
+    "phone": "042-257-1890",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 801호",
+    "homepage": "http://-"
+  },
+  {
+    "seq": "302",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역자활센터",
+    "phone": "042-257-1979",
+    "address": "대전 중구 보문로 310 (선화동, 대제빌딩) 503호",
+    "homepage": "http://http://www.dmssc.or.kr/"
+  },
+  {
+    "seq": "301",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대전대덕구지역자활센터",
+    "phone": "042-628-9723",
+    "address": "대전 대덕구 대화1길 62 (대화동, 주민복지회관) 2층",
+    "homepage": "http://www.ddjh.or.kr"
+  },
+  {
+    "seq": "300",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "대전유성지역자활센터",
+    "phone": "042-824-1981",
+    "address": "대전 유성구 유성대로730번길 51 (장대동) 2층",
+    "homepage": "http://www.dmssc.or.kr"
+  },
+  {
+    "seq": "299",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "대전동구지역자활센터",
+    "phone": "042-622-8890",
+    "address": "대전 동구 대전로 696 (인동) 4층",
+    "homepage": "http://http://www.ddjc.co.kr"
+  },
+  {
+    "seq": "298",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "대한법률구조공단 대전지부",
+    "phone": "042-472-9061",
+    "address": "대전 서구 둔산북로 121 (둔산동, 아너스빌오피스텔) 3층 308호",
+    "homepage": "http://www.klac.or.kr"
+  },
+  {
+    "seq": "297",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "한국장애인고용공단 대전지역본부",
+    "phone": "042-620-6204",
+    "address": "대전 서구 청사로 136 (월평동, 대전무역회관) 13층",
+    "homepage": "http://https://www.kead.or.kr/organization/organizationEmployeePage.do?searchBranchId=B02&searchStationId=B070&menuId=MENU0820"
+  },
+  {
+    "seq": "296",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "대전혜광학교",
+    "phone": "042-280-0123",
+    "address": "대전 동구 은어송로 111 (가오동, 대전혜광학교)",
+    "homepage": "http://hyekwangsc.djsch.kr"
+  },
+  {
+    "seq": "295",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "대전원명학교",
+    "phone": "042-349-7700",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": "http://www.wonmyeong.sc.kr"
+  },
+  {
+    "seq": "294",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "대전성세재활학교",
+    "phone": "042-333-6300",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://sungsesc.djsch.kr"
+  },
+  {
+    "seq": "293",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "대전맹학교",
+    "phone": "042-280-3502",
+    "address": "대전 동구 은어송로 95 (가오동, 대전맹학교)",
+    "homepage": "http://blsc.djsch.kr"
+  },
+  {
+    "seq": "292",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "대전가원학교",
+    "phone": "042-545-7788",
+    "address": "대전 서구 계백로 1095 (도안동, 대전가원학교)",
+    "homepage": "http://www.gawon.sc.kr"
+  },
+  {
+    "seq": "291",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전발달장애인훈련센터",
+    "phone": "042-280-1600",
+    "address": "대전 서구 둔산북로 56 (둔산동, 한화생명보험(주)) 8층",
+    "homepage": "http://https://www.kead.or.kr/campus/djtdsthome/cntntsPage.do?menuId=MENU1142"
+  },
+  {
+    "seq": "290",
+    "district": "서구",
+    "orgType": "기타",
+    "name": "모두사랑장애인야간학교",
+    "phone": "042-521-9933",
+    "address": "대전 서구 둔산남로 98-17 (탄방동) 5층",
+    "homepage": "http://www.modoosarang.or.kr"
+  },
+  {
+    "seq": "289",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "한국장애인고용공단 대전직업능력개발원",
+    "phone": "042-366-5412",
+    "address": "대전 대덕구 신일동로 70 (신일동, 대전직업능력개발원)",
+    "homepage": "http://www.kead.or.kr"
+  },
+  {
+    "seq": "288",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "한국아동발달지원연구소",
+    "phone": "042-524-8100",
+    "address": "대전 중구 계백로 1712 (문화동, 기독교연합봉사회관) 301호",
+    "homepage": "http://www.childsupport.re.kr"
+  },
+  {
+    "seq": "285",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "루루장애재활치료센터",
+    "phone": "042-631-1086",
+    "address": "대전 동구 계족로 499 (용전동) 루루빌딩 2층",
+    "homepage": null
+  },
+  {
+    "seq": "284",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "ILU언어심리발달센터",
+    "phone": "042-625-4472",
+    "address": "대전 동구 동서대로1572번길 157 (성남동) 4층",
+    "homepage": null
+  },
+  {
+    "seq": "283",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "한스발달센터",
+    "phone": "042-274-5510",
+    "address": "대전 동구 동대전로 81 (대동) 502",
+    "homepage": "http://https://blog.naver.com/hans_center"
+  },
+  {
+    "seq": "282",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "엘림",
+    "phone": "070-8292-5252",
+    "address": "대전 동구 한밭대로 1322 (용전동) 티에비뉴 5층",
+    "homepage": "http://https://blog.naver.com/elim84"
+  },
+  {
+    "seq": "281",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "데이지아동발달연구소",
+    "phone": "042-621-5578",
+    "address": "대전 동구 솔랑길 26 (삼성동)",
+    "homepage": "http://blog.naver.com/daisytherapy"
+  },
+  {
+    "seq": "280",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "오뚜기사회서비스센터",
+    "phone": "042-624-1418",
+    "address": "대전 동구 대전로 930 (삼성동) 3층",
+    "homepage": null
+  },
+  {
+    "seq": "279",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "하은아동발달센터",
+    "phone": "042-285-0075",
+    "address": "대전 동구 은어송로 75 (가오동, 가오클리닉 빌딩) 6층",
+    "homepage": "http://https://m.blog.naver.com/PostList.naver?blogId=eypodo&tab=1"
+  },
+  {
+    "seq": "278",
+    "district": "동구",
+    "orgType": "기타",
+    "name": "솔파란아동발달연구소",
+    "phone": "0507-1382-0785",
+    "address": "대전 동구 동서대로 1688 (성남동) 6층",
+    "homepage": null
+  },
+  {
+    "seq": "277",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "대동종합사회복지관",
+    "phone": "042-673-8337",
+    "address": "대전 동구 백룡로48번길 79 (대동)",
+    "homepage": "http://https://www.ddswc.co.kr/"
+  },
+  {
+    "seq": "276",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "유성구송강사회복지관",
+    "phone": "042-934-6338",
+    "address": "대전 유성구 봉산로 45 (송강동, 송강마을1단지)",
+    "homepage": "http://songkang.or.kr/xe/"
+  },
+  {
+    "seq": "275",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "생명종합사회복지관",
+    "phone": "042-283-9191",
+    "address": "대전 동구 동부로 56-7 (판암동, 주공아파트4단지)",
+    "homepage": "http://saengmyeong.net/"
+  },
+  {
+    "seq": "274",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대덕구장애인자립생활센터",
+    "phone": "042-621-5858",
+    "address": "대전 대덕구 계족산로81번길 92 (송촌동) 아카데미타워 3층 301호",
+    "homepage": "http://www.ddil.or.kr"
+  },
+  {
+    "seq": "273",
+    "district": "대덕구",
+    "orgType": "장애인단체",
+    "name": "대덕돌봄협동조합",
+    "phone": "042-628-9726",
+    "address": "대전 대덕구 중리북로 4 (법동, 동아빌딩)",
+    "homepage": null
+  },
+  {
+    "seq": "272",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "푸른초장",
+    "phone": "042-823-3693",
+    "address": "대전 유성구 학하중앙로128번길 9-20 (학하동) 1층",
+    "homepage": "http://www.psalms23.org"
+  },
+  {
+    "seq": "271",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "유성장애인자립생활센터",
+    "phone": "042-826-0030",
+    "address": "대전 유성구 온천로 59 (봉명동, 동아벤처타워) 501호",
+    "homepage": "http://cafe.daum.net/ysncil"
+  },
+  {
+    "seq": "270",
+    "district": "유성구",
+    "orgType": "장애인단체",
+    "name": "대전지체장애인협회 유성구지회",
+    "phone": "042-822-1770",
+    "address": "대전 유성구 노은동로75번길 52 (노은동, 서림빌딩) 401호",
+    "homepage": "http://cafe.naver.com/8221770"
+  },
+  {
+    "seq": "269",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전서구장애인자립생활센터",
+    "phone": "042-543-8002",
+    "address": "대전 서구 도안동로11번길 42 (도안동) 지산프라자 503호",
+    "homepage": "http://sgcil.org"
+  },
+  {
+    "seq": "268",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전장애인돌봄센터",
+    "phone": "042-537-2707",
+    "address": "대전 서구 도산로 445 (탄방동) 1층",
+    "homepage": "http://djbj.or.kr"
+  },
+  {
+    "seq": "267",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전지체장애인협회 서구지회",
+    "phone": "042-483-3447",
+    "address": "대전 서구 만년로67번길 18-13 (만년동) 산호빌딩 3층",
+    "homepage": "http://sgsky.mong9.com/"
+  },
+  {
+    "seq": "266",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "대전서구지역자활센터",
+    "phone": "042-527-1654",
+    "address": "대전 서구 계룡로 676 (용문동) 주원빌딩 502호",
+    "homepage": "http://www.djsj.or.kr"
+  },
+  {
+    "seq": "265",
+    "district": "서구",
+    "orgType": "장애인단체",
+    "name": "한밭장애인자립생활센터",
+    "phone": "042-486-2373",
+    "address": "대전 서구 둔산로31번길 72 (둔산동) 6층",
+    "homepage": "http://www.hbcil.or.kr"
+  },
+  {
+    "seq": "263",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전광역시근육장애인협회",
+    "phone": "042-524-6778",
+    "address": "대전 중구 계룡로 825 (용두동, 희영빌딩) 1층",
+    "homepage": "http://http://cafe.daum.net/cckmda"
+  },
+  {
+    "seq": "262",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전지체장애인협회 중구지회",
+    "phone": "042-255-3955",
+    "address": "대전 중구 보문로 111 (부사동) 1층",
+    "homepage": "http://http://www.xn--2e0bu9h9rpvncutdxhtxm1e51bfa424f6l4aymbda.com/"
+  },
+  {
+    "seq": "260",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "대전중구지역자활센터",
+    "phone": "042-221-4021",
+    "address": "대전 중구 대흥로175번길 16 (대흥동) 2층",
+    "homepage": "http://https://www.djssc.kr/"
+  },
+  {
+    "seq": "259",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "보문장애인자립생활센터",
+    "phone": "042-286-7171",
+    "address": "대전 동구 옥천로176번길 15-4 (판암동) 동진프라자  2층",
+    "homepage": "http://www.bmcil.org"
+  },
+  {
+    "seq": "258",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "대전광역시장애우권익문제연구소/대전 장애인 인권센터",
+    "phone": "042-672-1483",
+    "address": "대전 동구 대전로 913 (삼성동) 온누리빌딩 3층",
+    "homepage": "http://www.djhrcenter.or.kr"
+  },
+  {
+    "seq": "257",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "한국지체장애인협회 동구지회",
+    "phone": "042-628-1602",
+    "address": "대전 동구 옥천로 187 (판암동) 503호",
+    "homepage": null
+  },
+  {
+    "seq": "256",
+    "district": "동구",
+    "orgType": "장애인단체",
+    "name": "사회복지법인 밀알",
+    "phone": "042-621-9800",
+    "address": "대전 동구 대전로 887 (삼성동) 화성빌딩 4층",
+    "homepage": "http://cafe.daum.net/MilalLove"
+  },
+  {
+    "seq": "255",
+    "district": "유성구",
+    "orgType": "수화통역센터",
+    "name": "유성구수어통역센터",
+    "phone": "042-822-6642",
+    "address": "대전 유성구 계룡로132번길 10 (봉명동, 도안센트럴프라자) 5층 501호",
+    "homepage": "http://cafe.daum.net/wsdeaf"
+  },
+  {
+    "seq": "254",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "대전광역시장애인생활이동지원센터",
+    "phone": "042-226-8040",
+    "address": "대전 중구 보문산로 44 (산성동) 4층",
+    "homepage": "http://www.djbu.or.kr"
+  },
+  {
+    "seq": "252",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "더함공동생활가정",
+    "phone": "042-545-0320",
+    "address": "대전 서구 관저남로12번길 12 (관저동, 중흥s-클래스 프라디움) 103동 1402호",
+    "homepage": null
+  },
+  {
+    "seq": "251",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "샬롬장애인공동생활가정",
+    "phone": "042-471-7671",
+    "address": "대전 서구 계백로1300번길 72 (정림동, 정림동 대미2차 임대아파트) 102호",
+    "homepage": "http://blog.naver.com/shalomghome"
+  },
+  {
+    "seq": "250",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "주사랑의집",
+    "phone": "042-582-5048",
+    "address": "대전 중구 유천로18번길 66 (유천동) 313동 103호",
+    "homepage": null
+  },
+  {
+    "seq": "249",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "실로암장애인공동생활가정",
+    "phone": "042-543-1187",
+    "address": "대전 서구 관저로 84 (관저동, 구봉마을 8단지) 807동 405호",
+    "homepage": null
+  },
+  {
+    "seq": "248",
+    "district": "유성구",
+    "orgType": "단기거주시설",
+    "name": "유성희망무지개",
+    "phone": "042-545-2344",
+    "address": "대전 유성구 원내로 10 (원내동) 1층",
+    "homepage": "http://https://cafe.daum.net/rainbow61977/RyuD/69"
+  },
+  {
+    "seq": "247",
+    "district": "중구",
+    "orgType": "단기거주시설",
+    "name": "시온마을",
+    "phone": "042-531-9423",
+    "address": "대전 중구 모암로 59 (옥계동)",
+    "homepage": "http://cafe.daum.net/no7305"
+  },
+  {
+    "seq": "246",
+    "district": "동구",
+    "orgType": "단기거주시설",
+    "name": "파란나무장애인단기보호",
+    "phone": "042-625-2055",
+    "address": "대전 동구 백룡로57번길 106-10 (자양동)",
+    "homepage": "http://www.bluetree.or.kr"
+  },
+  {
+    "seq": "245",
+    "district": "유성구",
+    "orgType": "단기거주시설",
+    "name": "은샘공동체",
+    "phone": "042-863-5020",
+    "address": "대전 유성구 신성로62번길 18 (신성동, 은샘공동체)",
+    "homepage": "http://cafe.daum.net/ESCommunity"
+  },
+  {
+    "seq": "244",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "대전광역시립장애인종합복지관주간보호센터(성인)",
+    "phone": "042-540-3500",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://www.djrc.or.kr"
+  },
+  {
+    "seq": "243",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "한울장애인주간보호센터",
+    "phone": "042-626-2374",
+    "address": "대전 동구 가양로 72 (가양동)",
+    "homepage": null
+  },
+  {
+    "seq": "240",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "두손장애인주간보호센터",
+    "phone": "042-283-2223",
+    "address": "대전 동구 산내로1315번길 5-6 (낭월동)",
+    "homepage": null
+  },
+  {
+    "seq": "239",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "대전장애인생산품판매시설",
+    "phone": "042-826-3233",
+    "address": "대전 유성구 은구비남로7번길 15 (지족동) 다원빌딩 1층",
+    "homepage": "http://www.djgomdoori.or.kr/"
+  },
+  {
+    "seq": "238",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "비컴장애인직업적응훈련센터",
+    "phone": "042-537-8477",
+    "address": "대전 서구 배재로 98 (도마동) 1층",
+    "homepage": "http://cafe.naver.com/vicomcenter"
+  },
+  {
+    "seq": "237",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "늘픔대덕장애인직업적응훈련센터",
+    "phone": "042-361-1520",
+    "address": "대전 대덕구 덕암북로48번길 26-12 (덕암동)",
+    "homepage": "http://https://www.xn--wh1bz76d.com/"
+  },
+  {
+    "seq": "236",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "희망자립장애인보호작업장",
+    "phone": "042-531-1238",
+    "address": "대전 서구 도산로 158 (변동) 1층, 3층",
+    "homepage": "http://https://smartstore.naver.com/hope202012"
+  },
+  {
+    "seq": "235",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "어울림 보호작업장",
+    "phone": "042-486-3894",
+    "address": "대전 서구 만년로68번길 15-26 (만년동) 위즈니스빌딩 502호",
+    "homepage": "http://https://blog.naver.com/snow0815"
+  },
+  {
+    "seq": "232",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "대전장애인보호작업장",
+    "phone": "042-637-8043",
+    "address": "대전 대덕구 한남로 123 (오정동, 문화빌딩)",
+    "homepage": "http://www.djwork.or.kr/xe/"
+  },
+  {
+    "seq": "230",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "유성웰니스재활전문병원",
+    "phone": "042-824-6900",
+    "address": "대전 유성구 온천동로 15 (봉명동, 유성웰니스재활전문병원)",
+    "homepage": "http://www.ymc.kr/"
+  },
+  {
+    "seq": "229",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "대전재활병원",
+    "phone": "042-717-7575",
+    "address": "대전 유성구 문화원로146번길 7-24 (봉명동)",
+    "homepage": "http://www.daejeon-rh.com/"
+  },
+  {
+    "seq": "228",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "대덕구장애인종합복지관주간보호센터",
+    "phone": "042-637-2259",
+    "address": "대전 대덕구 신탄진로 77 (연축동, 장애인종합복지관)",
+    "homepage": "http://www.ddwelfare.or.kr/"
+  },
+  {
+    "seq": "227",
+    "district": "중구",
+    "orgType": "거주(생활)시설",
+    "name": "축복의집",
+    "phone": "042-271-2117",
+    "address": "대전 중구 단재로 471 (어남동)",
+    "homepage": "http://www.grace85.com/"
+  },
+  {
+    "seq": "226",
+    "district": "대덕구",
+    "orgType": "거주(생활)시설",
+    "name": "온달의집",
+    "phone": "042-349-6600",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": "http://www.ondalhome.or.kr/"
+  },
+  {
+    "seq": "225",
+    "district": "중구",
+    "orgType": "기타",
+    "name": "봄날실버홈(노인공동생활가정)",
+    "phone": "042-284-3005",
+    "address": "대전 중구 봉소루로54번길 21 (석교동)",
+    "homepage": null
+  },
+  {
+    "seq": "224",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "도담공동생활가정",
+    "phone": "042-271-7659",
+    "address": "대전 중구 대종로274번길 22 (문창동) 1층",
+    "homepage": null
+  },
+  {
+    "seq": "223",
+    "district": "대덕구",
+    "orgType": "기타",
+    "name": "대전해든학교",
+    "phone": "042-939-8300",
+    "address": "대전 대덕구 대청로 232 (용호동, 신탄진용정초등학교용호분교)",
+    "homepage": "http://haedeunsc.djsch.kr/main.do"
+  },
+  {
+    "seq": "222",
+    "district": "중구",
+    "orgType": "단기거주시설",
+    "name": "징검다리",
+    "phone": "042-584-5035",
+    "address": "대전 중구 문화로 34-16 (산성동)",
+    "homepage": "http://cafe.daum.net/mimun0035"
+  },
+  {
+    "seq": "221",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대전종합사회복지관",
+    "phone": "042-627-2957",
+    "address": "대전 대덕구 우암동로15번길 20 (비래동, 대전종합사회복지관)",
+    "homepage": "http://www.childfund-daejeon.or.kr"
+  },
+  {
+    "seq": "219",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "월평종합사회복지관",
+    "phone": "042-484-6181",
+    "address": "대전 서구 월평북로 11 (월평동, 주공아파트)",
+    "homepage": "http://www.wpwelfare.net"
+  },
+  {
+    "seq": "218",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "둔산종합사회복지관",
+    "phone": "042-482-2032",
+    "address": "대전 서구 둔산로 241 (둔산동, 보라아파트)",
+    "homepage": "http://www.dswelfare.or.kr"
+  },
+  {
+    "seq": "216",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "민주네쉼터 장애인공동생활가정",
+    "phone": "042-282-0380",
+    "address": "대전 동구 새울로91번길 14-14 (용운동)",
+    "homepage": "http://cafe.daum.net/minjoo0380"
+  },
+  {
+    "seq": "215",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "도토리한알공동생활가정",
+    "phone": "042-522-9457",
+    "address": "대전 서구 복수동로87번길 29-12 (복수동, 스위트빌) B동 402호",
+    "homepage": null
+  },
+  {
+    "seq": "214",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "대전밀알의 집",
+    "phone": "042-484-1763",
+    "address": "대전 동구 용운로156번길 15 (용운동)",
+    "homepage": "http://cafe.daum.net/MilalLove"
+  },
+  {
+    "seq": "212",
+    "district": "유성구",
+    "orgType": "공동생활가정",
+    "name": "느티나무장애인공동생활가정",
+    "phone": "042-545-9847",
+    "address": "대전 유성구 진잠옛로 35-25 (용계동) 1층",
+    "homepage": null
+  },
+  {
+    "seq": "211",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "그린하우스",
+    "phone": "042-542-8108",
+    "address": "대전 서구 가수원중로57번길 72 (가수원동) 1층",
+    "homepage": null
+  },
+  {
+    "seq": "209",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "우리들장애인주간보호센터",
+    "phone": "042-823-6243",
+    "address": "대전 유성구 계룡로18번길 8 (구암동) 1층",
+    "homepage": null
+  },
+  {
+    "seq": "208",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "쉴만한물가장애인주간보호센터",
+    "phone": "042-221-8005",
+    "address": "대전 중구 부용로72번길 1 (부사동) 2층",
+    "homepage": "http://cafe.daum.net/2578004"
+  },
+  {
+    "seq": "207",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "생명장애인주간보호센터",
+    "phone": "042-286-9190",
+    "address": "대전 동구 동부로 56-7 (판암동, 주공아파트4단지)",
+    "homepage": null
+  },
+  {
+    "seq": "206",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "늘사랑특수교육원",
+    "phone": "042-369-0322",
+    "address": "대전 서구 대신1길 48 (도마동) 104호",
+    "homepage": null
+  },
+  {
+    "seq": "205",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "가나특수교육원",
+    "phone": "042-637-3025",
+    "address": "대전 대덕구 신탄진로218번길 57-9 (와동) 2층",
+    "homepage": "http://blog.naver.com/gana3025"
+  },
+  {
+    "seq": "204",
+    "district": "대덕구",
+    "orgType": "단기거주시설",
+    "name": "가온누리",
+    "phone": "042-623-8071",
+    "address": "대전 대덕구 비래동로7번길 9 (비래동)",
+    "homepage": "http://blog.naver.com/nyp1215"
+  },
+  {
+    "seq": "203",
+    "district": "유성구",
+    "orgType": "거주(생활)시설",
+    "name": "성세재활원",
+    "phone": "042-540-3600",
+    "address": "대전 유성구 용계동 319-3",
+    "homepage": "http://www.seongse.com/main/main.htm"
+  },
+  {
+    "seq": "202",
+    "district": "중구",
+    "orgType": "거주(생활)시설",
+    "name": "은혜의집",
+    "phone": "042-271-2113",
+    "address": "대전 중구 단재로 471 (어남동)",
+    "homepage": "http://www.grace85.com/"
+  },
+  {
+    "seq": "201",
+    "district": "동구",
+    "orgType": "거주(생활)시설",
+    "name": "사랑의집",
+    "phone": "042-623-4297",
+    "address": "대전 동구 백룡로14번길 9-10 (자양동, 사랑의집)",
+    "homepage": "http://cafe.daum.net/6234297"
+  },
+  {
+    "seq": "200",
+    "district": "대덕구",
+    "orgType": "거주(생활)시설",
+    "name": "평강의집",
+    "phone": "042-349-9000",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": "http://pghome.or.kr/main/"
+  },
+  {
+    "seq": "199",
+    "district": "대덕구",
+    "orgType": "거주(생활)시설",
+    "name": "로뎀",
+    "phone": "042-710-0675",
+    "address": "대전 대덕구 대전로 1081 (오정동, 오정빌딩) 2층",
+    "homepage": "http://www.rodem1004.com/"
+  },
+  {
+    "seq": "198",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "성세병원",
+    "phone": "042-820-1234",
+    "address": "대전 유성구 온천북로33번길 21-32 (봉명동)",
+    "homepage": "http://www.sungseclinic.or.kr/"
+  },
+  {
+    "seq": "197",
+    "district": "유성구",
+    "orgType": "의료·체육시설",
+    "name": "성세체육관",
+    "phone": "042-542-3280",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://www.seongsegym.com/main/main.htm"
+  },
+  {
+    "seq": "195",
+    "district": "대덕구",
+    "orgType": "의료·체육시설",
+    "name": "대전광역시립체육재활원",
+    "phone": "042-631-9889",
+    "address": "대전 대덕구 대화로 10 (대화동, 근로청소년회관)",
+    "homepage": "http://www.djsrc.or.kr/"
+  },
+  {
+    "seq": "192",
+    "district": "유성구",
+    "orgType": "직업재활시설",
+    "name": "성세재활자립원",
+    "phone": "042-540-3300",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://www.sungse.com/"
+  },
+  {
+    "seq": "191",
+    "district": "중구",
+    "orgType": "직업재활시설",
+    "name": "밀알드림센터",
+    "phone": "042-586-0813",
+    "address": "대전 중구 대둔산로200번길 38 (안영동, 밀알드림센터)",
+    "homepage": "http://djdream.or.kr/"
+  },
+  {
+    "seq": "190",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "무지개복지공장",
+    "phone": "042-930-2317",
+    "address": "대전 대덕구 대덕대로1417번길 80 (문평동)",
+    "homepage": "http://www.djsiseol.or.kr/index.asp?"
+  },
+  {
+    "seq": "189",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "굿윌스토어 밀알대전점",
+    "phone": "042-345-2003",
+    "address": "대전 대덕구 동서대로1777번길 1 (송촌동) 1층",
+    "homepage": "http://goodwillstore.org/"
+  },
+  {
+    "seq": "188",
+    "district": "유성구",
+    "orgType": "직업재활시설",
+    "name": "희망자리",
+    "phone": "042-824-9901",
+    "address": "대전 유성구 유성대로694번길 95 (봉명동) 2층",
+    "homepage": "http://https://huimangjary.org/"
+  },
+  {
+    "seq": "187",
+    "district": "중구",
+    "orgType": "직업재활시설",
+    "name": "호두나무 장애인보호작업장",
+    "phone": "070-7806-4557",
+    "address": "대전 중구 산서로50번길 39 (사정동)",
+    "homepage": "http://-"
+  },
+  {
+    "seq": "186",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "해바라기보호작업장",
+    "phone": "042-638-9004",
+    "address": "대전 대덕구 우암로 416 (비래동) 2층",
+    "homepage": "http://cafe.daum.net/sunflowerworkings"
+  },
+  {
+    "seq": "185",
+    "district": "동구",
+    "orgType": "직업재활시설",
+    "name": "판암장애인보호작업장",
+    "phone": "042-285-0030",
+    "address": "대전 동구 동부로 56-34 (판암동)",
+    "homepage": "http://xn--pn3bm1aa347u.kr/"
+  },
+  {
+    "seq": "184",
+    "district": "동구",
+    "orgType": "직업재활시설",
+    "name": "탄탄재활작업장",
+    "phone": "042-285-0084",
+    "address": "대전 동구 산내로 1396-37 (대성동)",
+    "homepage": "http://cafe.daum.net/joongboosarang"
+  },
+  {
+    "seq": "183",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "장애인일터함께",
+    "phone": "042-349-8940",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": "http://www.csboho.or.kr/main/"
+  },
+  {
+    "seq": "182",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "직업재활시설 한터",
+    "phone": "042-586-3341",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://hanter.or.kr/"
+  },
+  {
+    "seq": "181",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "월평장애인보호작업장",
+    "phone": "042-472-1762",
+    "address": "대전 서구 월평북로 11 (월평동, 주공아파트) 주공아파트 307동 뒤편",
+    "homepage": "http://http://www.wolpyeong.or.kr/"
+  },
+  {
+    "seq": "180",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "연광실업보호작업장",
+    "phone": "042-582-2254",
+    "address": "대전 서구 영골길 159-1 (오동, 사회복지법인 연광원)",
+    "homepage": "http://www.yunkwang.co.kr/default/"
+  },
+  {
+    "seq": "179",
+    "district": "유성구",
+    "orgType": "직업재활시설",
+    "name": "성세시온의집",
+    "phone": "042-540-3260",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://www.seongsesion.com/"
+  },
+  {
+    "seq": "178",
+    "district": "유성구",
+    "orgType": "직업재활시설",
+    "name": "사나래보호작업장",
+    "phone": "042-822-4612",
+    "address": "대전 유성구 지족로 272 (지족동) 6층",
+    "homepage": null
+  },
+  {
+    "seq": "177",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "보람의집",
+    "phone": "042-532-4145",
+    "address": "대전 서구 동서대로998번길 13-5 (내동)",
+    "homepage": "http://cafe.daum.net/happyobr"
+  },
+  {
+    "seq": "176",
+    "district": "대덕구",
+    "orgType": "직업재활시설",
+    "name": "느루",
+    "phone": "042-637-2257",
+    "address": "대전 대덕구 한남로150번길 16 (오정동) 1층",
+    "homepage": "http://www.xn--oh1b93j.net/main/index.html"
+  },
+  {
+    "seq": "175",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "나래장애인보호작업장",
+    "phone": "042-534-3344",
+    "address": "대전 서구 복수남로12번길 28 (복수동, 나래)",
+    "homepage": "http://www.xn--910bu6k.kr/"
+  },
+  {
+    "seq": "174",
+    "district": "유성구",
+    "orgType": "직업재활시설",
+    "name": "굿프랜드보호작업장",
+    "phone": "042-541-3233",
+    "address": "대전 유성구 진잠로106번길 5-26 (원내동)",
+    "homepage": null
+  },
+  {
+    "seq": "173",
+    "district": "동구",
+    "orgType": "직업재활시설",
+    "name": "거북이보호작업장",
+    "phone": "070-8291-8070",
+    "address": "대전 동구 보문로 4 (효동, 플러스크리닉) 2층",
+    "homepage": "http://www.xn--v69a662acma76ys7b9elfn75j.kr/"
+  },
+  {
+    "seq": "171",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "행복한우리복지관",
+    "phone": "042-331-1155",
+    "address": "대전 서구 계백로 1093-32 (도안동)",
+    "homepage": "http://https://www.happywoori.or.kr/main/"
+  },
+  {
+    "seq": "170",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "시립손소리복지관",
+    "phone": "042-345-9900",
+    "address": "대전 동구 대전천동로 508 (원동, 대전광역시 청소년위캔센터) 3층",
+    "homepage": "http://www.djsonsori.or.kr/"
+  },
+  {
+    "seq": "169",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "유성구장애인종합복지관",
+    "phone": "042-822-3637",
+    "address": "대전 유성구 북유성대로 166 (죽동, 유성구장애인종합복지관)",
+    "homepage": "http://www.withway.or.kr"
+  },
+  {
+    "seq": "168",
+    "district": "유성구",
+    "orgType": "복지관",
+    "name": "시립장애인종합복지관",
+    "phone": "042-540-3500",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://https://www.djrc.or.kr/"
+  },
+  {
+    "seq": "164",
+    "district": "중구",
+    "orgType": "장애인단체",
+    "name": "(사)대전장애인단체총연합회",
+    "phone": "042-625-4678",
+    "address": "대전 중구 보문로 246 (대흥동, 대림빌딩) 705호",
+    "homepage": "http://www.djid.or.kr"
+  },
+  {
+    "seq": "163",
+    "district": "중구",
+    "orgType": "의료·체육시설",
+    "name": "대전광역시 지역장애인보건의료센터",
+    "phone": "042-338-2223",
+    "address": "대전 중구 문화로 282 (대사동, 충남대학교병원) 대전충청권역의료재활센터 2층",
+    "homepage": "http://djmc.cnuh.co.kr"
+  },
+  {
+    "seq": "82",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "관저장애인주간보호센터",
+    "phone": "042-545-6810",
+    "address": "대전 서구 구봉로 13 (관저동, 관저종합사회복지관)",
+    "homepage": "http://www.gwanjeo.or.kr"
+  },
+  {
+    "seq": "83",
+    "district": "서구",
+    "orgType": "단기거주시설",
+    "name": "꿈이있는 장애인단기보호센터",
+    "phone": "042-586-2195",
+    "address": "대전 서구 당고개길 48-18 (평촌동)",
+    "homepage": "http://cafe.daum.net/dream2195"
+  },
+  {
+    "seq": "113",
+    "district": "유성구",
+    "orgType": "단기거주시설",
+    "name": "노아단기보호센터",
+    "phone": "042-862-3692",
+    "address": "대전 유성구 학하복용서로 19 (학하동) 2층",
+    "homepage": "http://www.psalms23.org"
+  },
+  {
+    "seq": "116",
+    "district": "유성구",
+    "orgType": "단기거주시설",
+    "name": "늘푸른장애인단기거주시설",
+    "phone": "042-716-4243",
+    "address": "대전 유성구 원계산로 182-34 (계산동)",
+    "homepage": "http://https://cafe.naver.com/djimmanuel"
+  },
+  {
+    "seq": "84",
+    "district": "서구",
+    "orgType": "단기거주시설",
+    "name": "다솜장애인단기거주시설",
+    "phone": "042-525-5373",
+    "address": "대전 서구 용화6길 3 (도마동)",
+    "homepage": null
+  },
+  {
+    "seq": "85",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "단비장애인주간보호센터",
+    "phone": "042-536-1771",
+    "address": "대전 서구 갈마로313번길 20 (가장동) 1층",
+    "homepage": "http://blog.naver.com/danbi1771"
+  },
+  {
+    "seq": "95",
+    "district": "서구",
+    "orgType": "수화통역센터",
+    "name": "대전시서구수어통역센터",
+    "phone": "042-488-1041",
+    "address": "대전 서구 도솔로 193 (도마동) 3층",
+    "homepage": "http://cafe.daum.net/djsdeaf"
+  },
+  {
+    "seq": "134",
+    "district": "중구",
+    "orgType": "단기거주시설",
+    "name": "대전태화단기보호센터",
+    "phone": "042-586-1560",
+    "address": "대전 중구 보문산로333번길 29 (문화동) 1층",
+    "homepage": "http://www.nanume.org"
+  },
+  {
+    "seq": "133",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "대전태화주간보호센터",
+    "phone": "042-586-1507",
+    "address": "대전 중구 보문산로333번길 29 (문화동) 대전기독교사회복지관 2층",
+    "homepage": "http://www.nanume.org"
+  },
+  {
+    "seq": "87",
+    "district": "서구",
+    "orgType": "직업재활시설",
+    "name": "도토리보호작업장",
+    "phone": "042-535-4240",
+    "address": "대전 서구 가수원로 95 (가수원동) 7층",
+    "homepage": null
+  },
+  {
+    "seq": "86",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "도토리주간보호센터",
+    "phone": "042-533-9457",
+    "address": "대전 서구 갈마로212번길 20-5 (내동)",
+    "homepage": null
+  },
+  {
+    "seq": "89",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "동심원",
+    "phone": "042-581-2254",
+    "address": "대전 서구 영골길 159 (오동, 사회복지법인 연광원)",
+    "homepage": "http://xn--vk1b3pz57a3xd6ub.kr/dongsim/"
+  },
+  {
+    "seq": "90",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "라파장애인주간보호센터",
+    "phone": "042-482-9301",
+    "address": "대전 서구 정림서로 134-15 (정림동)",
+    "homepage": "http://cafe.daum.net/rapha9301"
+  },
+  {
+    "seq": "137",
+    "district": "중구",
+    "orgType": "단기거주시설",
+    "name": "밀알단기보호센터",
+    "phone": "042-226-0813",
+    "address": "대전 중구 뿌리공원로3번길 50 (안영동)",
+    "homepage": "http://www.djmilal.or.kr"
+  },
+  {
+    "seq": "136",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "밀알주간보호센터",
+    "phone": "042-242-0813",
+    "address": "대전 중구 뿌리공원로7번길 54 (안영동)",
+    "homepage": "http://www.djmilal.or.kr"
+  },
+  {
+    "seq": "140",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "베데스다",
+    "phone": "042-531-7575",
+    "address": "대전 중구 유등천동로 568-8 (태평동)",
+    "homepage": null
+  },
+  {
+    "seq": "93",
+    "district": "서구",
+    "orgType": "단기거주시설",
+    "name": "사랑누리 장애인단기보호센터",
+    "phone": "042-528-4522",
+    "address": "대전 서구 변동서로27번길 61 (변동)",
+    "homepage": "http://https://sarangnuri.net/"
+  },
+  {
+    "seq": "92",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "사랑누리공동생활가정",
+    "phone": "042-522-4522",
+    "address": "대전 서구 배재로 155-7 (도마동, 경남아파트2단지) 107동 102호",
+    "homepage": "http://www.sarangnuri.net"
+  },
+  {
+    "seq": "142",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "산성종합복지관주간보호센터",
+    "phone": "042-586-8035",
+    "address": "대전 중구 유등천동로 232 (산성동)",
+    "homepage": "http://www.djsswel.or.kr/"
+  },
+  {
+    "seq": "94",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "삼보실",
+    "phone": "042-583-4832",
+    "address": "대전 서구 삼보실길 67-50 (장안동)",
+    "homepage": null
+  },
+  {
+    "seq": "143",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "샤론원 장애인주간보호센터",
+    "phone": "042-585-9525",
+    "address": "대전 중구 대둔산로494번길 24 (산성동)",
+    "homepage": "http://www.sharonwon.co.kr"
+  },
+  {
+    "seq": "145",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "쉴만한 물가",
+    "phone": "042-257-8004",
+    "address": "대전 중구 부용로72번길 1 (부사동) 1층",
+    "homepage": "http://cafe.daum.net/2578004"
+  },
+  {
+    "seq": "147",
+    "district": "중구",
+    "orgType": "복지관",
+    "name": "시립산성종합복지관",
+    "phone": "042-586-8033",
+    "address": "대전 중구 유등천동로 232 (산성동)",
+    "homepage": "http://www.djsswel.or.kr/"
+  },
+  {
+    "seq": "118",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "시립장애인종합복지관",
+    "phone": "042-540-3500",
+    "address": "대전 유성구 유성대로298번길 175 (용계동, 대전시립장애인종합복지관)",
+    "homepage": "http://www.djrc.or.kr/"
+  },
+  {
+    "seq": "119",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "시립장애인종합복지관 주간보호",
+    "phone": "042-540-3587",
+    "address": "대전 유성구 유성대로298번길 175 (용계동)",
+    "homepage": null
+  },
+  {
+    "seq": "121",
+    "district": "유성구",
+    "orgType": "거주(생활)시설",
+    "name": "아담",
+    "phone": "042-824-3692",
+    "address": "대전 유성구 학하중앙로128번길 23-15 (학하동)",
+    "homepage": "http://www.psalms23.org/"
+  },
+  {
+    "seq": "96",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "아회장애인주간보호센터",
+    "phone": "042-538-1177",
+    "address": "대전 서구 갈마로211번길 24 (괴정동)",
+    "homepage": "http://cafe.daum.net/ahoi"
+  },
+  {
+    "seq": "97",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "연광자립원",
+    "phone": "042-581-0083",
+    "address": "대전 서구 영골길 159 (오동, 사회복지법인 연광원)",
+    "homepage": "http://https://www.yunkwang.co.kr/default/"
+  },
+  {
+    "seq": "149",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "예지연장애인주간보호센터",
+    "phone": "042-282-5915",
+    "address": "대전 중구 보문로19번길 14 (문창동)",
+    "homepage": "http://cafe.daum.net/yjy5915"
+  },
+  {
+    "seq": "152",
+    "district": "중구",
+    "orgType": "거주(생활)시설",
+    "name": "우리사랑",
+    "phone": "042-285-0002",
+    "address": "대전 중구 단재로 426-42 (어남동, 중증장애인거주시설 우리사랑)",
+    "homepage": "http://www.we-love.or.kr/"
+  },
+  {
+    "seq": "98",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "월평발달장애인주간보호센터",
+    "phone": "042-488-5166",
+    "address": "대전 서구 월평북로 11 (월평동, 주공아파트) 월평종합사회복지관 내 3층",
+    "homepage": "http://www.wpwelfare.net/xe/"
+  },
+  {
+    "seq": "123",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "유성구장애인종합복지관주간보호",
+    "phone": "042-822-3637",
+    "address": "대전 유성구 북유성대로 166 (죽동, 유성구장애인종합복지관)",
+    "homepage": "http://www.withway.or.kr"
+  },
+  {
+    "seq": "125",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "이삭주간보호센터",
+    "phone": "042-867-3692",
+    "address": "대전 유성구 학하복용서로 19 (학하동) 3층",
+    "homepage": "http://www.psalms23.org"
+  },
+  {
+    "seq": "126",
+    "district": "유성구",
+    "orgType": "공동생활가정",
+    "name": "임마누엘의집",
+    "phone": "070-8863-4619",
+    "address": "대전광역시 유성구 원계산로 182-34(1층)",
+    "homepage": null
+  },
+  {
+    "seq": "111",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "장애인주간보호센터 헬로",
+    "phone": "070-4422-7002",
+    "address": "대전 서구 도솔로 151 (도마동) 2층",
+    "homepage": null
+  },
+  {
+    "seq": "99",
+    "district": "서구",
+    "orgType": "복지관",
+    "name": "정림종합사회복지관",
+    "phone": "042-584-4451",
+    "address": "대전 서구 계백로1286번길 86 (정림동, 정림사회복지회관)",
+    "homepage": "http://www.jlswc.or.kr"
+  },
+  {
+    "seq": "153",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "좋은친구들",
+    "phone": "042-282-6040",
+    "address": "대전 중구 봉소루로24번길 22 (석교동)",
+    "homepage": "http://-"
+  },
+  {
+    "seq": "154",
+    "district": "중구",
+    "orgType": "수화통역센터",
+    "name": "중구수어통역센터",
+    "phone": "042-581-0143",
+    "address": "대전 중구 중앙로13번길 39 (용두동) 동양빌딩 401호",
+    "homepage": "http://cafe.daum.net/djdeaf"
+  },
+  {
+    "seq": "68",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "판암장애인주간보호센터",
+    "phone": "042-285-0028",
+    "address": "대전 동구 동부로 56-34 (판암동)",
+    "homepage": "http://blog.naver.com/milalpj2011"
+  },
+  {
+    "seq": "157",
+    "district": "중구",
+    "orgType": "공동생활가정",
+    "name": "편안한 쉼터",
+    "phone": "042-584-7799",
+    "address": "대전 중구 계백로1566번길 75 (유천동)",
+    "homepage": null
+  },
+  {
+    "seq": "114",
+    "district": "유성구",
+    "orgType": "기타",
+    "name": "푸른초장(주간활동센터)",
+    "phone": "042-826-3697",
+    "address": "대전 유성구 학하남로65번길 11 (학하동) 1층, 주간활동센터",
+    "homepage": "http://http://www.psalms23.org/"
+  },
+  {
+    "seq": "127",
+    "district": "유성구",
+    "orgType": "공동생활가정",
+    "name": "하늘꽃",
+    "phone": "042-543-2199",
+    "address": "대전 유성구 유성대로155번길 109-6 (교촌동)",
+    "homepage": "http://cafe.daum.net/flower2199"
+  },
+  {
+    "seq": "100",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "하늘장애인공동생활가정",
+    "phone": "042-362-6513",
+    "address": "대전 서구 정림로 11 (정림동, 늘푸른아파트) 103동 102호",
+    "homepage": null
+  },
+  {
+    "seq": "128",
+    "district": "유성구",
+    "orgType": "단기거주시설",
+    "name": "하늘품단기보호",
+    "phone": "042-546-1199",
+    "address": "대전광역시 유성구 원내로 18(원내동)",
+    "homepage": null
+  },
+  {
+    "seq": "158",
+    "district": "중구",
+    "orgType": "거주(생활)시설",
+    "name": "하람",
+    "phone": "042-253-8001",
+    "address": "대전 동구 대흥로202번길 32 (인동)",
+    "homepage": "http://www.djbew.or.kr/"
+  },
+  {
+    "seq": "101",
+    "district": "서구",
+    "orgType": "공동생활가정",
+    "name": "하솜장애인공동생활가정",
+    "phone": "042-524-6459",
+    "address": "대전 서구 관저북로 52 (관저동, 대자연마을아파트) 101동 106호",
+    "homepage": "http://cafe.daum.net/hasom"
+  },
+  {
+    "seq": "102",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "한걸음",
+    "phone": "042-585-0780",
+    "address": "대전 서구 삼보실길 68 (장안동)",
+    "homepage": "http://www.xn--369au22cs3j.net/"
+  },
+  {
+    "seq": "103",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "한뜻",
+    "phone": "042-585-3342",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://www.happyhantutt.or.kr/"
+  },
+  {
+    "seq": "104",
+    "district": "서구",
+    "orgType": "의료·체육시설",
+    "name": "한마음정신병원",
+    "phone": "042-582-9700",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://www.hanmental.co.kr/"
+  },
+  {
+    "seq": "105",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "한몸",
+    "phone": "042-583-4472",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://www.xn--c62b500c.com/"
+  },
+  {
+    "seq": "71",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "한우리쉼터(신상동)",
+    "phone": "042-273-6490",
+    "address": "대전 동구 옥천로653번길 175-9 (신상동, 한우리쉼터)",
+    "homepage": "http://cafe.daum.net/hanwoorys"
+  },
+  {
+    "seq": "72",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "한우리쉼터(용운동)",
+    "phone": "042-283-6490",
+    "address": "대전 동구 용운로 80 (용운동, 용방마을아파트) 308동 403호",
+    "homepage": null
+  },
+  {
+    "seq": "76",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "한울장애인 주간보호",
+    "phone": "042-626-2374",
+    "address": "대전 동구 가양로 72 (가양동)",
+    "homepage": null
+  },
+  {
+    "seq": "106",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "한줄기",
+    "phone": "042-385-0788",
+    "address": "대전 서구 삼보실길 123 (장안동)",
+    "homepage": "http://cafe.daum.net/hanjoolgi"
+  },
+  {
+    "seq": "77",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "해달별장애인공동생활가정",
+    "phone": "010-2488-8550",
+    "address": "대전 동구 계족로489번길 73 (용전동, 한숲아파트) 101동 101호",
+    "homepage": null
+  },
+  {
+    "seq": "129",
+    "district": "유성구",
+    "orgType": "공동생활가정",
+    "name": "행복공동체",
+    "phone": "042-826-8591",
+    "address": "대전 유성구 지족로364번길 91 (지족동, 경남아너스빌) 602호",
+    "homepage": "http://cafe.daum.net/happyfoun"
+  },
+  {
+    "seq": "130",
+    "district": "유성구",
+    "orgType": "주간보호시설",
+    "name": "행복나무특수교육원",
+    "phone": "042-542-1003",
+    "address": "대전 유성구 계룡로 55 (봉명동, 유성자이) 2층 203호",
+    "homepage": "http://cafe.daum.net/h.tree"
+  },
+  {
+    "seq": "107",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "행복누림",
+    "phone": "042-586-4665",
+    "address": "대전 서구 요골길 352 (원정동)",
+    "homepage": "http://cafe.daum.net/happynoorim"
+  },
+  {
+    "seq": "108",
+    "district": "서구",
+    "orgType": "거주(생활)시설",
+    "name": "행복마을",
+    "phone": "042-586-4661",
+    "address": "대전 서구 요골길 352 (원정동)",
+    "homepage": "http://cafe.daum.net/happyotown"
+  },
+  {
+    "seq": "80",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "호마노의집",
+    "phone": "042-626-8071",
+    "address": "대전 동구 현암로61번길 59 (삼성동)",
+    "homepage": null
+  },
+  {
+    "seq": "81",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "희망의집",
+    "phone": "042-627-8963",
+    "address": "대전광역시 동구 우암로 296번길 9(가양동)",
+    "homepage": null
+  },
+  {
+    "seq": "112",
+    "district": "서구",
+    "orgType": "주간보호시설",
+    "name": "힘찬장애인주간보호센터",
+    "phone": "042-585-0101",
+    "address": "대전 서구 유등로43번길 6-9 (복수동)",
+    "homepage": "http://cafe.daum.net/himchan0101"
+  },
+  {
+    "seq": "31",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "기쁜우리장애인주간보호센터",
+    "phone": "042-524-0591",
+    "address": "대전 동구 홍도로 5-14 (홍도동)",
+    "homepage": "http://cafe.daum.net/joyours"
+  },
+  {
+    "seq": "32",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "꿈이있는 장애인 주간보호",
+    "phone": "042-274-0196",
+    "address": "대전 동구 보문로 4 (효동, 플러스크리닉)",
+    "homepage": null
+  },
+  {
+    "seq": "33",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "꿈이있는장애인 주간보호센터(성인)",
+    "phone": "010-4245-8046",
+    "address": "대전 동구 대전천동로 414 (인동)",
+    "homepage": "http://-"
+  },
+  {
+    "seq": "5",
+    "district": "대덕구",
+    "orgType": "수화통역센터",
+    "name": "대덕구수어통역센터",
+    "phone": "042-345-0032",
+    "address": "대전 대덕구 비래동로7번길 54 (비래동)",
+    "homepage": "http://cafe.daum.net/daedeokdeafsunshine"
+  },
+  {
+    "seq": "7",
+    "district": "대덕구",
+    "orgType": "복지관",
+    "name": "대덕구장애인종합복지관",
+    "phone": "042-637-8848",
+    "address": "대전 대덕구 신탄진로 77 (연축동, 장애인종합복지관)",
+    "homepage": "http://www.ddwelfare.or.kr/"
+  },
+  {
+    "seq": "8",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "대덕종합사회복지관 장애인주간보호센터",
+    "phone": "070-7858-2498",
+    "address": "대전 대덕구 덕암로234번길 44 (덕암동, 대덕종합사회복지관)",
+    "homepage": "http://www.ddswc.or.kr/"
+  },
+  {
+    "seq": "36",
+    "district": "동구",
+    "orgType": "수화통역센터",
+    "name": "대전광역시수어통역센터 지역지원본부",
+    "phone": "042-673-1518",
+    "address": "대전 동구 중앙로200번길 66 (원동) DMC중앙스퀘어빌딩 205호",
+    "homepage": "http://www.daejeondeaf.or.kr"
+  },
+  {
+    "seq": "37",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "대전주간보호센터",
+    "phone": "042-632-0691",
+    "address": "대전 동구 소랑길 10 (삼성동)",
+    "homepage": null
+  },
+  {
+    "seq": "51",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "동구아름다운복지관",
+    "phone": "042-282-9600",
+    "address": "대전 동구 안골로 49 (구도동, 동구 아름다운 복지관)",
+    "homepage": "http://dbwc.or.kr/"
+  },
+  {
+    "seq": "11",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "드림주간보호시설",
+    "phone": "070-8126-7330",
+    "address": "대전 대덕구 신탄진로804번길 75 (신탄진동) (1층)",
+    "homepage": "http://cafe.daum.net/dreamgrouphome"
+  },
+  {
+    "seq": "12",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "로뎀나무주간보호센터",
+    "phone": "042-622-0675",
+    "address": "대전 대덕구 대전로 1081 (오정동, 오정빌딩) 1층",
+    "homepage": "http://www.rodem1004.com/"
+  },
+  {
+    "seq": "39",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "명은주간보호센터",
+    "phone": "042-632-7338",
+    "address": "대전 동구 우암로 48 (삼성동, 밀알복지관) 2층",
+    "homepage": "http://myungen.modoo.at/"
+  },
+  {
+    "seq": "43",
+    "district": "동구",
+    "orgType": "복지관",
+    "name": "밀알복지관",
+    "phone": "042-627-0900",
+    "address": "대전 동구 우암로 48 (삼성동, 밀알복지관)",
+    "homepage": "http://www.milalbj.or.kr/"
+  },
+  {
+    "seq": "44",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "베델리엄의 집",
+    "phone": "042-623-8123",
+    "address": "대전 동구 흥룡로 18-1 (가양동)",
+    "homepage": null
+  },
+  {
+    "seq": "15",
+    "district": "대덕구",
+    "orgType": "단기거주시설",
+    "name": "사랑의집",
+    "phone": "042-623-8930",
+    "address": "대전 대덕구 한밭대로1033번길 15 (오정동, 신동아아파트) 5동 801호",
+    "homepage": null
+  },
+  {
+    "seq": "16",
+    "district": "대덕구",
+    "orgType": "거주(생활)시설",
+    "name": "새둥지",
+    "phone": "042-349-6001",
+    "address": "대전 대덕구 대화1길 6 (대화동)",
+    "homepage": "http://www.saedungji.kr/kor/main/"
+  },
+  {
+    "seq": "17",
+    "district": "대덕구",
+    "orgType": "단기거주시설",
+    "name": "새여울단기보호센터",
+    "phone": "042-932-3595",
+    "address": "대전 대덕구 덕암북로10번길 72 (덕암동)",
+    "homepage": "http://www.sik9.co.kr"
+  },
+  {
+    "seq": "18",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "섬돌",
+    "phone": "042-637-1831",
+    "address": "대전 대덕구 중리동로 46 (중리동) 2층",
+    "homepage": "http://www.dcj.djcaritas.or.kr"
+  },
+  {
+    "seq": "48",
+    "district": "중구",
+    "orgType": "주간보호시설",
+    "name": "시온마을주간보호센터",
+    "phone": "042-273-9423",
+    "address": "대전 중구 모암로 59 (옥계동)",
+    "homepage": null
+  },
+  {
+    "seq": "52",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "에덴하우스",
+    "phone": "042-273-4009",
+    "address": "대전 동구 학고개로 82-20 (이사동)",
+    "homepage": null
+  },
+  {
+    "seq": "53",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "에벤에셀의 집",
+    "phone": "042-283-7743",
+    "address": "대전 동구 너더리3길 21 (판암동, 에벤에셀의집)",
+    "homepage": "http://cafe.daum.net/eben7741"
+  },
+  {
+    "seq": "19",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "엘림특수교육원",
+    "phone": "042-626-3026",
+    "address": "대전 대덕구 한남로88번길 24 (오정동)",
+    "homepage": "http://cafe.daum.net/elim-sedu"
+  },
+  {
+    "seq": "20",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "열매주간보호센터",
+    "phone": "042-621-3026",
+    "address": "대전 대덕구 한남로137번길 57 (오정동)",
+    "homepage": "http://cafe.daum.net/fruit-sedu"
+  },
+  {
+    "seq": "21",
+    "district": "대덕구",
+    "orgType": "단기거주시설",
+    "name": "예솜동산",
+    "phone": "042-672-5546",
+    "address": "대전 대덕구 신탄진로210번길 174 (와동)",
+    "homepage": "http://cafe.daum.net/tjyesom"
+  },
+  {
+    "seq": "23",
+    "district": "대덕구",
+    "orgType": "거주(생활)시설",
+    "name": "정화원",
+    "phone": "042-349-8800",
+    "address": "대전 대덕구 대화1길 2 (대화동, 천성원)",
+    "homepage": "http://xn--sp5b7wv62a.kr/main/"
+  },
+  {
+    "seq": "58",
+    "district": "동구",
+    "orgType": "공동생활가정",
+    "name": "주사랑쉼터",
+    "phone": "042-274-3193",
+    "address": "대전 동구 대전로542번길 121 (천동, 위드힐) 316동 301호",
+    "homepage": null
+  },
+  {
+    "seq": "62",
+    "district": "동구",
+    "orgType": "단기거주시설",
+    "name": "참사랑단기보호",
+    "phone": "042-341-1130",
+    "address": "대전 동구 산내로1287번길 50-13 (낭월동)",
+    "homepage": "http://cafe.naver.com/1130truelove"
+  },
+  {
+    "seq": "63",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "초록나무장애인주간보호센터",
+    "phone": "042-383-7072",
+    "address": "대전 동구 동서대로1778번길 115 (가양동) 1층",
+    "homepage": "http://cafe.daum.net/greentree2011"
+  },
+  {
+    "seq": "66",
+    "district": "동구",
+    "orgType": "주간보호시설",
+    "name": "파랑새장애인주간보호센터",
+    "phone": "070-4025-8331",
+    "address": "대전 동구 백룡로48번길 79 (대동)",
+    "homepage": null
+  },
+  {
+    "seq": "24",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "포도나무주간보호센터(성인)",
+    "phone": "042-622-0674",
+    "address": "대전 대덕구 대전로 1081 (오정동, 오정빌딩) 1층",
+    "homepage": "http://www.rodem1004.com"
+  },
+  {
+    "seq": "25",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "필그림복지원",
+    "phone": "042-624-0029",
+    "address": "대전 대덕구 송촌남로45번길 80 (송촌동)",
+    "homepage": null
+  },
+  {
+    "seq": "26",
+    "district": "대덕구",
+    "orgType": "공동생활가정",
+    "name": "해뜨는집",
+    "phone": "042-349-9703",
+    "address": "대전 대덕구 대화2길 24 (대화동)",
+    "homepage": null
+  },
+  {
+    "seq": "27",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "해오름주간보호센터",
+    "phone": "042-627-3012",
+    "address": "대전 대덕구 신탄진로218번길 32 (와동) 3층",
+    "homepage": null
+  },
+  {
+    "seq": "28",
+    "district": "대덕구",
+    "orgType": "주간보호시설",
+    "name": "행복이음주간보호센터",
+    "phone": "042-632-2279",
+    "address": "대전 대덕구 계족로740번길 23-13 (읍내동) 1층",
+    "homepage": "http://cafe.daum.net/happiness2279"
+  }
+]

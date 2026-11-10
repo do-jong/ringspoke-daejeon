@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# /graphify 시각화 도구가 만드는 로컬 전용 산출물
+graphify-out
+
+.env
+.env.*
+!.env.example
+
+# SQLite/GeoPackage sidecar files (created when reading, not real data)
+*.gpkg-shm
+*.gpkg-wal
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

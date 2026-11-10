@@ -1,0 +1,1594 @@
+{
+  "inspectedAt": "2026-11-05T14:57:46.892Z",
+  "summary": {
+    "osmTotalFeatures": 202339,
+    "osmRoadLineFeatures": 66863,
+    "trafficLinkCount": 14452,
+    "exactNameMatches": 6126,
+    "unmatchedNames": 8326,
+    "nameMatchRate": 42.39
+  },
+  "highwayCounts": {
+    "residential": 11378,
+    "tertiary": 3237,
+    "primary": 1592,
+    "motorway_link": 321,
+    "primary_link": 541,
+    "service": 13245,
+    "secondary": 1645,
+    "unclassified": 1390,
+    "living_street": 2338,
+    "cycleway": 1422,
+    "track": 5806,
+    "motorway": 553,
+    "secondary_link": 294,
+    "trunk_link": 521,
+    "trunk": 658,
+    "tertiary_link": 445,
+    "path": 7236,
+    "footway": 12991,
+    "pedestrian": 165,
+    "steps": 682,
+    "construction": 222,
+    "busway": 89,
+    "platform": 50,
+    "rest_area": 1,
+    "services": 6,
+    "road": 5,
+    "bus_stop": 1,
+    "raceway": 2,
+    "primary=planned": 1,
+    "proposed": 6,
+    "corridor": 18,
+    "elevator": 2
+  },
+  "trafficLengthStats": {
+    "min": 9.49351347,
+    "max": 12347.07,
+    "average": 444.7261720004388,
+    "total": 6427182.637750342,
+    "validCount": 14452
+  },
+  "osmLengthStats": {
+    "min": 0.4489353209126693,
+    "max": 14801.328329360036,
+    "average": 191.14113470514818,
+    "total": 12780269.689790322,
+    "validCount": 66863
+  },
+  "popularTrafficNames": [
+    {
+      "roadName": "-",
+      "count": 763,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "일반국도1호선",
+      "count": 446,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "지방도691호선",
+      "count": 212,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "한누리대로",
+      "count": 172,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "국가지원지방도96호선",
+      "count": 162,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "국가지원지방도68호선",
+      "count": 162,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "경부고속도로",
+      "count": 148,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "계백로",
+      "count": 140,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "지방도697호선",
+      "count": 130,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "통영대전고속도로",
+      "count": 125,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "한밭대로",
+      "count": 119,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "일반국도23호선",
+      "count": 118,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "당진영덕고속도로",
+      "count": 117,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "지방도604호선",
+      "count": 113,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "계룡로",
+      "count": 111,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "일반국도4호선",
+      "count": 110,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "대전남부순환고속도로",
+      "count": 110,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "대덕대로",
+      "count": 108,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "호남고속도로지선",
+      "count": 102,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "유성대로",
+      "count": 94,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "천안논산고속도로",
+      "count": 93,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "NONE",
+      "count": 88,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "일반국도36호선",
+      "count": 87,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "지방도643호선",
+      "count": 84,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "일반국도32호선",
+      "count": 82,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "대전로",
+      "count": 77,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "북유성대로",
+      "count": 76,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "동서로",
+      "count": 74,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "지방도627호선",
+      "count": 70,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "일반국도37호선",
+      "count": 68,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "우암로",
+      "count": 66,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "벌곡길",
+      "count": 65,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "옥천길",
+      "count": 64,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "테크노2로",
+      "count": 64,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "지방도501호선",
+      "count": 64,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "차동로",
+      "count": 64,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "국도43호선",
+      "count": 64,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "지방도635호선",
+      "count": 63,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "대청로",
+      "count": 62,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "버드내길",
+      "count": 60,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "지방도575호선",
+      "count": 58,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "천변도시고속화도로",
+      "count": 56,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "시청대로",
+      "count": 56,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "지방도68호선",
+      "count": 56,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "계족로",
+      "count": 54,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "중앙로",
+      "count": 53,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "지방도601호선",
+      "count": 52,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "도안대로",
+      "count": 50,
+      "osmNameExists": true
+    },
+    {
+      "roadName": "운주산로",
+      "count": 50,
+      "osmNameExists": false
+    },
+    {
+      "roadName": "지방도651호선",
+      "count": 50,
+      "osmNameExists": false
+    }
+  ],
+  "matchedExamples": [
+    {
+      "linkID": "1830003501",
+      "roadName": "대전로",
+      "linkLength": 626.757611263,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003502",
+      "roadName": "대전로",
+      "linkLength": 223.506134446,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003504",
+      "roadName": "대전로",
+      "linkLength": 290.427526593,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003505",
+      "roadName": "대전로",
+      "linkLength": 455.696154783,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003506",
+      "roadName": "대전로",
+      "linkLength": 631.189552462,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003601",
+      "roadName": "대전로",
+      "linkLength": 622.769446648,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003602",
+      "roadName": "대전로",
+      "linkLength": 217.580989662,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003603",
+      "roadName": "대전로",
+      "linkLength": 138.988589687,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003604",
+      "roadName": "대전로",
+      "linkLength": 288.242221346,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003605",
+      "roadName": "대전로",
+      "linkLength": 457.428343452,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830003606",
+      "roadName": "대전로",
+      "linkLength": 628.628330265,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004300",
+      "roadName": "대전로",
+      "linkLength": 71.533010977,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004400",
+      "roadName": "대전로",
+      "linkLength": 71.420679235,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004500",
+      "roadName": "대전로",
+      "linkLength": 683.508187237,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004600",
+      "roadName": "대전로",
+      "linkLength": 681.488054977,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004902",
+      "roadName": "대전로",
+      "linkLength": 342.319490587,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004903",
+      "roadName": "대전로",
+      "linkLength": 175.399610573,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004904",
+      "roadName": "대전로",
+      "linkLength": 705.078075471,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830004905",
+      "roadName": "대전로",
+      "linkLength": 467.694599813,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005002",
+      "roadName": "대전로",
+      "linkLength": 341.843072993,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005003",
+      "roadName": "대전로",
+      "linkLength": 178.250113119,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005004",
+      "roadName": "대전로",
+      "linkLength": 701.760917662,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005005",
+      "roadName": "대전로",
+      "linkLength": 465.590705831,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005101",
+      "roadName": "대전로",
+      "linkLength": 700.270569737262,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005103",
+      "roadName": "대전로",
+      "linkLength": 293.576237583,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005201",
+      "roadName": "대전로",
+      "linkLength": 693.746826779957,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005203",
+      "roadName": "대전로",
+      "linkLength": 298.280000195,
+      "osmCandidateCount": 288,
+      "osmCandidates": [
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 11.423847572080318,
+          "highway": "primary",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "대전로",
+          "length": 248.47673091153348,
+          "highway": "primary",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830005900",
+      "roadName": "통영대전고속도로",
+      "linkLength": 141.759258047,
+      "osmCandidateCount": 162,
+      "osmCandidates": [
+        {
+          "name": "통영대전고속도로",
+          "length": 154.79620718976454,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "통영대전고속도로",
+          "length": 154.79620718976454,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "통영대전고속도로",
+          "length": 156.97904570316544,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830006000",
+      "roadName": "통영대전고속도로",
+      "linkLength": 140.354078269,
+      "osmCandidateCount": 162,
+      "osmCandidates": [
+        {
+          "name": "통영대전고속도로",
+          "length": 154.79620718976454,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "통영대전고속도로",
+          "length": 154.79620718976454,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "통영대전고속도로",
+          "length": 156.97904570316544,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        }
+      ]
+    },
+    {
+      "linkID": "1830006101",
+      "roadName": "통영대전고속도로",
+      "linkLength": 257.00889964,
+      "osmCandidateCount": 162,
+      "osmCandidates": [
+        {
+          "name": "통영대전고속도로",
+          "length": 154.79620718976454,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "통영대전고속도로",
+          "length": 154.79620718976454,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        },
+        {
+          "name": "통영대전고속도로",
+          "length": 156.97904570316544,
+          "highway": "motorway",
+          "geometryType": "LineString"
+        }
+      ]
+    }
+  ],
+  "unmatchedExamples": [
+    {
+      "linkID": "1830000100",
+      "roadName": "일반국도17호선",
+      "linkLength": 145.293874194
+    },
+    {
+      "linkID": "1830000200",
+      "roadName": "태봉길",
+      "linkLength": 145.940446066
+    },
+    {
+      "linkID": "1830000301",
+      "roadName": "태봉길",
+      "linkLength": 210.42007237
+    },
+    {
+      "linkID": "1830000302",
+      "roadName": "일반국도17호선",
+      "linkLength": 11026.954378943004
+    },
+    {
+      "linkID": "1830000303",
+      "roadName": "산내길",
+      "linkLength": 382.712429313
+    },
+    {
+      "linkID": "1830000401",
+      "roadName": "태봉길",
+      "linkLength": 211.001711258
+    },
+    {
+      "linkID": "1830000403",
+      "roadName": "산내길",
+      "linkLength": 389.776300282
+    },
+    {
+      "linkID": "1830001904",
+      "roadName": "산내길",
+      "linkLength": 475.395201721
+    },
+    {
+      "linkID": "1830001905",
+      "roadName": "산내길",
+      "linkLength": 460.149597301
+    },
+    {
+      "linkID": "1830001906",
+      "roadName": "산내길",
+      "linkLength": 252.388364022
+    },
+    {
+      "linkID": "1830001907",
+      "roadName": "산내길",
+      "linkLength": 426.33941365
+    },
+    {
+      "linkID": "1830002004",
+      "roadName": "산내길",
+      "linkLength": 475.745695172
+    },
+    {
+      "linkID": "1830002005",
+      "roadName": "산내길",
+      "linkLength": 459.263971275
+    },
+    {
+      "linkID": "1830002006",
+      "roadName": "산내길",
+      "linkLength": 254.808379503
+    },
+    {
+      "linkID": "1830002007",
+      "roadName": "산내길",
+      "linkLength": 424.236204793
+    },
+    {
+      "linkID": "1830003503",
+      "roadName": "금산길",
+      "linkLength": 142.927020378
+    },
+    {
+      "linkID": "1830005102",
+      "roadName": "가오동길",
+      "linkLength": 189.682026216
+    },
+    {
+      "linkID": "1830005202",
+      "roadName": "가오동길",
+      "linkLength": 194.264146118
+    },
+    {
+      "linkID": "1830005501",
+      "roadName": "옥천길",
+      "linkLength": 324.98235966
+    },
+    {
+      "linkID": "1830005502",
+      "roadName": "옥천길",
+      "linkLength": 40.347123477
+    },
+    {
+      "linkID": "1830005601",
+      "roadName": "옥천길",
+      "linkLength": 317.618871451
+    },
+    {
+      "linkID": "1830005602",
+      "roadName": "옥천길",
+      "linkLength": 40.259497669
+    },
+    {
+      "linkID": "1830006300",
+      "roadName": "옥천길",
+      "linkLength": 217.416314098
+    },
+    {
+      "linkID": "1830006400",
+      "roadName": "옥천길",
+      "linkLength": 220.515874166
+    },
+    {
+      "linkID": "1830006700",
+      "roadName": "옥천길",
+      "linkLength": 127.234443138
+    },
+    {
+      "linkID": "1830006800",
+      "roadName": "옥천길",
+      "linkLength": 129.701940898
+    },
+    {
+      "linkID": "1830006904",
+      "roadName": "옥천길",
+      "linkLength": 98.553400832
+    },
+    {
+      "linkID": "1830006905",
+      "roadName": "옥천길",
+      "linkLength": 150.958734276
+    },
+    {
+      "linkID": "1830007004",
+      "roadName": "옥천길",
+      "linkLength": 98.440428572
+    },
+    {
+      "linkID": "1830007005",
+      "roadName": "옥천길",
+      "linkLength": 151.014217205
+    }
+  ],
+  "osmRoadSamples": [
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로643번길",
+        "name:en": "Daedeok-daero 643beon-gil",
+        "name:ko": "대덕대로643번길"
+      },
+      "calculatedLength": 153.53
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로633번길",
+        "name:en": "Daedeok-daero 633beon-gil",
+        "name:ko": "대덕대로633번길"
+      },
+      "calculatedLength": 186.42
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "maxspeed": "70"
+      },
+      "calculatedLength": 17.96
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로653번길",
+        "name:en": "Daedeok-daero 653beon-gil",
+        "name:ko": "대덕대로653번길"
+      },
+      "calculatedLength": 159.26
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "70",
+        "name": "가정로",
+        "name:en": "Gajeong-ro",
+        "name:ko": "가정로",
+        "oneway": "yes",
+        "source:highway": "2030 대전광역시 도시교통정비 기본계획변경, 표 2-16 및 표 5-2-30",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 493.42
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "destination": "무주;서대전;판암",
+        "destination:lang:en": "Muju;West Daejeon;Panam",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "maxspeed": "100",
+        "oneway": "yes"
+      },
+      "calculatedLength": 513.83
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "destination": "서울;대구;유성분기점 · 당진 · 서천",
+        "destination:lang:en": "Seoul;Daegu;Yuseong Junction, Dangjin, Seocheon",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "maxspeed": "40",
+        "oneway": "yes"
+      },
+      "calculatedLength": 77.73
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "destination": "당진;세종;광주;전주;북대전",
+        "destination:lang:en": "Dangjin;Sejong;Gwangju;Jeonju;North Daejeon",
+        "destination:ref": "251",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "maxspeed": "100",
+        "oneway": "yes"
+      },
+      "calculatedLength": 433.71
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로649번길",
+        "name:en": "Daedeok-daero 649beon-gil",
+        "name:ko": "대덕대로649번길"
+      },
+      "calculatedLength": 398.76
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로603번길",
+        "name:en": "Daedeok-daero 603beon-gil",
+        "name:ko": "대덕대로603번길"
+      },
+      "calculatedLength": 165.21
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로649번길",
+        "name:en": "Daedeok-daero 649beon-gil",
+        "name:ko": "대덕대로649번길"
+      },
+      "calculatedLength": 140.88
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로556번길",
+        "name:en": "Daedeok-daero 556beon-gil",
+        "name:ko": "대덕대로556번길",
+        "name:ko-Latn": "Daedeok-daero 556beon-gil"
+      },
+      "calculatedLength": 885.29
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로560번길",
+        "name:en": "Daedeok-daero 560beon-gil",
+        "name:ko": "대덕대로560번길",
+        "name:ko-Latn": "Daedeokdaero 560beongil"
+      },
+      "calculatedLength": 233.59
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로590번길",
+        "name:en": "Daedeok-daero 590beon-gil",
+        "name:ko": "대덕대로590번길",
+        "name:ko-Latn": "Daedeokdaero 590beongil"
+      },
+      "calculatedLength": 150.61
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로604번길",
+        "name:en": "Daedeok-daero 604beon-gil",
+        "name:ko": "대덕대로604번길",
+        "name:ko-Latn": "Daedeokdaero 604beongil"
+      },
+      "calculatedLength": 149.54
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "대덕대로577번길",
+        "name:en": "Daedeok-daero 577beon-gil",
+        "name:ko": "대덕대로577번길"
+      },
+      "calculatedLength": 336.39
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "primary_link",
+        "lanes": "4",
+        "oneway": "yes"
+      },
+      "calculatedLength": 21.66
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "primary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 303.52
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "service",
+        "lanes": "1",
+        "name": "아리랑로21번길",
+        "name:en": "Arirang-ro 21beon-gil",
+        "name:ko": "아리랑로21번길"
+      },
+      "calculatedLength": 1220.5
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "2",
+        "name": "온천서로",
+        "name:en": "Oncheonseo-ro",
+        "name:ko": "온천서로"
+      },
+      "calculatedLength": 703.06
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "secondary",
+        "lanes": "4",
+        "name": "대학로",
+        "name:en": "Daehak-ro",
+        "name:ko": "대학로",
+        "noref": "yes",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 652.96
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "primary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 271.64
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "unclassified",
+        "lanes": "4",
+        "maxspeed": "30"
+      },
+      "calculatedLength": 613.92
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "living_street",
+        "lanes": "2",
+        "name": "온천로",
+        "name:en": "Oncheon-ro",
+        "name:ko": "온천로",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 936.29
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "primary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "paving_stones",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 246.05
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "bridge:name": "하기1교",
+        "highway": "tertiary",
+        "lanes": "4",
+        "maxspeed": "70",
+        "name": "노은로",
+        "name:en": "Noeun-ro",
+        "name:ko": "노은로",
+        "oneway": "yes"
+      },
+      "calculatedLength": 102.57
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "name": "은구비로",
+        "name:en": "Eungubi-ro",
+        "name:ko": "은구비로"
+      },
+      "calculatedLength": 493.45
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "living_street",
+        "lanes": "4",
+        "name": "노은동로234번길",
+        "name:en": "Noeundong-ro 234beon-gil",
+        "name:ko": "노은동로234번길"
+      },
+      "calculatedLength": 68.1
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "residential",
+        "lanes": "4",
+        "name": "노은서로",
+        "name:en": "Noeunseo-ro",
+        "name:ko": "노은서로",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 701.02
+    },
+    {
+      "geometryType": "LineString",
+      "properties": {
+        "highway": "secondary",
+        "lanes": "4",
+        "name": "갑천로",
+        "name:en": "Gapcheon-ro",
+        "name:ko": "갑천로",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "sidewalk": "both",
+        "surface": "asphalt"
+      },
+      "calculatedLength": 2361.82
+    }
+  ]
+}

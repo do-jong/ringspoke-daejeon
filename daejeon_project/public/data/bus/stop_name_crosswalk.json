@@ -1,0 +1,1731 @@
+{
+  "generatedAt": "2026-11-09T10:08:10.463Z",
+  "description": "정류장 이름/ID가 소스마다 다르게 보이는 케이스 모음. bus_stops.geojson 원본은 그대로 두고 매칭 정보만 기록함.",
+  "sameStopDifferentName": [
+    {
+      "stopId": "41500",
+      "ourName": "유성생명과학고",
+      "tportalName": "유성중학교",
+      "note": "학교 이름 변경으로 추정 - 스냅샷 시점 차이"
+    },
+    {
+      "stopId": "51030",
+      "ourName": "장재리(태련암입구)",
+      "tportalName": "선비마을5단지",
+      "note": "스냅샷 시점 차이로 추정"
+    }
+  ],
+  "tportalUnresolvedId": [
+    {
+      "tportalName": "중촌주공2단지",
+      "tportalCoordinates": [
+        127.410576,
+        36.343216
+      ],
+      "resolvedStopId": "9002651",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "장동2구",
+      "tportalCoordinates": [
+        127.440315,
+        36.396004
+      ],
+      "resolvedStopId": "9002498",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "은어송마을3단지후문",
+      "tportalCoordinates": [
+        127.458565,
+        36.311447
+      ],
+      "resolvedStopId": "9002451",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "갈마아파트3단지",
+      "tportalCoordinates": [
+        127.37227,
+        36.341507
+      ],
+      "resolvedStopId": "9001059",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "노은휴먼시아4단지",
+      "tportalCoordinates": [
+        127.30605,
+        36.378033
+      ],
+      "resolvedStopId": "9007019",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "가장제일장로교회",
+      "tportalCoordinates": [
+        127.38244,
+        36.3286
+      ],
+      "resolvedStopId": "9005919",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "대성여자고등학교",
+      "tportalCoordinates": [
+        127.43792,
+        36.33816
+      ],
+      "resolvedStopId": "9001365",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "대전역동광장종점",
+      "tportalCoordinates": [
+        127.437904,
+        36.332012
+      ],
+      "resolvedStopId": "9005621",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "대전역동광장종점",
+      "tportalCoordinates": [
+        127.4376,
+        36.33268
+      ],
+      "resolvedStopId": "9007514",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "서남부터미널종점",
+      "tportalCoordinates": [
+        127.38789,
+        36.31271
+      ],
+      "resolvedStopId": "9003105",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "안영동검바위마을",
+      "tportalCoordinates": [
+        127.37695,
+        36.275196
+      ],
+      "resolvedStopId": "9002174",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "한국효문화진흥원",
+      "tportalCoordinates": [
+        127.37909,
+        36.286144
+      ],
+      "resolvedStopId": "9002683",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "남대전고등학교",
+      "tportalCoordinates": [
+        127.42723,
+        36.315746
+      ],
+      "resolvedStopId": "9001246",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "낭월공영차고지",
+      "tportalCoordinates": [
+        127.47771,
+        36.268803
+      ],
+      "resolvedStopId": "9005538",
+      "distanceM": 0,
+      "candidateCount": 1
+    },
+    {
+      "tportalName": "배재대학교종점",
+      "tportalCoordinates": [
+        127.36592,
+        36.32296
+      ],
+      "resolvedStopId": "9007074",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "월평주공아파트",
+      "tportalCoordinates": [
+        127.37101,
+        36.36213
+      ],
+      "resolvedStopId": "9002381",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "철도차량정비단",
+      "tportalCoordinates": [
+        127.42772,
+        36.42665
+      ],
+      "resolvedStopId": "9001433",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "산정마을종점(출발)",
+      "tportalCoordinates": [
+        127.45514,
+        36.234413
+      ],
+      "resolvedStopId": "8072537",
+      "distanceM": 0,
+      "candidateCount": 1
+    },
+    {
+      "tportalName": "구암동기점지",
+      "tportalCoordinates": [
+        127.329445,
+        36.35628
+      ],
+      "resolvedStopId": "9007565",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "대전고등학교",
+      "tportalCoordinates": [
+        127.42549,
+        36.323307
+      ],
+      "resolvedStopId": "9001376",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "대전역동광장",
+      "tportalCoordinates": [
+        127.43691,
+        36.332943
+      ],
+      "resolvedStopId": "9005504",
+      "distanceM": 0,
+      "candidateCount": 5
+    },
+    {
+      "tportalName": "대전역동광장",
+      "tportalCoordinates": [
+        127.438736,
+        36.333298
+      ],
+      "resolvedStopId": "9005548",
+      "distanceM": 0,
+      "candidateCount": 5
+    },
+    {
+      "tportalName": "대한통운종점",
+      "tportalCoordinates": [
+        127.42528,
+        36.383934
+      ],
+      "resolvedStopId": "9001455",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "둔천초등학교",
+      "tportalCoordinates": [
+        127.37721,
+        36.37026
+      ],
+      "resolvedStopId": "9005908",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "보훈병원종점",
+      "tportalCoordinates": [
+        127.43832,
+        36.448544
+      ],
+      "resolvedStopId": "9001753",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "수통골기점지",
+      "tportalCoordinates": [
+        127.29512,
+        36.346436
+      ],
+      "resolvedStopId": "9002077",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "신탄진기점지",
+      "tportalCoordinates": [
+        127.417755,
+        36.45052
+      ],
+      "resolvedStopId": "9005503",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "어덕마을종점",
+      "tportalCoordinates": [
+        127.40243,
+        36.33355
+      ],
+      "resolvedStopId": "9002200",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "윗사정삼거리",
+      "tportalCoordinates": [
+        127.399086,
+        36.293003
+      ],
+      "resolvedStopId": "9007040",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "정부청사광장",
+      "tportalCoordinates": [
+        127.38281,
+        36.35819
+      ],
+      "resolvedStopId": "9005583",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "충대농대종점",
+      "tportalCoordinates": [
+        127.35208,
+        36.36739
+      ],
+      "resolvedStopId": "9002736",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "충대농대종점",
+      "tportalCoordinates": [
+        127.35218,
+        36.367615
+      ],
+      "resolvedStopId": "9002737",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "충렬사삼거리",
+      "tportalCoordinates": [
+        127.35361,
+        36.39629
+      ],
+      "resolvedStopId": "9002745",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "냉천골종점",
+      "tportalCoordinates": [
+        127.49069,
+        36.41495
+      ],
+      "resolvedStopId": "9001265",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "목원대학교",
+      "tportalCoordinates": [
+        127.33803,
+        36.329475
+      ],
+      "resolvedStopId": "9001641",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "백암리종점",
+      "tportalCoordinates": [
+        127.399414,
+        36.20623
+      ],
+      "resolvedStopId": "9005141",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "보문오거리",
+      "tportalCoordinates": [
+        127.425064,
+        36.317078
+      ],
+      "resolvedStopId": "21030",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "봉산동기점",
+      "tportalCoordinates": [
+        127.384605,
+        36.44825
+      ],
+      "resolvedStopId": "9001783",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "비래검문소",
+      "tportalCoordinates": [
+        127.444664,
+        36.355915
+      ],
+      "resolvedStopId": "9007010",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "삼호아파트",
+      "tportalCoordinates": [
+        127.44925,
+        36.35399
+      ],
+      "resolvedStopId": "9001891",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "서대전여고",
+      "tportalCoordinates": [
+        127.37054,
+        36.32689
+      ],
+      "resolvedStopId": "9001932",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "송정소징이",
+      "tportalCoordinates": [
+        127.24938,
+        36.287224
+      ],
+      "resolvedStopId": "9002062",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "수운교입구",
+      "tportalCoordinates": [
+        127.339676,
+        36.412895
+      ],
+      "resolvedStopId": "9002070",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "시청환승지",
+      "tportalCoordinates": [
+        127.38445,
+        36.351566
+      ],
+      "resolvedStopId": "9002089",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "시청환승지",
+      "tportalCoordinates": [
+        127.385284,
+        36.352467
+      ],
+      "resolvedStopId": "9002090",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "신대차고지",
+      "tportalCoordinates": [
+        127.421585,
+        36.40874
+      ],
+      "resolvedStopId": "9007174",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "신흥동종점",
+      "tportalCoordinates": [
+        127.44274,
+        36.32252
+      ],
+      "resolvedStopId": "9005568",
+      "distanceM": 0,
+      "candidateCount": 1
+    },
+    {
+      "tportalName": "용호동종점",
+      "tportalCoordinates": [
+        127.4481,
+        36.437256
+      ],
+      "resolvedStopId": "9002327",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "정림동종점",
+      "tportalCoordinates": [
+        127.360306,
+        36.292442
+      ],
+      "resolvedStopId": "9007447",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "천개동종점",
+      "tportalCoordinates": [
+        127.45864,
+        36.381557
+      ],
+      "resolvedStopId": "9002684",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "평촌동종점",
+      "tportalCoordinates": [
+        127.308716,
+        36.23689
+      ],
+      "resolvedStopId": "9007516",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "향촌아파트",
+      "tportalCoordinates": [
+        127.377396,
+        36.35576
+      ],
+      "resolvedStopId": "9002968",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "효동네거리",
+      "tportalCoordinates": [
+        127.43924,
+        36.31885
+      ],
+      "resolvedStopId": "9003016",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "효평삼거리",
+      "tportalCoordinates": [
+        127.47391,
+        36.409588
+      ],
+      "resolvedStopId": "9003027",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "효평삼거리",
+      "tportalCoordinates": [
+        127.47388,
+        36.409664
+      ],
+      "resolvedStopId": "9003028",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "기성농협",
+      "tportalCoordinates": [
+        127.34092,
+        36.25356
+      ],
+      "resolvedStopId": "9001224",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "대덕대학",
+      "tportalCoordinates": [
+        127.36313,
+        36.390774
+      ],
+      "resolvedStopId": "9001029",
+      "distanceM": 0,
+      "candidateCount": 1
+    },
+    {
+      "tportalName": "마전종점",
+      "tportalCoordinates": [
+        127.4667,
+        36.189686
+      ],
+      "resolvedStopId": "9005122",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "상소룡골",
+      "tportalCoordinates": [
+        127.4548,
+        36.242577
+      ],
+      "resolvedStopId": "9003122",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "서대전역",
+      "tportalCoordinates": [
+        127.40499,
+        36.32163
+      ],
+      "resolvedStopId": "9001936",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "세동종점",
+      "tportalCoordinates": [
+        127.26877,
+        36.311546
+      ],
+      "resolvedStopId": "9002022",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "직동종점",
+      "tportalCoordinates": [
+        127.47764,
+        36.41642
+      ],
+      "resolvedStopId": "9002665",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "한빛고교",
+      "tportalCoordinates": [
+        127.37635,
+        36.284378
+      ],
+      "resolvedStopId": "9002937",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "회남종점",
+      "tportalCoordinates": [
+        127.57889,
+        36.44414
+      ],
+      "resolvedStopId": "9005041",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "구완동",
+      "tportalCoordinates": [
+        127.424286,
+        36.279274
+      ],
+      "resolvedStopId": "9007678",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "동춘당",
+      "tportalCoordinates": [
+        127.44144,
+        36.364178
+      ],
+      "resolvedStopId": "9007518",
+      "distanceM": 0,
+      "candidateCount": 3
+    },
+    {
+      "tportalName": "동학사",
+      "tportalCoordinates": [
+        127.240875,
+        36.359516
+      ],
+      "resolvedStopId": "9005104",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "방아실",
+      "tportalCoordinates": [
+        127.54583,
+        36.38976
+      ],
+      "resolvedStopId": "9005131",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "신안동",
+      "tportalCoordinates": [
+        127.44126,
+        36.33071
+      ],
+      "resolvedStopId": "9002115",
+      "distanceM": 0,
+      "candidateCount": 4
+    },
+    {
+      "tportalName": "안산동",
+      "tportalCoordinates": [
+        127.29834,
+        36.41465
+      ],
+      "resolvedStopId": "9002170",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "탑립동",
+      "tportalCoordinates": [
+        127.40161,
+        36.408413
+      ],
+      "resolvedStopId": "9002765",
+      "distanceM": 0,
+      "candidateCount": 2
+    },
+    {
+      "tportalName": "탑립",
+      "tportalCoordinates": [
+        127.40648,
+        36.41181
+      ],
+      "resolvedStopId": "9102765",
+      "distanceM": 0,
+      "candidateCount": 1
+    }
+  ],
+  "reusedStopIds": [
+    {
+      "stopId": "51140",
+      "variants": [
+        {
+          "name": "대전지방국세청",
+          "nodeId": "8001430",
+          "coordinates": [
+            127.42838,
+            36.372147
+          ],
+          "routeCount": 6
+        },
+        {
+          "name": "국책연구단지 동측",
+          "nodeId": "8007459",
+          "coordinates": [
+            127.3062,
+            36.495014
+          ],
+          "routeCount": 2
+        }
+      ]
+    },
+    {
+      "stopId": "43730",
+      "variants": [
+        {
+          "name": "군인아파트",
+          "nodeId": "8001191",
+          "coordinates": [
+            127.337074,
+            36.410934
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "군인아파트",
+          "nodeId": "8005670",
+          "coordinates": [
+            127.338295,
+            36.416744
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "41500",
+      "variants": [
+        {
+          "name": "유성생명과학고",
+          "nodeId": "8002419",
+          "coordinates": [
+            127.326836,
+            36.34947
+          ],
+          "routeCount": 3
+        },
+        {
+          "name": "유성중학교",
+          "nodeId": "8007028",
+          "coordinates": [
+            127.33553,
+            36.346176
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "33020",
+      "variants": [
+        {
+          "name": "가수원도서관",
+          "nodeId": "8001018",
+          "coordinates": [
+            127.34997,
+            36.301926
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "등곡리",
+          "nodeId": "3012045",
+          "coordinates": [
+            127.384865,
+            36.507732
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "34050",
+      "variants": [
+        {
+          "name": "기성초등학교",
+          "nodeId": "8001227",
+          "coordinates": [
+            127.33621,
+            36.250916
+          ],
+          "routeCount": 4
+        },
+        {
+          "name": "박산고개",
+          "nodeId": "8005056",
+          "coordinates": [
+            127.36249,
+            36.47506
+          ],
+          "routeCount": 3
+        }
+      ]
+    },
+    {
+      "stopId": "34010",
+      "variants": [
+        {
+          "name": "새터",
+          "nodeId": "8001911",
+          "coordinates": [
+            127.32542,
+            36.243416
+          ],
+          "routeCount": 3
+        },
+        {
+          "name": "금남면사무소",
+          "nodeId": "8005081",
+          "coordinates": [
+            127.28089,
+            36.464188
+          ],
+          "routeCount": 2
+        }
+      ]
+    },
+    {
+      "stopId": "33030",
+      "variants": [
+        {
+          "name": "가수원도서관",
+          "nodeId": "8001017",
+          "coordinates": [
+            127.35014,
+            36.30203
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "부강리",
+          "nodeId": "3012009",
+          "coordinates": [
+            127.36087,
+            36.53291
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "33070",
+      "variants": [
+        {
+          "name": "가수원육교.가수원시장",
+          "nodeId": "8001029",
+          "coordinates": [
+            127.35135,
+            36.30447
+          ],
+          "routeCount": 17
+        },
+        {
+          "name": "부강2리",
+          "nodeId": "3064469",
+          "coordinates": [
+            127.36597,
+            36.5295
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "34100",
+      "variants": [
+        {
+          "name": "밤갈미",
+          "nodeId": "8001684",
+          "coordinates": [
+            127.34575,
+            36.242565
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "황용2리",
+          "nodeId": "3011062",
+          "coordinates": [
+            127.31857,
+            36.47452
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "34110",
+      "variants": [
+        {
+          "name": "용바위",
+          "nodeId": "8002283",
+          "coordinates": [
+            127.346306,
+            36.231873
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "대평리원형교차로",
+          "nodeId": "3064020",
+          "coordinates": [
+            127.28052,
+            36.46002
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "34130",
+      "variants": [
+        {
+          "name": "장안동종점",
+          "nodeId": "8002516",
+          "coordinates": [
+            127.33841,
+            36.197227
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "장재1리",
+          "nodeId": "8005500",
+          "coordinates": [
+            127.30819,
+            36.479748
+          ],
+          "routeCount": 3
+        }
+      ]
+    },
+    {
+      "stopId": "34080",
+      "variants": [
+        {
+          "name": "토옥골",
+          "nodeId": "8002808",
+          "coordinates": [
+            127.343994,
+            36.239403
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "영대리",
+          "nodeId": "3011085",
+          "coordinates": [
+            127.335434,
+            36.467873
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "34030",
+      "variants": [
+        {
+          "name": "야실",
+          "nodeId": "8002178",
+          "coordinates": [
+            127.33071,
+            36.249527
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "대박리",
+          "nodeId": "8005126",
+          "coordinates": [
+            127.34945,
+            36.477154
+          ],
+          "routeCount": 3
+        }
+      ]
+    },
+    {
+      "stopId": "33040",
+      "variants": [
+        {
+          "name": "가수원육교.가수원시장",
+          "nodeId": "8001028",
+          "coordinates": [
+            127.350845,
+            36.30469
+          ],
+          "routeCount": 18
+        },
+        {
+          "name": "부강초등학교",
+          "nodeId": "3064462",
+          "coordinates": [
+            127.36714,
+            36.52823
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "11100",
+      "variants": [
+        {
+          "name": "대전대학교",
+          "nodeId": "8001384",
+          "coordinates": [
+            127.46375,
+            36.33268
+          ],
+          "routeCount": 5
+        },
+        {
+          "name": "세종시보건소(대동초)",
+          "nodeId": "3064147",
+          "coordinates": [
+            127.29376,
+            36.59545
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "61040",
+      "variants": [
+        {
+          "name": "어부동",
+          "nodeId": "8005025",
+          "coordinates": [
+            127.53908,
+            36.430008
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "새뜸마을4단지,가온마을1단지",
+          "nodeId": "3064360",
+          "coordinates": [
+            127.24442,
+            36.48931
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51100",
+      "variants": [
+        {
+          "name": "영진아파트",
+          "nodeId": "8002219",
+          "coordinates": [
+            127.42733,
+            36.37438
+          ],
+          "routeCount": 3
+        },
+        {
+          "name": "세종우체국(남부서,보람초)",
+          "nodeId": "8007347",
+          "coordinates": [
+            127.29276,
+            36.4802
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51030",
+      "variants": [
+        {
+          "name": "장재리(태련암입구)",
+          "nodeId": "8005241",
+          "coordinates": [
+            127.312416,
+            36.480072
+          ],
+          "routeCount": 4
+        },
+        {
+          "name": "선비마을5단지",
+          "nodeId": "8001985",
+          "coordinates": [
+            127.44515,
+            36.36633
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51050",
+      "variants": [
+        {
+          "name": "호탄리",
+          "nodeId": "8005286",
+          "coordinates": [
+            127.29637,
+            36.47634
+          ],
+          "routeCount": 4
+        },
+        {
+          "name": "송촌고등학교",
+          "nodeId": "8002063",
+          "coordinates": [
+            127.444756,
+            36.361942
+          ],
+          "routeCount": 5
+        }
+      ]
+    },
+    {
+      "stopId": "51020",
+      "variants": [
+        {
+          "name": "금남초등학교",
+          "nodeId": "8005082",
+          "coordinates": [
+            127.28634,
+            36.471943
+          ],
+          "routeCount": 4
+        },
+        {
+          "name": "한신휴플러스",
+          "nodeId": "8002950",
+          "coordinates": [
+            127.44406,
+            36.35495
+          ],
+          "routeCount": 9
+        }
+      ]
+    },
+    {
+      "stopId": "51130",
+      "variants": [
+        {
+          "name": "대전지방국세청",
+          "nodeId": "8006007",
+          "coordinates": [
+            127.42819,
+            36.372967
+          ],
+          "routeCount": 6
+        },
+        {
+          "name": "새뜸마을5,8단지",
+          "nodeId": "3064242",
+          "coordinates": [
+            127.25329,
+            36.482388
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51040",
+      "variants": [
+        {
+          "name": "송촌고등학교",
+          "nodeId": "8002064",
+          "coordinates": [
+            127.444984,
+            36.362057
+          ],
+          "routeCount": 5
+        },
+        {
+          "name": "첫마을4단지",
+          "nodeId": "8007088",
+          "coordinates": [
+            127.251724,
+            36.48024
+          ],
+          "routeCount": 2
+        }
+      ]
+    },
+    {
+      "stopId": "32040",
+      "variants": [
+        {
+          "name": "갤러리아타임월드",
+          "nodeId": "8001077",
+          "coordinates": [
+            127.376976,
+            36.351944
+          ],
+          "routeCount": 3
+        },
+        {
+          "name": "예양리",
+          "nodeId": "3015025",
+          "coordinates": [
+            127.32321,
+            36.572792
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "32130",
+      "variants": [
+        {
+          "name": "이마트",
+          "nodeId": "8002468",
+          "coordinates": [
+            127.37922,
+            36.355156
+          ],
+          "routeCount": 10
+        },
+        {
+          "name": "동면농협예양지소",
+          "nodeId": "3355071",
+          "coordinates": [
+            127.32163,
+            36.56798
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51010",
+      "variants": [
+        {
+          "name": "가양중학교입구",
+          "nodeId": "8001039",
+          "coordinates": [
+            127.443,
+            36.352158
+          ],
+          "routeCount": 8
+        },
+        {
+          "name": "새롬동,나성동(청소년센터)",
+          "nodeId": "8007083",
+          "coordinates": [
+            127.25729,
+            36.487713
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "73050",
+      "variants": [
+        {
+          "name": "한라비발디아파트",
+          "nodeId": "8007537",
+          "coordinates": [
+            127.25913,
+            36.26533
+          ],
+          "routeCount": 4
+        },
+        {
+          "name": "계룡시보건소",
+          "nodeId": "8005051",
+          "coordinates": [
+            127.25046,
+            36.272232
+          ],
+          "routeCount": 23
+        }
+      ]
+    },
+    {
+      "stopId": "32010",
+      "variants": [
+        {
+          "name": "향촌아파트",
+          "nodeId": "8002968",
+          "coordinates": [
+            127.37578,
+            36.35571
+          ],
+          "routeCount": 3
+        },
+        {
+          "name": "내판역",
+          "nodeId": "3015028",
+          "coordinates": [
+            127.325165,
+            36.55796
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "32020",
+      "variants": [
+        {
+          "name": "파랑새아파트",
+          "nodeId": "8002815",
+          "coordinates": [
+            127.37598,
+            36.355965
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "명학리",
+          "nodeId": "3015063",
+          "coordinates": [
+            127.34803,
+            36.53579
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "11090",
+      "variants": [
+        {
+          "name": "에코포레아파트",
+          "nodeId": "8002308",
+          "coordinates": [
+            127.463135,
+            36.3304
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "조치원1927아트센터",
+          "nodeId": "3001093",
+          "coordinates": [
+            127.29893,
+            36.59714
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "11010",
+      "variants": [
+        {
+          "name": "대전대학교입구",
+          "nodeId": "8001382",
+          "coordinates": [
+            127.45949,
+            36.32804
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "세종시문화예술회관",
+          "nodeId": "3001045",
+          "coordinates": [
+            127.29075,
+            36.598
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51090",
+      "variants": [
+        {
+          "name": "법동주공3단지",
+          "nodeId": "8001722",
+          "coordinates": [
+            127.42664,
+            36.371696
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "가락마을8단지",
+          "nodeId": "3064070",
+          "coordinates": [
+            127.24071,
+            36.50877
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "51110",
+      "variants": [
+        {
+          "name": "안산도서관",
+          "nodeId": "8002168",
+          "coordinates": [
+            127.427536,
+            36.368668
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "보람동,대평동",
+          "nodeId": "8007297",
+          "coordinates": [
+            127.28166,
+            36.47563
+          ],
+          "routeCount": 3
+        }
+      ]
+    },
+    {
+      "stopId": "51120",
+      "variants": [
+        {
+          "name": "유원아파트",
+          "nodeId": "8002426",
+          "coordinates": [
+            127.427475,
+            36.36943
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "한국개발연구원(KDI)",
+          "nodeId": "8007291",
+          "coordinates": [
+            127.30786,
+            36.481045
+          ],
+          "routeCount": 2
+        }
+      ]
+    },
+    {
+      "stopId": "51080",
+      "variants": [
+        {
+          "name": "삼정하이츠타운",
+          "nodeId": "8001889",
+          "coordinates": [
+            127.42635,
+            36.37344
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "가락마을8단지",
+          "nodeId": "3064060",
+          "coordinates": [
+            127.24059,
+            36.50893
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "52030",
+      "variants": [
+        {
+          "name": "벤처타운장영실관",
+          "nodeId": "8001729",
+          "coordinates": [
+            127.413376,
+            36.43713
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "정부세종청사 남측",
+          "nodeId": "3062007",
+          "coordinates": [
+            127.25996,
+            36.501766
+          ],
+          "routeCount": 5
+        }
+      ]
+    },
+    {
+      "stopId": "52020",
+      "variants": [
+        {
+          "name": "벤처타운장영실관",
+          "nodeId": "8001728",
+          "coordinates": [
+            127.41312,
+            36.43762
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "범지기마을10단지",
+          "nodeId": "3061007",
+          "coordinates": [
+            127.25225,
+            36.51862
+          ],
+          "routeCount": 2
+        }
+      ]
+    },
+    {
+      "stopId": "53030",
+      "variants": [
+        {
+          "name": "상서동",
+          "nodeId": "8005613",
+          "coordinates": [
+            127.42271,
+            36.427597
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "으뜸초등학교",
+          "nodeId": "3064122",
+          "coordinates": [
+            127.231476,
+            36.50704
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "53050",
+      "variants": [
+        {
+          "name": "철도차량정비단",
+          "nodeId": "8001433",
+          "coordinates": [
+            127.425735,
+            36.42597
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "가락마을20,21단지",
+          "nodeId": "3064233",
+          "coordinates": [
+            127.24079,
+            36.51751
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "53010",
+      "variants": [
+        {
+          "name": "달수정",
+          "nodeId": "8005616",
+          "coordinates": [
+            127.429184,
+            36.429283
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "가락마을22단지",
+          "nodeId": "3064098",
+          "coordinates": [
+            127.24111,
+            36.52018
+          ],
+          "routeCount": 3
+        }
+      ]
+    },
+    {
+      "stopId": "53060",
+      "variants": [
+        {
+          "name": "평촌동",
+          "nodeId": "8002841",
+          "coordinates": [
+            127.43381,
+            36.431816
+          ],
+          "routeCount": 1
+        },
+        {
+          "name": "종촌초등학교(가락마을6,7단지)",
+          "nodeId": "8007631",
+          "coordinates": [
+            127.24088,
+            36.50344
+          ],
+          "routeCount": 2
+        }
+      ]
+    },
+    {
+      "stopId": "73220",
+      "variants": [
+        {
+          "name": "유동1리",
+          "nodeId": "8005227",
+          "coordinates": [
+            127.23607,
+            36.275352
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "계룡시민체육관",
+          "nodeId": "8005225",
+          "coordinates": [
+            127.233154,
+            36.268
+          ],
+          "routeCount": 7
+        }
+      ]
+    },
+    {
+      "stopId": "73230",
+      "variants": [
+        {
+          "name": "계룡시민체육관",
+          "nodeId": "8005224",
+          "coordinates": [
+            127.23351,
+            36.268032
+          ],
+          "routeCount": 2
+        },
+        {
+          "name": "유동1리",
+          "nodeId": "8005226",
+          "coordinates": [
+            127.23631,
+            36.275276
+          ],
+          "routeCount": 1
+        }
+      ]
+    },
+    {
+      "stopId": "77500",
+      "variants": [
+        {
+          "name": "향한리웃마을",
+          "nodeId": "8007134",
+          "coordinates": [
+            127.21717,
+            36.28508
+          ],
+          "routeCount": 9
+        },
+        {
+          "name": "향한리용기말",
+          "nodeId": "8007132",
+          "coordinates": [
+            127.22389,
+            36.277695
+          ],
+          "routeCount": 9
+        }
+      ]
+    }
+  ]
+}

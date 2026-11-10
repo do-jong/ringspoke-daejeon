@@ -1,0 +1,1746 @@
+{
+  "급행1번": {
+    "category": "급행",
+    "origin": "원내차고지",
+    "dest": "신안동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 8,
+        "onewayMin": 48
+      },
+      "휴일": {
+        "headwayMin": 10,
+        "onewayMin": 48
+      },
+      "토요일": {
+        "headwayMin": 9,
+        "onewayMin": 48
+      }
+    }
+  },
+  "급행2번": {
+    "category": "급행",
+    "origin": "봉산동",
+    "dest": "대전역",
+    "operator": "협진(☎ 936-7961) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 12,
+        "onewayMin": 87
+      },
+      "휴일": {
+        "headwayMin": 15,
+        "onewayMin": 87
+      },
+      "토요일": {
+        "headwayMin": 12,
+        "onewayMin": 87
+      }
+    }
+  },
+  "급행3번": {
+    "category": "급행",
+    "origin": "원내차고지",
+    "dest": "DCC",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 13,
+        "onewayMin": 55
+      },
+      "휴일,토요일": {
+        "headwayMin": 17,
+        "onewayMin": 55
+      }
+    }
+  },
+  "급행4번": {
+    "category": "급행",
+    "origin": "낭월동",
+    "dest": "비래동",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 13,
+        "onewayMin": 58
+      },
+      "휴일": {
+        "headwayMin": 17,
+        "onewayMin": 58
+      },
+      "토요일": {
+        "headwayMin": 14,
+        "onewayMin": 58
+      }
+    }
+  },
+  "M1번": {
+    "category": "급행",
+    "origin": "누리동",
+    "dest": "대전청사",
+    "operator": "협진(☎ 936-7961),세종제일, 세종교통, 협진운수",
+    "schedule": {
+      "평일": {
+        "headwayMin": 16,
+        "onewayMin": 105
+      },
+      "휴일,토요일": {
+        "headwayMin": 18,
+        "onewayMin": 105
+      }
+    }
+  },
+  "101번": {
+    "category": "도시",
+    "origin": "안산동",
+    "dest": "대성여고",
+    "operator": "국민(☎ 626-2169),금남(☎ 582-3527)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 89
+      },
+      "휴일": {
+        "headwayMin": 27,
+        "onewayMin": 89
+      },
+      "토요일": {
+        "headwayMin": 24,
+        "onewayMin": 89
+      }
+    }
+  },
+  "102번": {
+    "category": "도시",
+    "origin": "수통골",
+    "dest": "대전역",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 7,
+        "onewayMin": 89
+      },
+      "휴일": {
+        "headwayMin": 10,
+        "onewayMin": 89
+      },
+      "토요일": {
+        "headwayMin": 8,
+        "onewayMin": 89
+      }
+    }
+  },
+  "103번": {
+    "category": "도시",
+    "origin": "신대동",
+    "dest": "구암동",
+    "operator": "대운(☎ 626-2271) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 14,
+        "onewayMin": 108
+      },
+      "휴일,토요일": {
+        "headwayMin": 15,
+        "onewayMin": 108
+      }
+    }
+  },
+  "104번": {
+    "category": "도시",
+    "origin": "수통골",
+    "dest": "탄방역",
+    "operator": "한일(☎ 936-7710)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 66
+      },
+      "휴일": {
+        "headwayMin": 24,
+        "onewayMin": 66
+      },
+      "토요일": {
+        "headwayMin": 21,
+        "onewayMin": 66
+      }
+    }
+  },
+  "105번": {
+    "category": "도시",
+    "origin": "충대농대",
+    "dest": "비래삼호A",
+    "operator": "협진(☎ 936-7961),계룡(☎ 639-6800)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 10,
+        "onewayMin": 85
+      },
+      "휴일": {
+        "headwayMin": 14,
+        "onewayMin": 85
+      },
+      "토요일": {
+        "headwayMin": 12,
+        "onewayMin": 85
+      }
+    }
+  },
+  "106번": {
+    "category": "도시",
+    "origin": "목원대",
+    "dest": "비래동",
+    "operator": "금남(☎ 582-3527) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 10,
+        "onewayMin": 84
+      },
+      "휴일": {
+        "headwayMin": 14,
+        "onewayMin": 84
+      },
+      "토요일": {
+        "headwayMin": 13,
+        "onewayMin": 84
+      }
+    }
+  },
+  "107번": {
+    "category": "도시",
+    "origin": "대전역",
+    "dest": "동학사",
+    "operator": "대승(☎ 544-0181) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 83
+      },
+      "휴일,토요일": {
+        "headwayMin": 22,
+        "onewayMin": 83
+      }
+    }
+  },
+  "108번": {
+    "category": "도시형",
+    "origin": "낭월차고지",
+    "dest": "충대농대",
+    "operator": "동인(☎ 285-8100) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 13,
+        "onewayMin": 90
+      },
+      "휴일,토요일": {
+        "headwayMin": 15,
+        "onewayMin": 90
+      }
+    }
+  },
+  "113번": {
+    "category": "도시",
+    "origin": "서남부터미널",
+    "dest": "학하동",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 24,
+        "onewayMin": 72
+      },
+      "휴일,토요일": {
+        "headwayMin": 27,
+        "onewayMin": 72
+      }
+    }
+  },
+  "114번": {
+    "category": "도시",
+    "origin": "원내차고지",
+    "dest": "노은4단지",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 95
+      },
+      "휴일,토요일": {
+        "headwayMin": 29,
+        "onewayMin": 95
+      }
+    }
+  },
+  "115번": {
+    "category": null,
+    "origin": "오월드",
+    "dest": "충대농대",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 15,
+        "onewayMin": 67
+      },
+      "휴일,토요일": {
+        "headwayMin": 18,
+        "onewayMin": 67
+      }
+    }
+  },
+  "119번": {
+    "category": "도시",
+    "origin": "안산동",
+    "dest": "효동",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 17,
+        "onewayMin": 98
+      },
+      "휴일": {
+        "headwayMin": 21,
+        "onewayMin": 98
+      },
+      "토요일": {
+        "headwayMin": 20,
+        "onewayMin": 98
+      }
+    }
+  },
+  "121번": {
+    "category": "도시",
+    "origin": "탑립동",
+    "dest": "대덕대학",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 81
+      },
+      "휴일,토요일": {
+        "headwayMin": 33,
+        "onewayMin": 81
+      }
+    }
+  },
+  "201번": {
+    "category": "도시",
+    "origin": "원내차고지",
+    "dest": "대전IC",
+    "operator": "대교(☎ 523-2575) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 8,
+        "onewayMin": 89
+      },
+      "휴일": {
+        "headwayMin": 10,
+        "onewayMin": 89
+      },
+      "토요일": {
+        "headwayMin": 9,
+        "onewayMin": 89
+      }
+    }
+  },
+  "202번(2002번)": {
+    "category": "도시",
+    "origin": "대전역",
+    "dest": "신도안APT",
+    "operator": "경익(☎ 581-1511), 한일(☎ 936-7710) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 32,
+        "onewayMin": 106
+      },
+      "휴일,토요일": {
+        "headwayMin": 34,
+        "onewayMin": 106
+      }
+    }
+  },
+  "203번": {
+    "category": "도시",
+    "origin": "원내차고지",
+    "dest": "시청",
+    "operator": "대교(☎ 523-2575) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 18,
+        "onewayMin": 61
+      },
+      "휴일,토요일": {
+        "headwayMin": 23,
+        "onewayMin": 61
+      }
+    }
+  },
+  "211번": {
+    "category": "도시",
+    "origin": "구암동",
+    "dest": "청사",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 14,
+        "onewayMin": 86
+      },
+      "휴일,토요일": {
+        "headwayMin": 19,
+        "onewayMin": 86
+      }
+    }
+  },
+  "213번": {
+    "category": "도시",
+    "origin": "원내차고지",
+    "dest": "대한통운",
+    "operator": "대교(☎ 523-2575) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 18,
+        "onewayMin": 97
+      },
+      "휴일": {
+        "headwayMin": 26,
+        "onewayMin": 97
+      },
+      "토요일": {
+        "headwayMin": 23,
+        "onewayMin": 97
+      }
+    }
+  },
+  "216번": {
+    "category": "도시",
+    "origin": "원내차고지",
+    "dest": "시청",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 66
+      },
+      "휴일,토요일": {
+        "headwayMin": 24,
+        "onewayMin": 66
+      }
+    }
+  },
+  "301번": {
+    "category": "도시",
+    "origin": "봉산동",
+    "dest": "오월드",
+    "operator": "협진(☎ 936-7961),대승 ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 8,
+        "onewayMin": 84
+      },
+      "휴일": {
+        "headwayMin": 16,
+        "onewayMin": 84
+      },
+      "토요일": {
+        "headwayMin": 11,
+        "onewayMin": 84
+      }
+    }
+  },
+  "311번": {
+    "category": "도시",
+    "origin": "신대차고지",
+    "dest": "오월드",
+    "operator": "대운(☎ 626-2271) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 8,
+        "onewayMin": 98
+      },
+      "휴일": {
+        "headwayMin": 9,
+        "onewayMin": 98
+      },
+      "토요일": {
+        "headwayMin": 9,
+        "onewayMin": 98
+      }
+    }
+  },
+  "312번": {
+    "category": "도시",
+    "origin": "목원대",
+    "dest": "뿌리공원",
+    "operator": "금남(☎ 582-3527) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 87
+      },
+      "휴일": {
+        "headwayMin": 23,
+        "onewayMin": 87
+      },
+      "토요일": {
+        "headwayMin": 21,
+        "onewayMin": 87
+      }
+    }
+  },
+  "314번": {
+    "category": "도시",
+    "origin": "오월드",
+    "dest": "동춘당",
+    "operator": "대버(☎ 586-9977) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 11,
+        "onewayMin": 76
+      },
+      "휴일": {
+        "headwayMin": 14,
+        "onewayMin": 76
+      },
+      "토요일": {
+        "headwayMin": 13,
+        "onewayMin": 76
+      }
+    }
+  },
+  "315번": {
+    "category": "도시",
+    "origin": "오월드",
+    "dest": "향촌A",
+    "operator": "대버(☎ 586-9977) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 20,
+        "onewayMin": 53
+      },
+      "휴일": {
+        "headwayMin": 25,
+        "onewayMin": 53
+      },
+      "토요일": {
+        "headwayMin": 21,
+        "onewayMin": 53
+      }
+    }
+  },
+  "316번": {
+    "category": "도시",
+    "origin": "대한통운",
+    "dest": "한빛고",
+    "operator": "대운(☎ 626-2271) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 23,
+        "onewayMin": 107
+      },
+      "휴일": {
+        "headwayMin": 29,
+        "onewayMin": 107
+      },
+      "토요일": {
+        "headwayMin": 26,
+        "onewayMin": 107
+      }
+    }
+  },
+  "318번": {
+    "category": "도시",
+    "origin": "오월드",
+    "dest": "대덕대학",
+    "operator": "경익(☎ 581-1511),산호(☎ 285-8057) ,금남(☎ 582-3527)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 66
+      },
+      "휴일,토요일": {
+        "headwayMin": 22,
+        "onewayMin": 66
+      }
+    }
+  },
+  "501번": {
+    "category": null,
+    "origin": "비래동",
+    "dest": "마전",
+    "operator": "동인(☎ 285-8100) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 15,
+        "onewayMin": 84
+      },
+      "휴일,토요일": {
+        "headwayMin": 17,
+        "onewayMin": 84
+      }
+    }
+  },
+  "511번": {
+    "category": "도시",
+    "origin": "낭월차고지",
+    "dest": "중촌동",
+    "operator": "동인(☎ 285-8100) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 13,
+        "onewayMin": 56
+      }
+    }
+  },
+  "512번": {
+    "category": "도시",
+    "origin": "대한통운",
+    "dest": "구도동",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 72
+      },
+      "휴일": {
+        "headwayMin": 26,
+        "onewayMin": 72
+      },
+      "토요일": {
+        "headwayMin": 23,
+        "onewayMin": 72
+      }
+    }
+  },
+  "513번": {
+    "category": "도시",
+    "origin": "낭월차고지",
+    "dest": "검바위",
+    "operator": "동인(☎ 285-8100) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 67
+      },
+      "휴일,토요일": {
+        "headwayMin": 28,
+        "onewayMin": 67
+      }
+    }
+  },
+  "514번": {
+    "category": "도시",
+    "origin": "낭월차고지",
+    "dest": "만년동",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 17,
+        "onewayMin": 102
+      },
+      "휴일,토요일": {
+        "headwayMin": 24,
+        "onewayMin": 102
+      }
+    }
+  },
+  "601번": {
+    "category": "도시",
+    "origin": "구암동",
+    "dest": "비래동",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 72
+      },
+      "휴일,토요일": {
+        "headwayMin": 26,
+        "onewayMin": 72
+      }
+    }
+  },
+  "602번": {
+    "category": "도시",
+    "origin": "비래동",
+    "dest": "월평주공A",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 66
+      },
+      "휴일,토요일": {
+        "headwayMin": 24,
+        "onewayMin": 66
+      }
+    }
+  },
+  "603번": {
+    "category": "도시",
+    "origin": "목원대",
+    "dest": "대전대",
+    "operator": "대버(☎ 586-9977) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 14,
+        "onewayMin": 96
+      },
+      "휴일": {
+        "headwayMin": 19,
+        "onewayMin": 96
+      },
+      "토요일": {
+        "headwayMin": 18,
+        "onewayMin": 96
+      }
+    }
+  },
+  "604번": {
+    "category": "도시",
+    "origin": "동신과학고",
+    "dest": "충열사삼거리",
+    "operator": "대승(☎ 544-0181)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 12,
+        "onewayMin": 88
+      },
+      "휴일,토요일": {
+        "headwayMin": 15,
+        "onewayMin": 88
+      }
+    }
+  },
+  "605번": {
+    "category": "도시",
+    "origin": "대전대",
+    "dest": "갈마A",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 12,
+        "onewayMin": 84
+      },
+      "휴일,토요일": {
+        "headwayMin": 17,
+        "onewayMin": 84
+      }
+    }
+  },
+  "607번": {
+    "category": "도시",
+    "origin": "비래동",
+    "dest": "옥천",
+    "operator": "대운(☎ 626-2271) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 16,
+        "onewayMin": 83
+      }
+    }
+  },
+  "608번": {
+    "category": "도시",
+    "origin": "서남부터미널",
+    "dest": "은어송A",
+    "operator": "대교(☎ 523-2575) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 23,
+        "onewayMin": 79
+      },
+      "휴일,토요일": {
+        "headwayMin": 26,
+        "onewayMin": 79
+      }
+    }
+  },
+  "611번": {
+    "category": "도시",
+    "origin": "신대차고지",
+    "dest": "세천공원",
+    "operator": "한일(☎ 936-7710) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 20,
+        "onewayMin": 80
+      },
+      "휴일": {
+        "headwayMin": 25,
+        "onewayMin": 80
+      },
+      "토요일": {
+        "headwayMin": 22,
+        "onewayMin": 80
+      }
+    }
+  },
+  "612번": {
+    "category": "도시",
+    "origin": "동신과학고",
+    "dest": "배재대",
+    "operator": "대운(☎ 626-2271 ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 85
+      },
+      "휴일,토요일": {
+        "headwayMin": 26,
+        "onewayMin": 85
+      }
+    }
+  },
+  "613번": {
+    "category": "도시",
+    "origin": "비래동",
+    "dest": "갈마A",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 13,
+        "onewayMin": 67
+      },
+      "휴일": {
+        "headwayMin": 19,
+        "onewayMin": 67
+      },
+      "토요일": {
+        "headwayMin": 17,
+        "onewayMin": 67
+      }
+    }
+  },
+  "615번": {
+    "category": "도시",
+    "origin": "대한통운",
+    "dest": "정림동",
+    "operator": "대승(☎ 544-0181) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 14,
+        "onewayMin": 78
+      },
+      "휴일,토요일": {
+        "headwayMin": 16,
+        "onewayMin": 78
+      }
+    }
+  },
+  "616번": {
+    "category": "도시",
+    "origin": "대전역",
+    "dest": "대전역",
+    "operator": "대승(☎ 544-0181) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 98
+      },
+      "휴일,토요일": {
+        "headwayMin": 26,
+        "onewayMin": 98
+      }
+    }
+  },
+  "617번": {
+    "category": "도시",
+    "origin": "비래동",
+    "dest": "변동5",
+    "operator": "국민(☎ 626-2169)  ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 17,
+        "onewayMin": 73
+      },
+      "휴일,토요일": {
+        "headwayMin": 21,
+        "onewayMin": 73
+      }
+    }
+  },
+  "618번": {
+    "category": "도시",
+    "origin": "동신과학고",
+    "dest": "대전컨밴션센터",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 90
+      },
+      "휴일": {
+        "headwayMin": 27,
+        "onewayMin": 90
+      },
+      "토요일": {
+        "headwayMin": 22,
+        "onewayMin": 90
+      }
+    }
+  },
+  "619번": {
+    "category": "도시",
+    "origin": "동신과학고",
+    "dest": "서대전여고",
+    "operator": "산호(☎ 285-8057)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 74
+      },
+      "휴일,토요일": {
+        "headwayMin": 26,
+        "onewayMin": 74
+      }
+    }
+  },
+  "701번": {
+    "category": "도시",
+    "origin": "탑립동",
+    "dest": "대전고등학교",
+    "operator": "동건(☎ 936-3613) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 18,
+        "onewayMin": 84
+      },
+      "휴일": {
+        "headwayMin": 27,
+        "onewayMin": 84
+      },
+      "토요일": {
+        "headwayMin": 23,
+        "onewayMin": 84
+      }
+    }
+  },
+  "703번": {
+    "category": null,
+    "origin": "신탄진",
+    "dest": "정림동",
+    "operator": "대교(☎ 523-2575),산호(☎ 285-8057),대운(☎ 626-2271)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 12,
+        "onewayMin": 108
+      },
+      "휴일": {
+        "headwayMin": 16,
+        "onewayMin": 108
+      },
+      "토요일": {
+        "headwayMin": 15,
+        "onewayMin": 108
+      }
+    }
+  },
+  "704번": {
+    "category": "도시",
+    "origin": "원내차고지",
+    "dest": "죽동",
+    "operator": "경익(☎ 581-1511), 대교(☎ 523-2575)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 18,
+        "onewayMin": 56
+      },
+      "휴일,토요일": {
+        "headwayMin": 21,
+        "onewayMin": 56
+      }
+    }
+  },
+  "705번": {
+    "category": null,
+    "origin": "신탄진",
+    "dest": "시청",
+    "operator": "국민(☎ 626-2169)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 16,
+        "onewayMin": 100
+      },
+      "휴일": {
+        "headwayMin": 18,
+        "onewayMin": 95
+      },
+      "토요일": {
+        "headwayMin": 16,
+        "onewayMin": 95
+      }
+    }
+  },
+  "706번": {
+    "category": "도시",
+    "origin": "대한통운",
+    "dest": "목원대",
+    "operator": "한일(☎ 936-7710) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 16,
+        "onewayMin": 84
+      },
+      "휴일": {
+        "headwayMin": 19,
+        "onewayMin": 84
+      },
+      "토요일": {
+        "headwayMin": 17,
+        "onewayMin": 84
+      }
+    }
+  },
+  "707번": {
+    "category": "도시",
+    "origin": "동광장",
+    "dest": "DCC",
+    "operator": "국민(☎ 626-2169)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 20,
+        "onewayMin": 55
+      },
+      "휴일,토요일": {
+        "headwayMin": 24,
+        "onewayMin": 55
+      }
+    }
+  },
+  "708번": {
+    "category": "도시",
+    "origin": "구암역",
+    "dest": "보훈병원",
+    "operator": "경익(☎ 581-1511),동건(☎ 936-3613) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 85
+      },
+      "휴일": {
+        "headwayMin": 26,
+        "onewayMin": 85
+      },
+      "토요일": {
+        "headwayMin": 24,
+        "onewayMin": 85
+      }
+    }
+  },
+  "711번": {
+    "category": "도시",
+    "origin": "신탄진",
+    "dest": "대전역",
+    "operator": "동건(☎ 936-3613)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 18,
+        "onewayMin": 86
+      },
+      "휴일": {
+        "headwayMin": 27,
+        "onewayMin": 86
+      },
+      "토요일": {
+        "headwayMin": 24,
+        "onewayMin": 86
+      }
+    }
+  },
+  "802번": {
+    "category": "도시",
+    "origin": "봉산동",
+    "dest": "보문산",
+    "operator": "대버(☎ 586-9977) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 18,
+        "onewayMin": 102
+      },
+      "휴일": {
+        "headwayMin": 24,
+        "onewayMin": 102
+      },
+      "토요일": {
+        "headwayMin": 22,
+        "onewayMin": 102
+      }
+    }
+  },
+  "1001번": {
+    "category": "급행",
+    "origin": "집현동",
+    "dest": "대전시청",
+    "operator": "동건(☎ 936-3613),세종교통(☎ 044-867-7166)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 13,
+        "onewayMin": 80
+      },
+      "휴일,토요일": {
+        "headwayMin": 17,
+        "onewayMin": 80
+      }
+    }
+  },
+  "1002번": {
+    "category": "도시",
+    "origin": "충대농대",
+    "dest": "세종시",
+    "operator": "대승(☎ 544-0181) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 80
+      },
+      "휴일,토요일": {
+        "headwayMin": 25,
+        "onewayMin": 80
+      }
+    }
+  },
+  "116번": {
+    "category": "도시",
+    "origin": "안산동",
+    "dest": "월평주공A",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 25,
+        "onewayMin": 82
+      },
+      "휴일,토요일": {
+        "headwayMin": 33,
+        "onewayMin": 82
+      }
+    }
+  },
+  "117번": {
+    "category": "도시",
+    "origin": "충대농대",
+    "dest": "학하동",
+    "operator": "협진(☎ 936-7961) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 71
+      },
+      "휴일,토요일": {
+        "headwayMin": 36,
+        "onewayMin": 71
+      }
+    }
+  },
+  "123번": {
+    "category": "도시",
+    "origin": "안산동",
+    "dest": "원내동",
+    "operator": "대승(☎ 544-0181) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 24,
+        "onewayMin": 76
+      },
+      "휴일,토요일": {
+        "headwayMin": 27,
+        "onewayMin": 76
+      }
+    }
+  },
+  "212번": {
+    "category": null,
+    "origin": "구암역",
+    "dest": "빼올약수터",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 41,
+        "onewayMin": 85
+      },
+      "휴일,토요일": {
+        "headwayMin": 51,
+        "onewayMin": 85
+      }
+    }
+  },
+  "302번": {
+    "category": "도시",
+    "origin": "오월드",
+    "dest": "신도안",
+    "operator": "산호(☎ 285-8057),동인(☎ 285-8100),금남(☎ 582-3527)",
+    "schedule": {
+      "평일": {
+        "headwayMin": 35,
+        "onewayMin": 74
+      },
+      "휴일,토요일": {
+        "headwayMin": 53,
+        "onewayMin": 74
+      }
+    }
+  },
+  "313번": {
+    "category": "도시",
+    "origin": "동신과학고",
+    "dest": "뿌리공원",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 27,
+        "onewayMin": 62
+      },
+      "휴일,토요일": {
+        "headwayMin": 32,
+        "onewayMin": 62
+      }
+    }
+  },
+  "317번": {
+    "category": "도시",
+    "origin": "대전역",
+    "dest": "대전역",
+    "operator": "동인(☎ 285-8100) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 32,
+        "onewayMin": 86
+      },
+      "휴일,토요일": {
+        "headwayMin": 34,
+        "onewayMin": 86
+      }
+    }
+  },
+  "606번": {
+    "category": "도시",
+    "origin": "동신과학고",
+    "dest": "충열사삼거리",
+    "operator": "협진(☎ 936-7961) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 23,
+        "onewayMin": 85
+      },
+      "휴일,토요일": {
+        "headwayMin": 27,
+        "onewayMin": 85
+      }
+    }
+  },
+  "614번": {
+    "category": "도시",
+    "origin": "대한통운",
+    "dest": "용두4",
+    "operator": "대교(☎ 523-2575) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 21,
+        "onewayMin": 67
+      },
+      "휴일,토요일": {
+        "headwayMin": 29,
+        "onewayMin": 67
+      }
+    }
+  },
+  "620번": {
+    "category": "도시",
+    "origin": "낭월차고지",
+    "dest": "대한통운",
+    "operator": "산호(☎ 285-8057) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 29,
+        "onewayMin": 83
+      },
+      "휴일,토요일": {
+        "headwayMin": 33,
+        "onewayMin": 83
+      }
+    }
+  },
+  "622번": {
+    "category": "도시",
+    "origin": "비래동",
+    "dest": "서대전역",
+    "operator": "금남(☎ 582-3527) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 39,
+        "onewayMin": 40
+      }
+    }
+  },
+  "712번": {
+    "category": "도시",
+    "origin": "탑립동",
+    "dest": "철도정비창",
+    "operator": "동건(☎ 936-3613) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 33,
+        "onewayMin": 62
+      },
+      "휴일,토요일": {
+        "headwayMin": 41,
+        "onewayMin": 62
+      }
+    }
+  },
+  "911번": {
+    "category": "도시",
+    "origin": "충대농대",
+    "dest": "대전컨벤션센터",
+    "operator": "대운(☎ 626-2271),금남(☎ 582-3527)  ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 27,
+        "onewayMin": 77
+      },
+      "휴일,토요일": {
+        "headwayMin": 32,
+        "onewayMin": 77
+      }
+    }
+  },
+  "912번": {
+    "category": "도시",
+    "origin": "충대농대",
+    "dest": "자운대",
+    "operator": "대운(☎ 626-2271",
+    "schedule": {
+      "평일": {
+        "headwayMin": 19,
+        "onewayMin": 48
+      },
+      "휴일,토요일": {
+        "headwayMin": 22,
+        "onewayMin": 48
+      }
+    }
+  },
+  "916번": {
+    "category": "도시",
+    "origin": "서남부터미널",
+    "dest": "만년동",
+    "operator": "한일(☎ 936-7710),국민(☎ 626-2169)  ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 24,
+        "onewayMin": 87
+      },
+      "휴일,토요일": {
+        "headwayMin": 27,
+        "onewayMin": 87
+      }
+    }
+  },
+  "918번": {
+    "category": "도시",
+    "origin": "탑립동",
+    "dest": "시청",
+    "operator": "계룡(☎ 639-6800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 22,
+        "onewayMin": 66
+      },
+      "휴일,토요일": {
+        "headwayMin": 29,
+        "onewayMin": 66
+      }
+    }
+  },
+  "첨단1번": {
+    "category": "외곽",
+    "origin": "탑립동(관평중)",
+    "dest": "탑립동(관평중)",
+    "operator": "동건(☎ 936-3613)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 24,
+        "onewayMin": 30
+      }
+    }
+  },
+  "첨단2번": {
+    "category": "외곽",
+    "origin": "봉산동",
+    "dest": "봉산동",
+    "operator": "대승(☎ 544-0181) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 19,
+        "onewayMin": 57
+      }
+    }
+  },
+  "11번": {
+    "category": "외곽",
+    "origin": "수통골",
+    "dest": "용계동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 134,
+        "onewayMin": 55
+      }
+    }
+  },
+  "20번": {
+    "category": "외곽",
+    "origin": "대전역",
+    "dest": "장태산",
+    "operator": "대버(☎ 586-9977) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 96,
+        "onewayMin": 90
+      }
+    }
+  },
+  "21번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "수락계곡",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 65,
+        "onewayMin": 80
+      }
+    }
+  },
+  "22번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "장안동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 68,
+        "onewayMin": 60
+      }
+    }
+  },
+  "23번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "무도리",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 75,
+        "onewayMin": 60
+      }
+    }
+  },
+  "24번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "우명동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 64,
+        "onewayMin": 50
+      }
+    }
+  },
+  "25번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "봉곡동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 59,
+        "onewayMin": 55
+      }
+    }
+  },
+  "26번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "평촌동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 71,
+        "onewayMin": 50
+      }
+    }
+  },
+  "27번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "흑석동",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 121,
+        "onewayMin": 50
+      }
+    }
+  },
+  "30번": {
+    "category": "외곽",
+    "origin": "낭월차고지",
+    "dest": "대전역동광장",
+    "operator": "동인(☎ 285-8100)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 116,
+        "onewayMin": 100
+      }
+    }
+  },
+  "31번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "원동4",
+    "operator": "산호(☎ 285-8057)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 215,
+        "onewayMin": 100
+      }
+    }
+  },
+  "32번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "백암리",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 110,
+        "onewayMin": 40
+      }
+    }
+  },
+  "33번": {
+    "category": "외곽",
+    "origin": "대전역",
+    "dest": "구완동",
+    "operator": "산호(☎ 285-8057)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 124,
+        "onewayMin": 55
+      }
+    }
+  },
+  "34번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "대둔산 휴게소",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 44,
+        "onewayMin": 60
+      }
+    }
+  },
+  "41번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "국립숲체원",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 69,
+        "onewayMin": 50
+      }
+    }
+  },
+  "42번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "세동",
+    "operator": "대버(☎ 586-9977)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 73,
+        "onewayMin": 60
+      }
+    }
+  },
+  "46번": {
+    "category": "외곽",
+    "origin": "서남부터미널",
+    "dest": "송정동",
+    "operator": "경익(☎ 581-1511) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 55,
+        "onewayMin": 60
+      }
+    }
+  },
+  "52번": {
+    "category": "외곽",
+    "origin": "대전역",
+    "dest": "산정마을",
+    "operator": "산호(☎ 285-8057)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 180,
+        "onewayMin": 75
+      }
+    }
+  },
+  "55번": {
+    "category": "외곽",
+    "origin": "오월드",
+    "dest": "치유의숲",
+    "operator": "산호(☎ 285-8057)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 35,
+        "onewayMin": 15
+      }
+    }
+  },
+  "60번": {
+    "category": null,
+    "origin": "대전역",
+    "dest": "직동",
+    "operator": "동인(☎ 285-8100) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 82,
+        "onewayMin": 70
+      }
+    }
+  },
+  "61번": {
+    "category": "외곽",
+    "origin": "대전대",
+    "dest": "냉천,천개동",
+    "operator": "계룡(☎ 639-6800)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 110,
+        "onewayMin": 35
+      }
+    }
+  },
+  "62번": {
+    "category": "외곽",
+    "origin": "대전역",
+    "dest": "방아실",
+    "operator": "금남(☎ 582-3527) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 152,
+        "onewayMin": 50
+      }
+    }
+  },
+  "63번": {
+    "category": "외곽",
+    "origin": "대전역",
+    "dest": "회남리",
+    "operator": "대운(☎ 626-2271)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 68,
+        "onewayMin": 90
+      }
+    }
+  },
+  "66번": {
+    "category": "외곽",
+    "origin": "비래동",
+    "dest": "판암역",
+    "operator": "대교(☎ 523-2575)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 34,
+        "onewayMin": 52
+      }
+    }
+  },
+  "71번": {
+    "category": "외곽",
+    "origin": "동신고",
+    "dest": "용호동",
+    "operator": "국민(☎ 626-2169)  ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 150,
+        "onewayMin": 65
+      }
+    }
+  },
+  "72번": {
+    "category": "외곽",
+    "origin": "달전리",
+    "dest": "대청댐",
+    "operator": "국민(☎ 626-2169)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 144,
+        "onewayMin": 55
+      }
+    }
+  },
+  "73번": {
+    "category": "외곽",
+    "origin": "금탄동",
+    "dest": "대청댐",
+    "operator": "대운(☎ 626-2271) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 148,
+        "onewayMin": 50
+      }
+    }
+  },
+  "74번": {
+    "category": "외곽",
+    "origin": "대한통운",
+    "dest": "장동2",
+    "operator": "한일(☎ 936-7710)",
+    "schedule": {
+      "전일": {
+        "headwayMin": 40,
+        "onewayMin": 30
+      }
+    }
+  },
+  "75번": {
+    "category": "외곽",
+    "origin": "세종고속시외버스터미널",
+    "dest": "신탄진(보훈)",
+    "operator": "대운(☎ 626-2271) ",
+    "schedule": {
+      "전일": {
+        "headwayMin": 150,
+        "onewayMin": 60
+      }
+    }
+  },
+  "B1번": {
+    "category": null,
+    "origin": "대전역",
+    "dest": "오송역",
+    "operator": "대전비알티(☎931-9800) ",
+    "schedule": {
+      "평일": {
+        "headwayMin": 7,
+        "onewayMin": 72
+      },
+      "휴일": {
+        "headwayMin": 13,
+        "onewayMin": 72
+      },
+      "토요일": {
+        "headwayMin": 10,
+        "onewayMin": 72
+      }
+    }
+  }
+}

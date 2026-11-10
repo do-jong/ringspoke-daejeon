@@ -1,0 +1,37 @@
+{
+  "collectedAt": "2026-11-05T14:53:26.106Z",
+  "expectedCount": 14452,
+  "validation": {
+    "totalRecords": 14452,
+    "uniqueLinkIds": 14452,
+    "duplicateCount": 0,
+    "duplicateLinkIds": [],
+    "missingLinkIdCount": 0,
+    "missingSpeedCount": 9,
+    "missingSpeedLinkIds": [
+      "1830447600",
+      "1830447700",
+      "1830468099",
+      "1830468199",
+      "1830468299",
+      "1830468399",
+      "1830468499",
+      "1830468599",
+      "1870351899"
+    ],
+    "missingCongestionCount": 9,
+    "missingCongestionLinkIds": [
+      "1830447600",
+      "1830447700",
+      "1830468099",
+      "1830468199",
+      "1830468299",
+      "1830468399",
+      "1830468499",
+      "1830468599",
+      "1870351899"
+    ],
+    "invalidSpeedCount": 0,
+    "invalidSpeedLinkIds": []
+  }
+}

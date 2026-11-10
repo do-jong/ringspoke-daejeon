@@ -1,0 +1,932 @@
+{
+  "source": "2022년도 대전광역시 교통현황조사 및 분석, 제3장 2.버스 통행속도 (p.390-392)",
+  "note": "DSRC-RSE 기반 실측 평균 통행속도(km/h), 2022년 10월 기준. 현재 노선 목록과 완전히 같지 않을 수 있음.",
+  "categoryAverages": {
+    "급행": {
+      "speedAmKmh": 25.2,
+      "speedNoonKmh": 25.5,
+      "speedPmKmh": 24.1,
+      "speedAvgKmh": 24.9
+    },
+    "도시": {
+      "speedAmKmh": 22.2,
+      "speedNoonKmh": 21.8,
+      "speedPmKmh": 20.2,
+      "speedAvgKmh": 21.4
+    },
+    "외곽": {
+      "speedAmKmh": 25.8,
+      "speedNoonKmh": 25.2,
+      "speedPmKmh": 24.3,
+      "speedAvgKmh": 25.1
+    },
+    "전체": {
+      "speedAmKmh": 23.4,
+      "speedNoonKmh": 22.9,
+      "speedPmKmh": 21.5,
+      "speedAvgKmh": 22.6
+    }
+  },
+  "routes": {
+    "급행1번": {
+      "category": "급행",
+      "origin": "원내동",
+      "dest": "신안동",
+      "speedAmKmh": 24.1,
+      "speedNoonKmh": 24.0,
+      "speedPmKmh": 22.8,
+      "speedAvgKmh": 23.7
+    },
+    "급행2번": {
+      "category": "급행",
+      "origin": "봉산동",
+      "dest": "옥계동",
+      "speedAmKmh": 26.8,
+      "speedNoonKmh": 27.2,
+      "speedPmKmh": 25.1,
+      "speedAvgKmh": 26.3
+    },
+    "급행3번": {
+      "category": "급행",
+      "origin": "원내동",
+      "dest": "정부청사",
+      "speedAmKmh": 24.8,
+      "speedNoonKmh": 25.2,
+      "speedPmKmh": 24.4,
+      "speedAvgKmh": 24.8
+    },
+    "101번": {
+      "category": "도시",
+      "origin": "안산동",
+      "dest": "대성여고",
+      "speedAmKmh": 24.4,
+      "speedNoonKmh": 23.6,
+      "speedPmKmh": 21.5,
+      "speedAvgKmh": 23.2
+    },
+    "102번": {
+      "category": "도시",
+      "origin": "수통골",
+      "dest": "대전역",
+      "speedAmKmh": 22.5,
+      "speedNoonKmh": 21.7,
+      "speedPmKmh": 19.7,
+      "speedAvgKmh": 21.3
+    },
+    "103번": {
+      "category": "도시",
+      "origin": "수통골",
+      "dest": "동춘당",
+      "speedAmKmh": 20.2,
+      "speedNoonKmh": 19.6,
+      "speedPmKmh": 17.3,
+      "speedAvgKmh": 19.1
+    },
+    "104번": {
+      "category": "도시",
+      "origin": "수통골",
+      "dest": "탄방역",
+      "speedAmKmh": 22.8,
+      "speedNoonKmh": 22.0,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 21.6
+    },
+    "105번": {
+      "category": "도시",
+      "origin": "충대농대",
+      "dest": "비래삼호A",
+      "speedAmKmh": 21.5,
+      "speedNoonKmh": 20.6,
+      "speedPmKmh": 19.2,
+      "speedAvgKmh": 20.4
+    },
+    "106번": {
+      "category": "도시",
+      "origin": "목원대",
+      "dest": "비래동",
+      "speedAmKmh": 22.5,
+      "speedNoonKmh": 21.6,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 21.4
+    },
+    "107번": {
+      "category": "도시",
+      "origin": "대전역",
+      "dest": "동학사",
+      "speedAmKmh": 24.7,
+      "speedNoonKmh": 23.7,
+      "speedPmKmh": 21.7,
+      "speedAvgKmh": 23.3
+    },
+    "108번": {
+      "category": "도시",
+      "origin": "충대농대",
+      "dest": "낭월차고지",
+      "speedAmKmh": 23.4,
+      "speedNoonKmh": 23.1,
+      "speedPmKmh": 21.2,
+      "speedAvgKmh": 22.6
+    },
+    "113번": {
+      "category": "도시",
+      "origin": "서남부터미널",
+      "dest": "학하동",
+      "speedAmKmh": 21.8,
+      "speedNoonKmh": 20.7,
+      "speedPmKmh": 18.6,
+      "speedAvgKmh": 20.4
+    },
+    "114번": {
+      "category": "도시",
+      "origin": "원내차고지",
+      "dest": "노은4단지",
+      "speedAmKmh": 23.1,
+      "speedNoonKmh": 22.1,
+      "speedPmKmh": 20.8,
+      "speedAvgKmh": 22.0
+    },
+    "115번": {
+      "category": "도시",
+      "origin": "오월드",
+      "dest": "충대농대",
+      "speedAmKmh": 23.3,
+      "speedNoonKmh": 22.4,
+      "speedPmKmh": 21.0,
+      "speedAvgKmh": 22.2
+    },
+    "116번": {
+      "category": "도시",
+      "origin": "안산동",
+      "dest": "월평주공",
+      "speedAmKmh": 22.6,
+      "speedNoonKmh": 22.1,
+      "speedPmKmh": 19.9,
+      "speedAvgKmh": 21.5
+    },
+    "117번": {
+      "category": "도시",
+      "origin": "충대농대",
+      "dest": "학하동",
+      "speedAmKmh": 22.8,
+      "speedNoonKmh": 21.6,
+      "speedPmKmh": 19.9,
+      "speedAvgKmh": 21.4
+    },
+    "119번": {
+      "category": "도시",
+      "origin": "안산동",
+      "dest": "효동",
+      "speedAmKmh": 22.6,
+      "speedNoonKmh": 22.0,
+      "speedPmKmh": 20.0,
+      "speedAvgKmh": 21.5
+    },
+    "121번": {
+      "category": "도시",
+      "origin": "탑립동",
+      "dest": "대덕대학",
+      "speedAmKmh": 24.3,
+      "speedNoonKmh": 24.2,
+      "speedPmKmh": 21.7,
+      "speedAvgKmh": 23.4
+    },
+    "201번": {
+      "category": "도시",
+      "origin": "원내차고지",
+      "dest": "대전IC",
+      "speedAmKmh": 20.3,
+      "speedNoonKmh": 19.4,
+      "speedPmKmh": 17.8,
+      "speedAvgKmh": 19.1
+    },
+    "202번": {
+      "category": "도시",
+      "origin": "대전역",
+      "dest": "신도안APT",
+      "speedAmKmh": 26.5,
+      "speedNoonKmh": 25.4,
+      "speedPmKmh": 23.9,
+      "speedAvgKmh": 25.3
+    },
+    "203번": {
+      "category": "도시",
+      "origin": "원내동",
+      "dest": "시청",
+      "speedAmKmh": 21.6,
+      "speedNoonKmh": 21.7,
+      "speedPmKmh": 20.0,
+      "speedAvgKmh": 21.1
+    },
+    "211번": {
+      "category": "도시",
+      "origin": "화물터미널",
+      "dest": "정부청사",
+      "speedAmKmh": 21.6,
+      "speedNoonKmh": 20.8,
+      "speedPmKmh": 19.3,
+      "speedAvgKmh": 20.6
+    },
+    "212번": {
+      "category": "도시",
+      "origin": "화물터미널",
+      "dest": "가수원역",
+      "speedAmKmh": 22.2,
+      "speedNoonKmh": 21.9,
+      "speedPmKmh": 20.5,
+      "speedAvgKmh": 21.5
+    },
+    "213번": {
+      "category": "도시",
+      "origin": "목원대",
+      "dest": "원내동",
+      "speedAmKmh": 21.3,
+      "speedNoonKmh": 21.6,
+      "speedPmKmh": 20.2,
+      "speedAvgKmh": 21.0
+    },
+    "216번": {
+      "category": "도시",
+      "origin": "원내차고지",
+      "dest": "시청",
+      "speedAmKmh": 22.1,
+      "speedNoonKmh": 22.2,
+      "speedPmKmh": 20.6,
+      "speedAvgKmh": 21.6
+    },
+    "301번": {
+      "category": "도시",
+      "origin": "봉산동",
+      "dest": "오월드",
+      "speedAmKmh": 22.5,
+      "speedNoonKmh": 22.7,
+      "speedPmKmh": 20.9,
+      "speedAvgKmh": 22.0
+    },
+    "311번": {
+      "category": "도시",
+      "origin": "신대차고지",
+      "dest": "오월드",
+      "speedAmKmh": 22.0,
+      "speedNoonKmh": 21.5,
+      "speedPmKmh": 19.7,
+      "speedAvgKmh": 21.1
+    },
+    "312번": {
+      "category": "도시",
+      "origin": "목원대학교",
+      "dest": "뿌리공원",
+      "speedAmKmh": 21.2,
+      "speedNoonKmh": 20.4,
+      "speedPmKmh": 19.0,
+      "speedAvgKmh": 20.2
+    },
+    "313번": {
+      "category": "도시",
+      "origin": "동신과학고",
+      "dest": "뿌리공원",
+      "speedAmKmh": 22.4,
+      "speedNoonKmh": 22.0,
+      "speedPmKmh": 20.3,
+      "speedAvgKmh": 21.6
+    },
+    "314번": {
+      "category": "도시",
+      "origin": "오월드",
+      "dest": "동춘당",
+      "speedAmKmh": 21.2,
+      "speedNoonKmh": 20.9,
+      "speedPmKmh": 18.8,
+      "speedAvgKmh": 20.3
+    },
+    "315번": {
+      "category": "도시",
+      "origin": "오월드",
+      "dest": "향촌아파트",
+      "speedAmKmh": 23.3,
+      "speedNoonKmh": 22.8,
+      "speedPmKmh": 21.1,
+      "speedAvgKmh": 22.4
+    },
+    "316번": {
+      "category": "도시",
+      "origin": "대한통운",
+      "dest": "한빛고",
+      "speedAmKmh": 21.2,
+      "speedNoonKmh": 21.2,
+      "speedPmKmh": 19.6,
+      "speedAvgKmh": 20.7
+    },
+    "317번": {
+      "category": "도시",
+      "origin": "대전역",
+      "dest": "대전역",
+      "speedAmKmh": 18.3,
+      "speedNoonKmh": 17.5,
+      "speedPmKmh": 16.4,
+      "speedAvgKmh": 17.4
+    },
+    "318번": {
+      "category": "도시",
+      "origin": "오월드",
+      "dest": "대덕대학",
+      "speedAmKmh": 23.1,
+      "speedNoonKmh": 22.7,
+      "speedPmKmh": 20.9,
+      "speedAvgKmh": 22.2
+    },
+    "501번": {
+      "category": "도시",
+      "origin": "비래동",
+      "dest": "마전",
+      "speedAmKmh": 27.7,
+      "speedNoonKmh": 27.0,
+      "speedPmKmh": 26.3,
+      "speedAvgKmh": 27.0
+    },
+    "511번": {
+      "category": "도시",
+      "origin": "낭월공영차고지",
+      "dest": "중촌동",
+      "speedAmKmh": 21.7,
+      "speedNoonKmh": 21.6,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 21.1
+    },
+    "512번": {
+      "category": "도시",
+      "origin": "대한통운",
+      "dest": "구도동",
+      "speedAmKmh": 21.3,
+      "speedNoonKmh": 21.3,
+      "speedPmKmh": 19.5,
+      "speedAvgKmh": 20.7
+    },
+    "513번": {
+      "category": "도시",
+      "origin": "낭월차고지",
+      "dest": "검바위",
+      "speedAmKmh": 24.9,
+      "speedNoonKmh": 25.0,
+      "speedPmKmh": 23.2,
+      "speedAvgKmh": 24.3
+    },
+    "514번": {
+      "category": "도시",
+      "origin": "낭월차고지",
+      "dest": "만년동",
+      "speedAmKmh": 21.6,
+      "speedNoonKmh": 21.6,
+      "speedPmKmh": 20.0,
+      "speedAvgKmh": 21.1
+    },
+    "601번": {
+      "category": "도시",
+      "origin": "비래동",
+      "dest": "구암동기점지",
+      "speedAmKmh": 23.3,
+      "speedNoonKmh": 22.7,
+      "speedPmKmh": 21.3,
+      "speedAvgKmh": 22.4
+    },
+    "602번": {
+      "category": "도시",
+      "origin": "비래동",
+      "dest": "월평주공",
+      "speedAmKmh": 19.4,
+      "speedNoonKmh": 19.3,
+      "speedPmKmh": 17.6,
+      "speedAvgKmh": 18.8
+    },
+    "603번": {
+      "category": "도시",
+      "origin": "목원대학교",
+      "dest": "대전대학교",
+      "speedAmKmh": 21.0,
+      "speedNoonKmh": 20.2,
+      "speedPmKmh": 19.2,
+      "speedAvgKmh": 20.1
+    },
+    "604번": {
+      "category": "도시",
+      "origin": "대전동신과학고",
+      "dest": "충렬사삼거리",
+      "speedAmKmh": 23.8,
+      "speedNoonKmh": 23.3,
+      "speedPmKmh": 21.5,
+      "speedAvgKmh": 22.9
+    },
+    "605번": {
+      "category": "도시",
+      "origin": "대전대동문",
+      "dest": "갈마아파트",
+      "speedAmKmh": 21.9,
+      "speedNoonKmh": 21.4,
+      "speedPmKmh": 19.5,
+      "speedAvgKmh": 20.9
+    },
+    "606번": {
+      "category": "도시",
+      "origin": "대전동신과학고",
+      "dest": "충렬사삼거리",
+      "speedAmKmh": 23.3,
+      "speedNoonKmh": 23.0,
+      "speedPmKmh": 21.2,
+      "speedAvgKmh": 22.5
+    },
+    "607번": {
+      "category": "도시",
+      "origin": "비래동종점",
+      "dest": "옥천",
+      "speedAmKmh": 24.7,
+      "speedNoonKmh": 24.4,
+      "speedPmKmh": 23.5,
+      "speedAvgKmh": 24.2
+    },
+    "608번": {
+      "category": "도시",
+      "origin": "서남부터미널",
+      "dest": "은어송A",
+      "speedAmKmh": 21.3,
+      "speedNoonKmh": 20.5,
+      "speedPmKmh": 19.2,
+      "speedAvgKmh": 20.3
+    },
+    "611번": {
+      "category": "도시",
+      "origin": "신대차고지",
+      "dest": "세천공원",
+      "speedAmKmh": 21.8,
+      "speedNoonKmh": 20.9,
+      "speedPmKmh": 19.6,
+      "speedAvgKmh": 20.8
+    },
+    "612번": {
+      "category": "도시",
+      "origin": "대전동신과학고",
+      "dest": "배재대학교",
+      "speedAmKmh": 19.1,
+      "speedNoonKmh": 18.5,
+      "speedPmKmh": 17.3,
+      "speedAvgKmh": 18.3
+    },
+    "613번": {
+      "category": "도시",
+      "origin": "비래동",
+      "dest": "갈마아파트",
+      "speedAmKmh": 20.4,
+      "speedNoonKmh": 19.3,
+      "speedPmKmh": 17.3,
+      "speedAvgKmh": 19.0
+    },
+    "614번": {
+      "category": "도시",
+      "origin": "대한통운",
+      "dest": "용두4",
+      "speedAmKmh": 19.9,
+      "speedNoonKmh": 19.4,
+      "speedPmKmh": 17.9,
+      "speedAvgKmh": 19.1
+    },
+    "615번": {
+      "category": "도시",
+      "origin": "대한통운",
+      "dest": "정림동종점",
+      "speedAmKmh": 20.8,
+      "speedNoonKmh": 20.5,
+      "speedPmKmh": 18.8,
+      "speedAvgKmh": 20.0
+    },
+    "616번": {
+      "category": "도시",
+      "origin": "대전역",
+      "dest": "대전역",
+      "speedAmKmh": 19.4,
+      "speedNoonKmh": 19.4,
+      "speedPmKmh": 18.1,
+      "speedAvgKmh": 19.0
+    },
+    "617번": {
+      "category": "도시",
+      "origin": "비래동",
+      "dest": "변동5",
+      "speedAmKmh": 18.3,
+      "speedNoonKmh": 18.3,
+      "speedPmKmh": 16.8,
+      "speedAvgKmh": 17.8
+    },
+    "618번": {
+      "category": "도시",
+      "origin": "대전동신과학고",
+      "dest": "대전컨밴션센터",
+      "speedAmKmh": 22.4,
+      "speedNoonKmh": 21.9,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 21.5
+    },
+    "619번": {
+      "category": "도시",
+      "origin": "대전동신과학고",
+      "dest": "서대전여고",
+      "speedAmKmh": 21.1,
+      "speedNoonKmh": 20.5,
+      "speedPmKmh": 19.0,
+      "speedAvgKmh": 20.2
+    },
+    "620번": {
+      "category": "도시",
+      "origin": "낭월차고지",
+      "dest": "대한통운",
+      "speedAmKmh": 22.8,
+      "speedNoonKmh": 22.4,
+      "speedPmKmh": 20.7,
+      "speedAvgKmh": 22.0
+    },
+    "622번": {
+      "category": "도시",
+      "origin": "비래동",
+      "dest": "서대전역",
+      "speedAmKmh": 16.8,
+      "speedNoonKmh": 15.7,
+      "speedPmKmh": 14.1,
+      "speedAvgKmh": 15.5
+    },
+    "701번": {
+      "category": "도시",
+      "origin": "탑립동",
+      "dest": "대전고등학교",
+      "speedAmKmh": 25.5,
+      "speedNoonKmh": 26.5,
+      "speedPmKmh": 24.2,
+      "speedAvgKmh": 25.4
+    },
+    "703번": {
+      "category": "도시",
+      "origin": "신탄진",
+      "dest": "정림동",
+      "speedAmKmh": 22.5,
+      "speedNoonKmh": 22.6,
+      "speedPmKmh": 20.6,
+      "speedAvgKmh": 21.9
+    },
+    "704번": {
+      "category": "도시",
+      "origin": "원내차고지",
+      "dest": "보훈병원",
+      "speedAmKmh": 22.8,
+      "speedNoonKmh": 22.9,
+      "speedPmKmh": 21.0,
+      "speedAvgKmh": 22.3
+    },
+    "705번": {
+      "category": "도시",
+      "origin": "신탄진",
+      "dest": "동광장",
+      "speedAmKmh": 24.8,
+      "speedNoonKmh": 24.9,
+      "speedPmKmh": 23.1,
+      "speedAvgKmh": 24.3
+    },
+    "706번": {
+      "category": "도시",
+      "origin": "대한통운",
+      "dest": "목원대학교",
+      "speedAmKmh": 22.3,
+      "speedNoonKmh": 22.1,
+      "speedPmKmh": 20.2,
+      "speedAvgKmh": 21.5
+    },
+    "711번": {
+      "category": "도시",
+      "origin": "신탄진",
+      "dest": "대전역",
+      "speedAmKmh": 21.5,
+      "speedNoonKmh": 21.7,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 21.1
+    },
+    "712번": {
+      "category": "도시",
+      "origin": "탑립동",
+      "dest": "철도정비창",
+      "speedAmKmh": 23.5,
+      "speedNoonKmh": 24.1,
+      "speedPmKmh": 22.8,
+      "speedAvgKmh": 23.5
+    },
+    "802번": {
+      "category": "도시",
+      "origin": "봉산동",
+      "dest": "보문산공원",
+      "speedAmKmh": 21.3,
+      "speedNoonKmh": 21.1,
+      "speedPmKmh": 19.7,
+      "speedAvgKmh": 20.7
+    },
+    "911번": {
+      "category": "도시",
+      "origin": "충대농대",
+      "dest": "대전컨벤션센터",
+      "speedAmKmh": 20.6,
+      "speedNoonKmh": 19.5,
+      "speedPmKmh": 18.1,
+      "speedAvgKmh": 19.4
+    },
+    "912번": {
+      "category": "도시",
+      "origin": "충대농대",
+      "dest": "자운대",
+      "speedAmKmh": 24.4,
+      "speedNoonKmh": 24.1,
+      "speedPmKmh": 22.5,
+      "speedAvgKmh": 23.7
+    },
+    "916번": {
+      "category": "도시",
+      "origin": "서남부터미널",
+      "dest": "만년동",
+      "speedAmKmh": 19.7,
+      "speedNoonKmh": 19.9,
+      "speedPmKmh": 18.2,
+      "speedAvgKmh": 19.2
+    },
+    "918번": {
+      "category": "도시",
+      "origin": "탑립동",
+      "dest": "시청",
+      "speedAmKmh": 22.3,
+      "speedNoonKmh": 22.6,
+      "speedPmKmh": 20.7,
+      "speedAvgKmh": 21.9
+    },
+    "1002번": {
+      "category": "도시",
+      "origin": "충대농대",
+      "dest": "새나루마을9,10단지",
+      "speedAmKmh": 29.3,
+      "speedNoonKmh": 29.0,
+      "speedPmKmh": 27.2,
+      "speedAvgKmh": 28.5
+    },
+    "11번": {
+      "category": "외곽",
+      "origin": "수통골",
+      "dest": "용계동",
+      "speedAmKmh": 23.6,
+      "speedNoonKmh": 21.5,
+      "speedPmKmh": 20.2,
+      "speedAvgKmh": 21.7
+    },
+    "20번": {
+      "category": "외곽",
+      "origin": "대전역",
+      "dest": "장태산종점",
+      "speedAmKmh": 23.9,
+      "speedNoonKmh": 22.7,
+      "speedPmKmh": 21.9,
+      "speedAvgKmh": 22.8
+    },
+    "21번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "대둔산수락계곡",
+      "speedAmKmh": 30.7,
+      "speedNoonKmh": 30.4,
+      "speedPmKmh": 30.3,
+      "speedAvgKmh": 30.5
+    },
+    "22번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "장안동종점",
+      "speedAmKmh": 26.2,
+      "speedNoonKmh": 25.6,
+      "speedPmKmh": 25.0,
+      "speedAvgKmh": 25.6
+    },
+    "23번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "원정동",
+      "speedAmKmh": 28.8,
+      "speedNoonKmh": 28.6,
+      "speedPmKmh": 27.6,
+      "speedAvgKmh": 28.3
+    },
+    "24번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "우명동종점",
+      "speedAmKmh": 31.6,
+      "speedNoonKmh": 31.1,
+      "speedPmKmh": 30.2,
+      "speedAvgKmh": 31.0
+    },
+    "25번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "봉곡동종점",
+      "speedAmKmh": 29.5,
+      "speedNoonKmh": 28.8,
+      "speedPmKmh": 28.5,
+      "speedAvgKmh": 28.9
+    },
+    "26번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "평촌동종점",
+      "speedAmKmh": 31.8,
+      "speedNoonKmh": 31.4,
+      "speedPmKmh": 30.3,
+      "speedAvgKmh": 31.2
+    },
+    "27번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "흑석동",
+      "speedAmKmh": 22.6,
+      "speedNoonKmh": 21.4,
+      "speedPmKmh": 20.7,
+      "speedAvgKmh": 21.6
+    },
+    "30번": {
+      "category": "외곽",
+      "origin": "낭월차고지",
+      "dest": "대전역동광장",
+      "speedAmKmh": 23.6,
+      "speedNoonKmh": 23.5,
+      "speedPmKmh": 22.5,
+      "speedAvgKmh": 23.2
+    },
+    "31번": {
+      "category": "외곽",
+      "origin": "원동네거리",
+      "dest": "대흥동우체국",
+      "speedAmKmh": 24.3,
+      "speedNoonKmh": 24.2,
+      "speedPmKmh": 23.2,
+      "speedAvgKmh": 23.9
+    },
+    "32번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "백암리",
+      "speedAmKmh": 25.8,
+      "speedNoonKmh": 25.8,
+      "speedPmKmh": 24.8,
+      "speedAvgKmh": 25.5
+    },
+    "33번": {
+      "category": "외곽",
+      "origin": "대전역",
+      "dest": "구완동",
+      "speedAmKmh": 21.5,
+      "speedNoonKmh": 20.7,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 20.7
+    },
+    "34번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "대둔산휴게소",
+      "speedAmKmh": 28.2,
+      "speedNoonKmh": 27.9,
+      "speedPmKmh": 26.8,
+      "speedAvgKmh": 27.6
+    },
+    "41번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "국립대전숲체원",
+      "speedAmKmh": 24.3,
+      "speedNoonKmh": 24.0,
+      "speedPmKmh": 22.2,
+      "speedAvgKmh": 23.5
+    },
+    "42번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "세동",
+      "speedAmKmh": 27.8,
+      "speedNoonKmh": 27.7,
+      "speedPmKmh": 25.4,
+      "speedAvgKmh": 26.9
+    },
+    "46번": {
+      "category": "외곽",
+      "origin": "서남부터미널",
+      "dest": "송정동",
+      "speedAmKmh": 26.8,
+      "speedNoonKmh": 26.6,
+      "speedPmKmh": 25.1,
+      "speedAvgKmh": 26.2
+    },
+    "52번": {
+      "category": "외곽",
+      "origin": "대전역",
+      "dest": "산정마을",
+      "speedAmKmh": 25.2,
+      "speedNoonKmh": 24.8,
+      "speedPmKmh": 23.9,
+      "speedAvgKmh": 24.6
+    },
+    "60번": {
+      "category": "외곽",
+      "origin": "대전역",
+      "dest": "직동종점",
+      "speedAmKmh": 24.8,
+      "speedNoonKmh": 24.2,
+      "speedPmKmh": 23.5,
+      "speedAvgKmh": 24.2
+    },
+    "61번": {
+      "category": "외곽",
+      "origin": "대전대",
+      "dest": "천개동",
+      "speedAmKmh": 28.3,
+      "speedNoonKmh": 26.2,
+      "speedPmKmh": 25.3,
+      "speedAvgKmh": 26.6
+    },
+    "62번": {
+      "category": "외곽",
+      "origin": "대전역동광장",
+      "dest": "항곡리",
+      "speedAmKmh": 26.0,
+      "speedNoonKmh": 25.2,
+      "speedPmKmh": 24.8,
+      "speedAvgKmh": 25.3
+    },
+    "63번": {
+      "category": "외곽",
+      "origin": "대전역",
+      "dest": "회남리",
+      "speedAmKmh": 26.7,
+      "speedNoonKmh": 26.7,
+      "speedPmKmh": 26.0,
+      "speedAvgKmh": 26.5
+    },
+    "66번": {
+      "category": "외곽",
+      "origin": "비래동",
+      "dest": "판암역",
+      "speedAmKmh": 22.7,
+      "speedNoonKmh": 20.9,
+      "speedPmKmh": 19.9,
+      "speedAvgKmh": 21.2
+    },
+    "71-1번": {
+      "category": "외곽",
+      "origin": "동신고",
+      "dest": "용호동",
+      "speedAmKmh": 27.5,
+      "speedNoonKmh": 26.1,
+      "speedPmKmh": 25.5,
+      "speedAvgKmh": 26.3
+    },
+    "72번": {
+      "category": "외곽",
+      "origin": "달전리",
+      "dest": "대청댐",
+      "speedAmKmh": 23.9,
+      "speedNoonKmh": 23.5,
+      "speedPmKmh": 21.6,
+      "speedAvgKmh": 23.0
+    },
+    "73번": {
+      "category": "외곽",
+      "origin": "금탄동",
+      "dest": "대청댐종점",
+      "speedAmKmh": 24.6,
+      "speedNoonKmh": 23.8,
+      "speedPmKmh": 22.6,
+      "speedAvgKmh": 23.7
+    },
+    "74번": {
+      "category": "외곽",
+      "origin": "대한통운",
+      "dest": "장동2구",
+      "speedAmKmh": 23.5,
+      "speedNoonKmh": 23.1,
+      "speedPmKmh": 23.2,
+      "speedAvgKmh": 23.2
+    },
+    "75번": {
+      "category": "외곽",
+      "origin": "신탄진(보훈)",
+      "dest": "세종고속시외버스터미널",
+      "speedAmKmh": 24.1,
+      "speedNoonKmh": 23.7,
+      "speedPmKmh": 22.9,
+      "speedAvgKmh": 23.6
+    },
+    "첨단1번": {
+      "category": "외곽",
+      "origin": "탑립동",
+      "dest": "탑립동",
+      "speedAmKmh": 21.0,
+      "speedNoonKmh": 21.4,
+      "speedPmKmh": 20.1,
+      "speedAvgKmh": 20.8
+    }
+  }
+}
