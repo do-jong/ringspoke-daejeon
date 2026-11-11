@@ -52,6 +52,8 @@ const SUBWAY_TIMETABLE_OFFICIAL_URL = '/data/subway/subway_timetable_official.js
 const SUBWAY_RIDERSHIP_BY_AGE_URL = '/data/subway/subway_station_ridership_by_age.json'
 
 const POPULATION_URL = '/data/population/daejeon_population_oa.geojson'
+// 행정동(82)·구(5)별 고령인구 합계 - 집계구 인구(SGIS 2024, N/A 2.5명 보정)를 행정동 코드 앞 8자리로 합산
+const ELDERLY_AREA_URL = '/data/population/daejeon_elderly_dong_gu.json'
 
 const STOP_CENTRALITY_URL = '/data/bus/stop_centrality.geojson'
 
@@ -115,7 +117,12 @@ const LAYER_ITEMS = [
   { id: 'trafficLinks', label: '소통정보', color: '#f59e0b', group: '도로·지형' },
   { id: 'waterways', label: '하천', color: '#39a9db', group: '도로·지형' },
 
-  { id: 'population', label: '고령인구 비율', color: '#fb7185', group: '인구·시설' },
+  { id: 'population', label: '고령인구 비율(집계구)', color: '#fb7185', group: '인구·시설' },
+  { id: 'elderlyDong', label: '고령인구 비율(행정동)', color: '#f97316', group: '인구·시설' },
+  { id: 'elderlyGu', label: '고령인구 비율(구)', color: '#dc2626', group: '인구·시설' },
+  { id: 'elderlyCountOa', label: '노인 인구수(집계구)', color: '#a78bfa', group: '인구·시설' },
+  { id: 'elderlyCountDong', label: '노인 인구수(행정동)', color: '#7c3aed', group: '인구·시설' },
+  { id: 'elderlyCountGu', label: '노인 인구수(구)', color: '#5b21b6', group: '인구·시설' },
   { id: 'hospitals', label: '병원·의원(공식)', color: '#60a5fa', group: '인구·시설' },
   { id: 'pharmacies', label: '약국(공식)', color: '#4ade80', group: '인구·시설' },
   { id: 'welfareFacilities', label: '장애인 편의시설(공식)', color: '#c084fc', group: '인구·시설' },
@@ -488,6 +495,104 @@ function getPopulationStyle(feature) {
     weight: 0.5,
     fillColor: color,
     fillOpacity: 0.55,
+  }
+}
+
+// 행정동·구 고령인구 비율 색(집계구 레이어와 같은 구간 + 30% 이상 한 단계 추가)
+const ELDERLY_BINS = [
+  { max: 10, color: '#1e3a8a', label: '10% 미만' },
+  { max: 15, color: '#2563eb', label: '10~15%' },
+  { max: 20, color: '#f59e0b', label: '15~20%' },
+  { max: 25, color: '#f97316', label: '20~25%' },
+  { max: 30, color: '#dc2626', label: '25~30%' },
+  { max: Infinity, color: '#7f1d1d', label: '30% 이상' },
+]
+
+function elderlyAreaRatio(p) {
+  return p?.t ? (p.e / p.t) * 100 : null
+}
+
+function elderlyColor(ratio) {
+  if (ratio == null) return '#334155'
+  return ELDERLY_BINS.find((b) => ratio < b.max).color
+}
+
+function getElderlyAreaStyle(feature) {
+  return {
+    color: '#0f172a',
+    weight: feature.properties?.dong ? 0.8 : 2,
+    fillColor: elderlyColor(elderlyAreaRatio(feature.properties)),
+    fillOpacity: 0.6,
+  }
+}
+
+// 65세 이상 인구수(명) 색 구간 - 단위마다 크기가 달라 구간을 따로 둔다
+const COUNT_COLORS = ['#ede9fe', '#c4b5fd', '#a78bfa', '#7c3aed', '#5b21b6', '#3b0764']
+function countBins(edges) {
+  const fmt = (n) => (n >= 10000 ? `${n / 10000}만` : n.toLocaleString())
+  return edges.concat(Infinity).map((max, i) => ({
+    max,
+    color: COUNT_COLORS[i + COUNT_COLORS.length - edges.length - 1],
+    label: i === 0 ? `${fmt(max)}명 미만` : max === Infinity ? `${fmt(edges[i - 1])}명 이상` : `${fmt(edges[i - 1])}~${fmt(max)}명`,
+  }))
+}
+const ELDERLY_COUNT_BINS = {
+  oa: countBins([30, 60, 90, 120, 160]),
+  dong: countBins([2000, 3000, 4000, 5000]),
+  gu: countBins([40000, 50000, 60000]),
+}
+function countColor(n, bins) {
+  if (n == null) return '#334155'
+  return bins.find((b) => n < b.max).color
+}
+function getElderlyCountOaStyle(feature) {
+  return {
+    color: '#1e293b',
+    weight: 0.4,
+    fillColor: countColor(feature.properties?.elderlyPop, ELDERLY_COUNT_BINS.oa),
+    fillOpacity: 0.7,
+  }
+}
+function getElderlyCountAreaStyle(feature) {
+  const isDong = !!feature.properties?.dong
+  return {
+    color: '#0f172a',
+    weight: isDong ? 0.8 : 2,
+    fillColor: countColor(feature.properties?.e, isDong ? ELDERLY_COUNT_BINS.dong : ELDERLY_COUNT_BINS.gu),
+    fillOpacity: 0.7,
+  }
+}
+
+function makeBindElderlyAreaPopup(collection, isGu, mode = 'ratio') {
+  // 비율 높은 순 순위
+  const ranked = [...(collection?.features || [])].sort(
+    (a, b) => (elderlyAreaRatio(b.properties) ?? -1) - (elderlyAreaRatio(a.properties) ?? -1)
+  )
+  const rankOf = new Map(ranked.map((f, i) => [f, i + 1]))
+  const countRanked = [...(collection?.features || [])].sort((a, b) => (b.properties?.e ?? 0) - (a.properties?.e ?? 0))
+  const countRankOf = new Map(countRanked.map((f, i) => [f, i + 1]))
+  const styleFn = mode === 'count' ? getElderlyCountAreaStyle : getElderlyAreaStyle
+  return (feature, layer) => {
+    const p = feature.properties || {}
+    const r = elderlyAreaRatio(p)
+    const n = ranked.length
+    const title = isGu ? p.gu : `${p.dong} <span style="color:#888">${p.gu}</span>`
+    layer.bindPopup(
+      `<strong>${title}</strong><br/>` +
+        `65세 이상: <strong>${p.e?.toLocaleString() ?? '-'}명</strong> (${n}곳 중 ${countRankOf.get(feature)}위)<br/>` +
+        `고령인구 비율: <strong>${r != null ? r.toFixed(1) : '-'}%</strong> (${n}곳 중 ${rankOf.get(feature)}위)<br/>` +
+        `총인구: ${p.t?.toLocaleString() ?? '-'}명<br/>` +
+        `<span style="color:#888;font-size:11px">SGIS 2024, 1~4명 비공개 칸은 2.5명으로 추정</span>`
+    )
+    if (isGu) {
+      layer.bindTooltip(mode === 'count' ? `${p.gu} ${(p.e / 10000).toFixed(1)}만 명` : `${p.gu} ${r != null ? r.toFixed(1) : '-'}%`, {
+        permanent: true,
+        direction: 'center',
+        className: 'elderly-gu-label',
+      })
+    }
+    layer.on('mouseover', () => layer.setStyle({ weight: 3, color: '#ffffff' }))
+    layer.on('mouseout', () => layer.setStyle(styleFn(feature)))
   }
 }
 
@@ -2148,6 +2253,7 @@ export default function TransitMap() {
   const [busRouteLines, setBusRouteLines] = useState(null)
   const [busRouteListRaw, setBusRouteListRaw] = useState(null)
   const [populationData, setPopulationData] = useState(null)
+  const [elderlyArea, setElderlyArea] = useState(null)
   const [stopCentrality, setStopCentrality] = useState(null)
   const [subwayStationsOfficial, setSubwayStationsOfficial] = useState(null)
   const [subwayRouteOfficial, setSubwayRouteOfficial] = useState(null)
@@ -2311,6 +2417,7 @@ export default function TransitMap() {
   useOptionalGeoJSON(SUBWAY_TIMETABLE_OFFICIAL_URL, '지하철 공식 열차시각표', setSubwayTimetableOfficial)
   useOptionalGeoJSON(SUBWAY_RIDERSHIP_BY_AGE_URL, '지하철역 연령별 승하차 인원', setSubwayRidershipByAge)
   useOptionalGeoJSON(POPULATION_URL, '고령인구 분포', setPopulationData)
+  useOptionalGeoJSON(ELDERLY_AREA_URL, '행정동·구 고령인구', setElderlyArea)
   useOptionalGeoJSON(STOP_CENTRALITY_URL, '정류장 중심성', setStopCentrality)
   useOptionalGeoJSON(SUBWAY_STATIONS_URL, '지하철역(공식)', setSubwayStationsOfficial)
   useOptionalGeoJSON(SUBWAY_ROUTE_URL, '지하철 노선(공식)', setSubwayRouteOfficial)
@@ -2467,6 +2574,21 @@ export default function TransitMap() {
           flex-shrink: 0;
         }
 
+        .elderly-legend {
+          position: absolute; right: 252px; bottom: 25px; z-index: 1200;
+          background: rgba(15, 23, 42, 0.9); color: #e2e8f0; border-radius: 10px;
+          padding: 8px 12px; font-size: 12px; line-height: 1.6; pointer-events: none;
+        }
+        .elderly-legend { display: flex; gap: 14px; align-items: flex-start; }
+        .elderly-legend-title { font-weight: 700; margin-bottom: 2px; }
+        .elderly-legend-row { display: flex; align-items: center; gap: 6px; }
+        .elderly-legend-row i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+        .elderly-legend-note { color: #94a3b8; font-size: 11px; margin-top: 2px; }
+        .leaflet-tooltip.elderly-gu-label {
+          background: rgba(15, 23, 42, 0.8); color: #fff; border: 0; box-shadow: none;
+          font-weight: 700; font-size: 12px; padding: 2px 6px;
+        }
+        .leaflet-tooltip.elderly-gu-label::before { display: none; }
         .map-status {
           position: absolute;
           z-index: 1200;
@@ -3237,6 +3359,46 @@ export default function TransitMap() {
                   onEachFeature={bindPopulationPopup}
                 />
               )}
+              {layers.elderlyDong && elderlyArea && (
+                <GeoJSON
+                  key="elderly-dong-layer"
+                  data={elderlyArea.dong}
+                  style={getElderlyAreaStyle}
+                  onEachFeature={makeBindElderlyAreaPopup(elderlyArea.dong, false)}
+                />
+              )}
+              {layers.elderlyGu && elderlyArea && (
+                <GeoJSON
+                  key="elderly-gu-layer"
+                  data={elderlyArea.gu}
+                  style={getElderlyAreaStyle}
+                  onEachFeature={makeBindElderlyAreaPopup(elderlyArea.gu, true)}
+                />
+              )}
+              {layers.elderlyCountOa && populationData && (
+                <GeoJSON
+                  key="elderly-count-oa-layer"
+                  data={populationData}
+                  style={getElderlyCountOaStyle}
+                  onEachFeature={bindPopulationPopup}
+                />
+              )}
+              {layers.elderlyCountDong && elderlyArea && (
+                <GeoJSON
+                  key="elderly-count-dong-layer"
+                  data={elderlyArea.dong}
+                  style={getElderlyCountAreaStyle}
+                  onEachFeature={makeBindElderlyAreaPopup(elderlyArea.dong, false, 'count')}
+                />
+              )}
+              {layers.elderlyCountGu && elderlyArea && (
+                <GeoJSON
+                  key="elderly-count-gu-layer"
+                  data={elderlyArea.gu}
+                  style={getElderlyCountAreaStyle}
+                  onEachFeature={makeBindElderlyAreaPopup(elderlyArea.gu, true, 'count')}
+                />
+              )}
             </Pane>
 
             <Pane name="roadPane" style={{ zIndex: 410 }}>
@@ -3644,6 +3806,31 @@ export default function TransitMap() {
             </Pane>
 
           </MapContainer>
+
+          {(() => {
+            const legends = []
+            if (layers.elderlyDong || layers.elderlyGu) legends.push({ title: '고령인구 비율 (65세+)', bins: ELDERLY_BINS, note: '대전 평균 17.8%' })
+            if (layers.elderlyCountOa) legends.push({ title: '노인 인구수 · 집계구', bins: ELDERLY_COUNT_BINS.oa })
+            if (layers.elderlyCountDong) legends.push({ title: '노인 인구수 · 행정동', bins: ELDERLY_COUNT_BINS.dong })
+            if (layers.elderlyCountGu) legends.push({ title: '노인 인구수 · 구', bins: ELDERLY_COUNT_BINS.gu, note: '대전 전체 260,971명' })
+            if (!legends.length) return null
+            return (
+              <div className="elderly-legend">
+                {legends.map((lg) => (
+                  <div key={lg.title} className="elderly-legend-block">
+                    <div className="elderly-legend-title">{lg.title}</div>
+                    {lg.bins.map((b) => (
+                      <div key={b.label} className="elderly-legend-row">
+                        <i style={{ background: b.color }} />
+                        {b.label}
+                      </div>
+                    ))}
+                    {lg.note && <div className="elderly-legend-note">{lg.note}</div>}
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
 
           <MapLegend
             layers={layers}
