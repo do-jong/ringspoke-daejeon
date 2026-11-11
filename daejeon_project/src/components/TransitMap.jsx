@@ -1281,6 +1281,10 @@ function TramTrainSimulation({ lineShape, clockMin, visible }) {
             다음 역: {t.nextStationName}
             <br />
             속도: 약 {t.speedKmh}km/h (계획 배차 기반 추정)
+            <br />
+            정원: {TRAM_CAPACITY}명 (최대 {TRAM_MAX_CAPACITY}명)
+            <br />
+            <span style={{ color: '#888', fontSize: 11 }}>※ 개통 전이라 탑승 인원 자료 없음</span>
           </Popup>
         </Marker>
       ))}
@@ -1306,6 +1310,9 @@ const BUS_CAPACITY = 47
 
 // 대전 1호선 4량 1편성 승객 정원 474명(대전교통공사 차량 제원)을 '만차'(100%) 기준으로 쓴다.
 const SUBWAY_CAPACITY = 474
+// 대전 트램(2호선) 차량 1편성 승차정원 225명, 최대 승차인원 305명
+const TRAM_CAPACITY = 225
+const TRAM_MAX_CAPACITY = 305
 
 function occupancyColor(count, capacity) {
   if (count == null) return '#9aa3ad' // 승하차 데이터 없는 노선/구간(회색)
@@ -3285,7 +3292,7 @@ export default function TransitMap() {
               day={subwayDay}
               clockMin={subwayClockMin}
               onClose={() => setRailPanel(null)}
-              note="개통 전이라 실측 자료 없음 · 첨두(07~09, 18~20시) 8분, 그 외 10.67분 배차로 가정"
+              note={`개통 전이라 실측 자료 없음 · 첨두(07~09, 18~20시) 8분, 그 외 10.67분 배차로 가정 · 1편성 정원 ${TRAM_CAPACITY}명(최대 ${TRAM_MAX_CAPACITY}명)`}
               lines={computeTramLive({ lineShape: tramLineShape, clockMin: subwayClockMin })}
             />
           )}
