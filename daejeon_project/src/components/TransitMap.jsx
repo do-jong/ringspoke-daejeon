@@ -77,7 +77,8 @@ const TASHU_STATIONS_URL = '/data/tashu/tashu_stations.geojson'
 const TASHU_USAGE_URL = '/data/tashu/tashu_station_usage.json'
 
 const SCHOOLS_URL = '/data/facilities/daejeon_schools.geojson'
-const MARKETS_URL = '/data/facilities/daejeon_markets.geojson'
+const MARKETS_URL = '/data/facilities/daejeon_markets_std.geojson' // 전국전통시장표준데이터(대전 27곳)
+const LARGE_RETAIL_URL = '/data/facilities/daejeon_large_retail.geojson' // 행안부 대규모점포 중 대형마트 9곳
 const GOVERNMENT_OFFICES_URL = '/data/facilities/daejeon_government_offices.geojson'
 
 const BUSWAY_OFFICIAL_URL = '/data/bus/busway_official.geojson'
@@ -124,12 +125,14 @@ const LAYER_ITEMS = [
   { id: 'elderlyCountDong', label: '노인 인구수(행정동)', color: '#7c3aed', group: '인구·시설' },
   { id: 'elderlyCountGu', label: '노인 인구수(구)', color: '#5b21b6', group: '인구·시설' },
   { id: 'hospitals', label: '병원·의원(공식)', color: '#60a5fa', group: '인구·시설' },
+  { id: 'healthCenters', label: '보건소(공식)', color: '#16a34a', group: '인구·시설' },
   { id: 'pharmacies', label: '약국(공식)', color: '#4ade80', group: '인구·시설' },
   { id: 'welfareFacilities', label: '장애인 편의시설(공식)', color: '#c084fc', group: '인구·시설' },
   { id: 'welfareCenters', label: '복지시설(공식)', color: '#f472b6', group: '인구·시설' },
   { id: 'tashu', label: '타슈 대여소(공식)', color: '#2dd4bf', group: '인구·시설' },
   { id: 'schools', label: '학교(OSM 추정)', color: '#818cf8', group: '인구·시설' },
-  { id: 'markets', label: '전통시장(OSM 추정)', color: '#fb923c', group: '인구·시설' },
+  { id: 'markets', label: '전통시장(공식)', color: '#fb923c', group: '인구·시설' },
+  { id: 'largeRetail', label: '대형마트(공식)', color: '#e11d48', group: '인구·시설' },
   { id: 'governmentOffices', label: '행정기관(OSM 추정)', color: '#94a3b8', group: '인구·시설' },
   { id: 'buildings', label: '건물(공식)', color: '#aab2bd', group: '인구·시설' },
 
@@ -732,6 +735,68 @@ function bindFacilityPopup(feature, layer) {
   const p = feature.properties || {}
   const extra = p.schoolType || p.operator || ''
   layer.bindPopup(`<strong>${p.name}</strong>${extra ? ` (${extra})` : ''}`)
+}
+
+// 행정안전부 대규모점포 인허가 자료 - 공식 데이터(대형마트만 정리)
+const LARGE_RETAIL_COLORS = { 대형마트: '#e11d48', 백화점: '#9333ea', '아울렛·쇼핑몰': '#0284c7' }
+
+function createLargeRetailMarker(feature, latlng) {
+  return L.circleMarker(latlng, {
+    radius: 7,
+    color: '#ffffff',
+    weight: 2,
+    fillColor: LARGE_RETAIL_COLORS[feature.properties?.category] || '#e11d48',
+    fillOpacity: 0.95,
+  })
+}
+
+function bindLargeRetailPopup(feature, layer) {
+  const p = feature.properties || {}
+  layer.bindPopup(
+    `<strong>${p.name}</strong> (${p.category})<br/>` +
+      `${p.areaM2 ? `매장면적: ${p.areaM2.toLocaleString()}㎡<br/>` : ''}` +
+      `${p.address || ''}<br/>` +
+      `<span style="color:#64748b;font-size:11px">출처: 행정안전부 대규모점포 인허가 자료 (인허가명: ${p.licenseName})</span>`
+  )
+}
+
+// 전국전통시장표준데이터(소상공인시장진흥공단) - 공식 데이터
+function bindMarketPopup(feature, layer) {
+  const p = feature.properties || {}
+  const yn = (v) => (v === 'Y' ? '있음' : v === 'N' ? '없음' : '정보 없음')
+  layer.bindPopup(
+    `<strong>${p.name}</strong> (${p.marketType || '전통시장'})<br/>` +
+      `장 서는 날: ${p.cycle || '정보 없음'}<br/>` +
+      `점포수: ${p.stores != null ? `${p.stores}개` : '정보 없음'}${p.openYear ? ` · 개설 ${p.openYear}년` : ''}<br/>` +
+      `주차장 ${yn(p.parking)} · 화장실 ${yn(p.toilet)}<br/>` +
+      `${p.address || ''}<br/>` +
+      `<span style="color:#64748b;font-size:11px">출처: 전국전통시장표준데이터 (기준일 ${p.dataDate || '-'})</span>`
+  )
+}
+
+// 보건소·보건지소·보건진료소: 심평원 병의원 파일 안에 들어 있는 공공 보건기관 15곳
+const HEALTH_CENTER_TYPES = new Set(['보건소', '보건지소', '보건진료소'])
+const isHealthCenter = (feature) => HEALTH_CENTER_TYPES.has(feature?.properties?.type)
+
+function createHealthCenterMarker(feature, latlng) {
+  const main = feature.properties?.type === '보건소'
+  return L.circleMarker(latlng, {
+    radius: main ? 8 : 6,
+    color: '#ffffff',
+    weight: 2,
+    fillColor: main ? '#15803d' : '#4ade80',
+    fillOpacity: 0.95,
+  })
+}
+
+function bindHealthCenterPopup(feature, layer) {
+  const p = feature.properties || {}
+  layer.bindPopup(
+    `<strong>${p.name}</strong> (${p.type})<br/>` +
+      `${p.address || ''}<br/>` +
+      `${p.phone || '전화번호 정보 없음'}<br/>` +
+      `<span style="color:#64748b;font-size:11px">출처: 건강보험심사평가원 전국 병의원 및 약국 현황</span>`
+  )
 }
 
 function createHospitalMarker(feature, latlng) {
@@ -2277,6 +2342,7 @@ export default function TransitMap() {
   const [tashuUsage, setTashuUsage] = useState(null)
   const [schools, setSchools] = useState(null)
   const [markets, setMarkets] = useState(null)
+  const [largeRetail, setLargeRetail] = useState(null)
   const [governmentOffices, setGovernmentOffices] = useState(null)
   const [buswayOfficial, setBuswayOfficial] = useState(null)
   const [buildingsOfficial, setBuildingsOfficial] = useState(null)
@@ -2440,6 +2506,7 @@ export default function TransitMap() {
   useOptionalGeoJSON(TASHU_USAGE_URL, '타슈 대여·반납', setTashuUsage)
   useOptionalGeoJSON(SCHOOLS_URL, '학교', setSchools)
   useOptionalGeoJSON(MARKETS_URL, '전통시장', setMarkets)
+  useOptionalGeoJSON(LARGE_RETAIL_URL, '대형마트', setLargeRetail)
   useOptionalGeoJSON(GOVERNMENT_OFFICES_URL, '행정기관', setGovernmentOffices)
   useOptionalGeoJSON(BUSWAY_OFFICIAL_URL, '버스전용도로(공식 구간)', setBuswayOfficial)
   useOptionalGeoJSON(BUILDINGS_URL, '건물(공식)', setBuildingsOfficial)
@@ -3621,8 +3688,22 @@ export default function TransitMap() {
                 <GeoJSON
                   key="hospitals-layer"
                   data={hospitals}
+                  filter={(f) => !isHealthCenter(f)}
                   pointToLayer={createHospitalMarker}
                   onEachFeature={bindHospitalPopup}
+                />
+              )}
+            </Pane>
+
+            <Pane name="healthCentersPane" style={{ zIndex: 462 }}>
+              {/* 15곳뿐이라 멀리서 봐도 보이게 확대 제한 없음 */}
+              {layers.healthCenters && hospitals && (
+                <GeoJSON
+                  key="health-centers-layer"
+                  data={hospitals}
+                  filter={isHealthCenter}
+                  pointToLayer={createHealthCenterMarker}
+                  onEachFeature={bindHealthCenterPopup}
                 />
               )}
             </Pane>
@@ -3682,13 +3763,25 @@ export default function TransitMap() {
               )}
             </Pane>
 
+            <Pane name="largeRetailPane" style={{ zIndex: 462 }}>
+              {/* 9곳뿐이라 멀리서 봐도 보이게 확대 제한 없음 */}
+              {layers.largeRetail && largeRetail && (
+                <GeoJSON
+                  key="large-retail-layer"
+                  data={largeRetail}
+                  pointToLayer={createLargeRetailMarker}
+                  onEachFeature={bindLargeRetailPopup}
+                />
+              )}
+            </Pane>
+
             <Pane name="marketsPane" style={{ zIndex: 459 }}>
               {layers.markets && zoom >= POINT_MIN_ZOOM && markets && (
                 <GeoJSON
                   key="markets-layer"
                   data={markets}
                   pointToLayer={createFacilityMarker('#fb923c')}
-                  onEachFeature={bindFacilityPopup}
+                  onEachFeature={bindMarketPopup}
                 />
               )}
             </Pane>
