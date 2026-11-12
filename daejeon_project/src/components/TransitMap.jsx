@@ -1938,6 +1938,9 @@ function RailLivePanel({ title, lines, onClose, clockMin, day, note }) {
 
 // 노선 구분(routeType)에 따라 실제 부르는 이름으로 표시: 급행3번, 마을1번, 첨단2번 등
 // (대전 BIS 노선유형 코드: 1 급행, 5 마을, 6 첨단 - build_route_stop_ridership.cjs와 같은 기준)
+// 다른 노선 코드와 완전히 같은 중복 등록 노선(데이터는 남기고 화면에서만 제외)
+const DUPLICATE_ROUTE_IDS = new Set(['69690138'])
+
 const ROUTE_TYPE_PREFIX = { 1: '급행', 5: '마을', 6: '첨단' }
 function routeDisplayName(route) {
   if (!route) return ''
@@ -2500,7 +2503,12 @@ export default function TransitMap() {
     return () => window.removeEventListener('keydown', onKeyDown, true)
   }, [layers.subwayTrains, layers.tramTrains, layers.busTrains, layers.busTrainsAll])
 
-  const busRouteList = busRouteListRaw?.routes || []
+  // 대전 BIS에 같은 노선이 코드만 다르게 두 번 들어 있는 경우(302번: 30300158 대전 등록 / 69690138 계룡 경유 등록,
+  // 정류소 83개·시간표 모두 동일)는 화면과 시뮬레이션에서 한 번만 쓴다. 원본 데이터 파일은 그대로 둔다.
+  const busRouteList = useMemo(
+    () => (busRouteListRaw?.routes || []).filter((r) => !DUPLICATE_ROUTE_IDS.has(r.routeId)),
+    [busRouteListRaw]
+  )
   const routeIndex = useMemo(() => buildRouteIndex(busRouteList, busRouteStops), [busRouteListRaw, busRouteStops])
   const routeIndexKey = `${routeIndex.ids.size}-${Object.keys(busRouteStops || {}).length}`
 
